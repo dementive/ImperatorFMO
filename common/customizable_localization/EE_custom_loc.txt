@@ -1,0 +1,320 @@
+﻿peace_gold_demands_loc = {
+	type = country
+
+	text = {
+		localization_key = peace_gold_demands_loc_1
+		trigger = {
+			has_variable = demands_gold
+		}
+	}
+	text = {
+		localization_key = peace_gold_demands_loc_2
+		trigger = {
+			always = yes
+		}
+	}
+}
+current_gold_demands_loc = {
+	type = country
+	text = {
+		localization_key = current_gold_demands_loc_1
+		trigger = {
+			trigger_if = {
+				limit = { has_variable = demands_gold }
+				var:demands_gold > 0
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localization_key = current_gold_demands_loc_2
+		trigger = {
+			always = yes
+		}
+	}
+}
+peace_acceptance_loc = {
+	type = country
+	text = {
+		localization_key = peace_acceptance_loc_1
+		trigger = {
+			trigger_if = {
+				limit = { has_variable = ai_acceptance_var }
+				var:ai_acceptance_var = 0
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localization_key = peace_acceptance_loc_2
+		trigger = {
+			trigger_if = {
+				limit = { has_variable = ai_acceptance_var }
+				var:ai_acceptance_var = 1
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+	}
+	text = {
+		localization_key = peace_acceptance_loc_3
+		trigger = {
+			always = yes
+		}
+	}	
+}
+current_trade_good_focus_loc = {
+	type = country
+
+	text = {
+		localization_key = current_trade_good_focus_loc_1
+		trigger = {
+			has_variable = amber_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_2
+		trigger = {
+			has_variable = iron_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_3
+		trigger = {
+			has_variable = camel_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_4
+		trigger = {
+			has_variable = cattle_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_5
+		trigger = {
+			has_variable = hemp_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_6
+		trigger = {
+			has_variable = cloth_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_7
+		trigger = {
+			has_variable = dates_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_8
+		trigger = {
+			has_variable = dye_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_9
+		trigger = {
+			has_variable = earthware_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_10
+		trigger = {
+			has_variable = fish_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_11
+		trigger = {
+			has_variable = fur_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_12
+		trigger = {
+			has_variable = gems_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_13
+		trigger = {
+			has_variable = glass_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_14
+		trigger = {
+			has_variable = elephants_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_15
+		trigger = {
+			has_variable = grain_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_16
+		trigger = {
+			has_variable = honey_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_17
+		trigger = {
+			has_variable = horses_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_18
+		trigger = {
+			has_variable = incense_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_19
+		trigger = {
+			has_variable = base_metals_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_20
+		trigger = {
+			has_variable = leather_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_21
+		trigger = {
+			has_variable = marble_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_22
+		trigger = {
+			has_variable = olive_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_23
+		trigger = {
+			has_variable = salt_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_24
+		trigger = {
+			has_variable = papyrus_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_25
+		trigger = {
+			has_variable = precious_metals_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_26
+		trigger = {
+			has_variable = silk_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_27
+		trigger = {
+			has_variable = spices_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_28
+		trigger = {
+			has_variable = steppe_horses_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_29
+		trigger = {
+			has_variable = stone_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_30
+		trigger = {
+			has_variable = vegetables_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_31
+		trigger = {
+			has_variable = wild_game_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_32
+		trigger = {
+			has_variable = wine_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_34
+		trigger = {
+			has_variable = wood_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_35
+		trigger = {
+			has_variable = sugar_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_36
+		trigger = {
+			has_variable = cedar_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_37
+		trigger = {
+			has_variable = myrrh_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_38
+		trigger = {
+			has_variable = cinnabar_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_39
+		trigger = {
+			has_variable = lapis_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_40
+		trigger = {
+			has_variable = jade_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_41
+		trigger = {
+			has_variable = fruits_focus
+		}
+	}
+	text = {
+		localization_key = current_trade_good_focus_loc_42
+		trigger = {
+			has_variable = silphium_focus
+		}
+	}
+}

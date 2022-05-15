@@ -1,0 +1,81 @@
+﻿#FMO makes tweaks to various defines to help increase performance in any way possible so my new mechanics can shit on performance instead of the base game.
+#Also some changes to some minor things that I don't like about the game.
+NGame = {
+	END_DATE = "900.1.1"
+	AUTOPEACE_DAYS_SINCE_LAST_BATTLE = 2160 # No automatic whitepeace if there's been a battle in the war within this defined amount
+}
+
+NCountry = {	
+	SLAVE_DISTRO_MIN_NUM_OF_STATES = 5  #Slaves captured will be distributed to these number of states near the capital plus capital unless there are less states, changed to 5 for less capital famines
+	POTENTIAL_MISSION_COUNT = 5 # Number of random missions to pick between
+	BASE_FORT_LIMIT_PER_STATE = 6
+	DEIFIED_RULERS_EXPIRE = 60 # Years before a deified ruler that has not been in a pantheon is forgotten and removed
+}
+
+NCombat = {
+	ASSAULT_ATTACKER_LOSS = 1.0
+}
+NCharacter = {
+	
+	MIN_HOLDINGS_FOR_POWER_BASE = 5
+
+	HOLDING_BASE_MULTIPLIER = 0.3 # % of Provincial income that a holding will grant to its owner
+	
+	IDEAL_CHILD_PER_FAMILY = 3
+	
+	# If court isze is bigger than threshold, reduce the number of children per couple by the define below
+	COURT_SIZE_CHILD_PENALTY_THRESHOLD = 100
+	SUBTRACTION_CHILDREN_COURT_SIZE_PENALTY = 1
+	
+	COURT_SIZE_AGE_FILL = { 14 55 } #when filling the initial court, characters get created using this age range
+	BASE_FERTILITY = 0.06
+	MAX_FERTILITY = 0.12
+}
+NFamily = {
+	#Brought this down by 2 so there are slightly less characters with bloodlines.
+	MAX_SIZE = 16; #above this size the family won't look into adopting minor characters anymore
+	# MINOR FAMILY GROWTH
+	MAX_MINOR_CHARACTER_YEARLY_GROWTH = 2;
+	MINOR_FAMILY_COURT_MULTIPLIER = 0.18 #creates a larger minor pool
+}
+NAI = {
+
+	#Some tweaks to performace, defensive leagues, and made the AI less trustworthy.
+
+	#Performance and search
+	MAX_UNITS_PER_TURN = 118 #Higher => more responsive unit AI on average, more CPU. Use "ai.pawns" and "timing show" console commands to tune.
+	IDLE_DEPTH = 8 #Depth of tactical search while idle can be reducd to this.
+	DEFENSIVE_LEAGUE_NEIGHBOR_ORDER = 3
+
+	#Planning
+	TRADITION_LOOKAHEAD = 3 #How many traditions ahead does AI look when weighting their effects multiplicatively (also applies to script weights).
+	REPICK_IDEAS_INTERVAL_MONTHS = 120 # How often the ai will reconsider its current national ideas. Does not affect filling empty idea slots which is done as soon as possible.
+
+	#Peace
+	PEACE_RESPITE_MONTHS = 1 #Anti-ragequit device applied to human player on Easy and Normal; don't DOW them if they had no time to rest.
+
+	#Culture:
+	CULTURE_CHANGE_POPCOUNT_THRESHOLD = 75 # cultures beneath this pop count will be ignored for integration
+	CULTURE_CHANGE_THRESHOLD = 0.125 # how large amount of the population a culture needs to be considered for integration
+
+	#Misc:
+	DEFENSIVE_LEAGUE_COMMON_THREAT_THRESHOLD = 1.5 #AI will only form defensive leagues when the common threat factor is at least this big (not same scale as common threat acceptance, 1 = "as scary as us").
+
+	#Opinions
+	OPINION_NO_WAR = 140 #AI will never plan wars against a country with opinion being at least this level.
+
+	#Personality
+	NO_TREACHERY_TRUSTWORTHINESS = 40 #Above this trustworthiness, AI may not even insult you to reduce their opinion of you or support rebellion, etc.
+	START_DATE_DIPLOMACY_REDUCTION_MONTHS = 9 #AI does war declarations and some other diplo actions less frequently during these months.
+
+	# Challenge modifiers
+	ANTAGONIST_BONUS_ON_HARD = 0.25
+	ANTAGONIST_BONUS_ON_VERY_HARD = 0.5
+	ANTAGONIST_VERSUS_OTHER_AI_DICE_BONUS = 1
+	ANTAGONISM_PEACE_ACCEPT_BONUS_VS_OTHER_AI = 15
+
+
+	# NOTE: I reduced this from 3 to 2. This should help with performance becuase there will be less wars planned I think.
+
+	MAX_PLANNED_WARS = 2 #How many wars can we plan at any one time? clamped between 1 and Min( Aggressivesness / 50, MAX_PLANNED_WARS )
+}

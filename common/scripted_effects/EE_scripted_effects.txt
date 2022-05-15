@@ -1,0 +1,543 @@
+﻿ai_does_not_accept_effect = {
+    if = {
+        limit = {
+            NOT = {
+                has_variable = ai_acceptance_var
+            }
+        }
+        set_variable = {
+            name = ai_acceptance_var
+            value = 0
+        }
+    }
+    else_if = {
+        limit = { has_variable = ai_acceptance_var }
+        remove_variable = ai_acceptance_var
+        set_variable = {
+            name = ai_acceptance_var
+            value = 0
+        }
+    }
+}
+ai_does_accept_effect = {
+    if = {
+        limit = {
+            NOT = {
+                has_variable = ai_acceptance_var
+            }
+        }
+        set_variable = {
+            name = ai_acceptance_var
+            value = 1
+        }
+    }
+    else_if = {
+        limit = { has_variable = ai_acceptance_var }
+        remove_variable = ai_acceptance_var
+        set_variable = {
+            name = ai_acceptance_var
+            value = 1
+        }
+    }
+}
+calculate_ai_acceptance_effect = {
+#    scope:player = {
+        if = {
+            limit = {
+                has_variable = current_warscore_cost
+            }
+            if = {
+                limit = {
+                    root = {
+                        war_score = {
+                            target = scope:player
+                            value <= var:current_warscore_cost_war #war score cost in the war scope...
+                        }
+                    }
+                    trigger_if = {
+                        limit = {
+                            var:current_warscore_cost <= 20
+                        }
+                        var:bad_guys_var = {
+                            weighted_calc_true_if = {
+                                amount = 1
+                                #1 = {
+                                #    has_war_exhaustion >= 5 #sorta exausted from war
+                                #}
+                                1 = {
+                                    treasury < -100 #very in debt
+                                }
+                                1 = {
+                                    stability < 8 #very unstable
+                                }
+                                1 = {
+                                    capital_scope = {
+                                        NOT = { controller = owner }
+                                    }
+                                }
+                                2 = {
+                                    has_war_exhaustion >= 18 #very exausted from war
+                                }
+                                2 = {
+                                    #two svalues, left side is total bad guy CONTROLLED provinces and right side is 25% of their total OWNED provinces
+                                    #So in english: if they control less than 25% of their provinces they will accept the deal.
+                                    bad_guys_controlled_provinces < bad_guys_quarter_of_total_provinces
+                                }
+                                2 = {
+                                    root = {
+                                        war_score = {
+                                            target = var:bad_guys_var
+                                            value >= 50
+                                        }
+                                    }
+                                }
+                                #Base game also does months at war, it is possible but would hurt performance I think.
+                                #The wargoal should also factor into this but not really sure how.
+                            }
+                        }
+                    }
+                    trigger_else = {
+                        limit = {
+                            var:current_warscore_cost > 20
+                        }
+                        var:bad_guys_var = {
+                            weighted_calc_true_if = {
+                                amount = 2
+                                1 = {
+                                    treasury < -100 #very in debt
+                                }
+                                1 = {
+                                    stability < 8 #very unstable
+                                }
+                                1 = {
+                                    capital_scope = {
+                                        NOT = { controller = owner }
+                                    }
+                                }
+                                2 = {
+                                    has_war_exhaustion >= 20 #very exausted from war
+                                }
+                                2 = {
+                                    #two svalues, left side is total bad guy CONTROLLED provinces and right side is 25% of their total OWNED provinces
+                                    #So in english: if they control less than 25% of their provinces they will accept the deal.
+                                    bad_guys_controlled_provinces < bad_guys_quarter_of_total_provinces
+                                }
+                                #Base game also does months at war, it is possible but would hurt performance I think.
+                                #The wargoal should also factor into this but not really sure how.
+                            }
+                        }
+                    }
+                }
+                ai_does_accept_effect = yes
+            }
+            else = {
+                limit = {
+                    root = {
+                        war_score = {
+                            target = scope:player
+                            value > var:current_warscore_cost_war
+                        }
+                    }
+                }
+                ai_does_not_accept_effect = yes
+            }
+        }
+#    }
+}
+set_trade_good_variable_effect = {
+    switch = {
+        trigger = trade_goods
+        amber = { set_variable = amber }
+        base_metals = { set_variable = base_metals }
+        camel = { set_variable = camel }
+        cattle = { set_variable = cattle }
+        cloth = { set_variable = cloth }
+        dates = { set_variable = dates }
+        dye = { set_variable = dye }
+        earthware = { set_variable = earthware }
+        elephants = { set_variable = elephants }
+        fish = { set_variable = fish }
+        fur = { set_variable = fur }
+        gems = { set_variable = gems }
+        glass = { set_variable = glass }
+        grain = { set_variable = grain }
+        hemp = { set_variable = hemp }
+        honey = { set_variable = honey }
+        horses = { set_variable = horses }
+        incense = { set_variable = incense }
+        iron = { set_variable = iron }
+        leather = { set_variable = leather }
+        marble = { set_variable = marble }
+        olive = { set_variable = olive }
+        papyrus = { set_variable = papyrus }
+        precious_metals = { set_variable = precious_metals }
+        salt = { set_variable = salt }
+        silk = { set_variable = silk }
+        spices = { set_variable = spices }
+        steppe_horses = { set_variable = steppe_horses }
+        stone = { set_variable = stone }
+        vegetables = { set_variable = vegetables }
+        wild_game = { set_variable = wild_game }
+        wine = { set_variable = wine }
+        wood = { set_variable = wood }
+        sugar = { set_variable = sugar }
+        cedar = { set_variable = cedar }
+        myrrh = { set_variable = myrrh }
+        cinnabar = { set_variable = cinnabar }
+        lapis = { set_variable = lapis }
+        jade = { set_variable = jade }
+        fruits = { set_variable = fruits }
+        silphium = { set_variable = silphium }
+    }
+}
+
+remove_hegemony_country_mods_effect = {
+    if = {
+        limit = {
+            has_country_modifier = dominating_regional_trade
+        }
+        remove_country_modifier = dominating_regional_trade
+    }
+    if = {
+        limit = {
+            has_country_modifier = trade_hegemony_mod
+        }
+        remove_country_modifier = trade_hegemony_mod
+    }
+}
+
+remove_trade_good_trading_modifiers_effect = {
+    if = {
+        limit = {
+            has_country_modifier = trading_in_amber_mod
+            player_amber_produced < 75_percent_of_world_amber
+        }
+        remove_country_modifier = trading_in_amber_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_base_metals_mod
+            player_base_metals_produced < 75_percent_of_world_base_metals
+        }
+        remove_country_modifier = trading_in_base_metals_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_camels_mod
+            player_camels_produced < 75_percent_of_world_camels
+        }
+        remove_country_modifier = trading_in_camels_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_livestock_mod
+            player_livestock_produced < 75_percent_of_world_livestock
+        }
+        remove_country_modifier = trading_in_livestock_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_cloth_mod
+            player_cloth_produced < 75_percent_of_world_cloth
+        }
+        remove_country_modifier = trading_in_cloth_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_dates_mod
+            player_dates_produced < 75_percent_of_world_dates
+        }
+        remove_country_modifier = trading_in_dates_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_dye_mod
+            player_dye_produced < 75_percent_of_world_dye
+        }
+        remove_country_modifier = trading_in_dye_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_earthware_mod
+            player_earthware_produced < 75_percent_of_world_earthware
+        }
+        remove_country_modifier = trading_in_earthware_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_elephants_mod
+            player_elephants_produced < 75_percent_of_world_elephants
+        }
+        remove_country_modifier = trading_in_elephants_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_fish_mod
+            player_fish_produced < 75_percent_of_world_fish
+        }
+        remove_country_modifier = trading_in_fish_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_fur_mod
+            player_fur_produced < 75_percent_of_world_fur
+        }
+        remove_country_modifier = trading_in_fur_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_gems_mod
+            player_gems_produced < 75_percent_of_world_gems
+        }
+        remove_country_modifier = trading_in_gems_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_glass_mod
+            player_glass_produced < 75_percent_of_world_glass
+        }
+        remove_country_modifier = trading_in_glass_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_grain_mod
+            player_grain_produced < 75_percent_of_world_grain
+        }
+        remove_country_modifier = trading_in_grain_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_hemp_mod
+            player_hemp_produced < 75_percent_of_world_hemp
+        }
+        remove_country_modifier = trading_in_hemp_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_honey_mod
+            player_honey_produced < 75_percent_of_world_honey
+        }
+        remove_country_modifier = trading_in_honey_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_horses_mod
+            player_horses_produced < 75_percent_of_world_horses
+        }
+        remove_country_modifier = trading_in_horses_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_incense_mod
+            player_incense_produced < 75_percent_of_world_incense
+        }
+        remove_country_modifier = trading_in_incense_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_iron_mod
+            player_iron_produced < 75_percent_of_world_iron
+        }
+        remove_country_modifier = trading_in_iron_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_leather_mod
+            player_leather_produced < 75_percent_of_world_leather
+        }
+        remove_country_modifier = trading_in_leather_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_marble_mod
+            player_marble_produced < 75_percent_of_world_marble
+        }
+        remove_country_modifier = trading_in_marble_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_olive_mod
+            player_olive_produced < 75_percent_of_world_olive
+        }
+        remove_country_modifier = trading_in_olive_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_salt_mod
+            player_salt_produced < 75_percent_of_world_salt
+        }
+        remove_country_modifier = trading_in_salt_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_papyrus_mod
+            player_papyrus_produced < 75_percent_of_world_papyrus
+        }
+        remove_country_modifier = trading_in_papyrus_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_precious_metals_mod
+            player_precious_metals_produced < 75_percent_of_world_precious_metals
+        }
+        remove_country_modifier = trading_in_precious_metals_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_silk_mod
+            player_silk_produced < 75_percent_of_world_silk
+        }
+        remove_country_modifier = trading_in_silk_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_spices_mod
+            player_spices_produced < 75_percent_of_world_spices
+        }
+        remove_country_modifier = trading_in_spices_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_steppe_horses_mod
+            player_steppe_horses_produced < 75_percent_of_world_steppe_horses
+        }
+        remove_country_modifier = trading_in_steppe_horses_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_stone_mod
+            player_stone_produced < 75_percent_of_world_stone
+        }
+        remove_country_modifier = trading_in_stone_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_vegetables_mod
+            player_vegetables_produced < 75_percent_of_world_vegetables
+        }
+        remove_country_modifier = trading_in_vegetables_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_wild_game_mod
+            player_wild_game_produced < 75_percent_of_world_wild_game
+        }
+        remove_country_modifier = trading_in_wild_game_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_wine_mod
+            player_wine_produced < 75_percent_of_world_wine
+        }
+        remove_country_modifier = trading_in_wine_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_wood_mod
+            player_wood_produced < 75_percent_of_world_wood
+        }
+        remove_country_modifier = trading_in_wood_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_sugar_mod
+            player_sugar_produced < 75_percent_of_world_sugar
+        }
+        remove_country_modifier = trading_in_sugar_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_cedar_mod
+            player_cedar_produced < 75_percent_of_world_cedar
+        }
+        remove_country_modifier = trading_in_cedar_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_myrrh_mod
+            player_myrrh_produced < 75_percent_of_world_myrrh
+        }
+        remove_country_modifier = trading_in_myrrh_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_cinnabar_mod
+            player_cinnabar_produced < 75_percent_of_world_cinnabar
+        }
+        remove_country_modifier = trading_in_cinnabar_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_lapis_mod
+            player_lapis_produced < 75_percent_of_world_lapis
+        }
+        remove_country_modifier = trading_in_lapis_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_jade_mod
+            player_jade_produced < 75_percent_of_world_jade
+        }
+        remove_country_modifier = trading_in_jade_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_fruits_mod
+            player_fruits_produced < 75_percent_of_world_fruits
+        }
+        remove_country_modifier = trading_in_fruits_mod
+    }
+    if = {
+        limit = {
+            has_country_modifier = trading_in_silphium_mod
+            player_silphium_produced < 75_percent_of_world_silphium
+        }
+        remove_country_modifier = trading_in_silphium_mod
+    }
+}
+remove_trade_good_focus_variables_effect = {
+    switch = {
+        trigger = has_variable
+        amber_focus = { remove_variable = amber_focus }
+        iron_focus = { remove_variable = iron_focus }
+        camel_focus = { remove_variable = camel_focus }
+        cattle_focus = { remove_variable = cattle_focus }
+        hemp_focus = { remove_variable = hemp_focus }
+        cloth_focus = { remove_variable = cloth_focus }
+        dates_focus = { remove_variable = dates_focus }
+        dye_focus = { remove_variable = dye_focus }
+        earthware_focus = { remove_variable = earthware_focus }
+        fish_focus = { remove_variable = fish_focus }
+        fur_focus = { remove_variable = fur_focus }
+        gems_focus = { remove_variable = gems_focus }
+        glass_focus = { remove_variable = glass_focus }
+        elephants_focus = { remove_variable = elephants_focus }
+        grain_focus = { remove_variable = grain_focus }
+        honey_focus = { remove_variable = honey_focus }
+        horses_focus = { remove_variable = horses_focus }
+        incense_focus = { remove_variable = incense_focus }
+        base_metals_focus = { remove_variable = base_metals_focus }
+        leather_focus = { remove_variable = leather_focus }
+        marble_focus = { remove_variable = marble_focus }
+        olive_focus = { remove_variable = olive_focus }
+        salt_focus = { remove_variable = salt_focus }
+        papyrus_focus = { remove_variable = papyrus_focus }
+        precious_metals_focus = { remove_variable = precious_metals_focus }
+        silk_focus = { remove_variable = silk_focus }
+        spices_focus = { remove_variable = spices_focus }
+        steppe_horses_focus = { remove_variable = steppe_horses_focus }
+        stone_focus = { remove_variable = stone_focus }
+        vegetables_focus = { remove_variable = vegetables_focus }
+        wild_game_focus = { remove_variable = wild_game_focus }
+        wine_focus = { remove_variable = wine_focus }
+        wood_focus = { remove_variable = wood_focus }
+        sugar_focus = { set_variable = sugar_focus }
+        cedar_focus = { set_variable = cedar_focus }
+        myrrh_focus= { set_variable = myrrh_focus }
+        cinnabar_focus = { set_variable = cinnabar_focus }
+        lapis_focus = { set_variable = lapis_focus }
+        jade_focus = { set_variable = jade_focus }
+        fruits_focus = { set_variable = fruits_focus }
+        silphium_focus = { set_variable = silphium_focus }        
+    }
+}

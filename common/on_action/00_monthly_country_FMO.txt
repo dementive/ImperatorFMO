@@ -1,0 +1,94 @@
+﻿monthly_country_pulse = {
+	on_actions = {		
+		monthly_check_for_100_experience
+		monthly_reparation_payments_on_action
+	}
+
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					has_variable = me_ant_start_flag
+					has_variable = me_mac_start_flag
+					tag = EGY
+					tag = SEL
+				}
+				war_with = c:TRE
+			}
+			trigger_event = me_thrace_3_new_philhellene_policy.201
+		}
+	}
+}
+monthly_reparation_payments_on_action = {
+	effect = {
+		#Add income for reparations...
+		if = {
+			limit = { has_variable = paying_5_year_reparations }
+			save_scope_as = rep_country
+			add_treasury = {
+				value = subtract_10_percent_monthly_income
+			}
+			var:paying_5_year_reparations = {
+				add_treasury = {
+					value = add_10_percent_monthly_income
+				}
+			}
+		}
+	}
+}
+monthly_check_for_100_experience = {
+	#This uses multiple scripted lists for performance. It also assigns focus for ai because they cant use buttons.
+	#Other ai stuff is in the bi-yearly action because perks aren't gained very often.
+	effect = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			every_ruler_without_focus = {
+				if = {
+					limit = {
+						highest_skill = martial 
+					}
+					add_random_martial_focus_effect = yes
+			        set_variable = martial_focus_tree_enabled
+				}
+				else_if = {
+					limit = {
+						highest_skill = charisma
+					}
+					add_random_oratory_focus_effect = yes
+			        set_variable = oratory_focus_tree_enabled
+				}
+				else_if = {
+					limit = {
+						highest_skill = finesse
+					}
+					add_random_civic_focus_effect = yes
+			        set_variable = civic_focus_tree_enabled
+				}
+				else_if = {
+					limit = {
+						highest_skill = zeal
+					}
+					add_random_zeal_focus_effect = yes
+			        set_variable = zeal_focus_tree_enabled
+				}
+			}
+		}
+		every_ruler_with_focus = {
+	        change_variable = {
+	            name = character_focus_experience
+	            add = 2
+	       	}
+		}
+		every_ruler_without_focus = {
+			set_variable = {
+				name = character_focus_experience
+				value = 2
+			}
+		}
+		every_ruler_with_perk = {
+			monthly_perk_distribution_effect = yes
+		}
+	}
+}

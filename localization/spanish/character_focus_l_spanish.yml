@@ -1,0 +1,262 @@
+﻿l_spanish:
+
+SHOW_CHARACTER_FOCUS:0 "Mostrar Enfoque"
+CHARACTER_FOCUS:0 "Enfoque del Personaje"
+
+SHOW_MARTIAL_FOCUS:0 "Enfoque Marcial"
+MARTIAL_FOCUS:0 "Enfoque Marcial"
+
+MARTIAL_ETHOS_TT:0 "#T Ethos Marcial#!"
+
+CIVIC_ETHOS_TT:0 "#T Ethos Cívico#!"
+
+RELIGIOUS_ETHOS_TT:0 "#T Ethos Religioso#!"
+
+ORATORY_ETHOS_TT:0 "#T Ethos Oratoria#!"
+
+MANAGE_HOLDINGS:0 "Administrar Posesiones"
+
+AQUIRE_WEALTH_TT:0 "Adquirir Riqueza"
+ENCOURAGE_TRADE_TT:0 "Fomentar Comercio"
+ENCOURAGE_CONSTRUCTION_TT:0 "Fomentar Construccciones"
+INCREASE_AUTONOMY_TTT:0 "Incrementar Autonomía"
+
+SIEGECRAFT_FOCUS_TT:0 "#T Máquinas de Asedio#!"
+STRATEGY_FOCUS_TT:0 "#T Estrategia#!"
+NAVAL_FOCUS_TT:0 "#T Naval#!"
+COMMAND_FOCUS_TT:0 "#T Liderazgo#!"
+
+CHARACTER_FOCUS_XP_TT:0 "#T Experiencia del Personaje en su Enfoque#!\n\n[CharacterWindow.GetCharacter.GetName] tiene actualmente #Y [CharacterWindow.GetCharacter.MakeScope.Var('character_focus_experience').GetValue|2]#! experiencia.\n\nSe necesitan #Y 100#! para tomar una nueva ventaja del enfoque.\n\n#TF Cada mes el gobernante de una nación gana #Y 2#! de experiencia. Se puede ganar más a través de eventos y otras acciones."
+
+#Modifiers
+prowess_focus_triggered_mod:0 "Enfoque en Destreza"
+strategy_focus_triggered_mod:0 "Enfoque en Estrategia"
+siegecraft_focus_triggered_mod:0 "Enfoque en Máquinas de Asedio"
+command_focus_triggered_mod:0 "Enfoque en Liderazgo"
+populist_focus_triggered_mod:0 "Enfoque Populista"
+oration_focus_triggered_mod:0 "Enfoque en Oratoria"
+foreign_affairs_focus_triggered_mod:0 "Enfoque en Asuntos Extranjeros"
+family_focus_triggered_mod:0 "Enfoque en la Familia"
+construction_focus_triggered_mod:0 "Enfoque en Construcción"
+holding_focus_triggered_mod:0 "Enfoque en las Posesiones"
+commerce_focus_triggered_mod:0 "Enfoque Comercial"
+wealth_focus_triggered_mod:0 "Enfoque en la Riqueza"
+divinity_focus_triggered_mod:0 "Enfoque en la Divinidad"
+philosophy_focus_triggered_mod:0 "Enfoque Filosófico"
+priestly_support_focus_triggered_mod:0 "Enfoque en el Apoyo Sacerdotal"
+piety_focus_triggered_mod:0 "Enfoque en la Piedad"
+loyal_generals_country_mod:0 "Generales Leales"
+inspired_commanders_country_mod:0 "Comandantes Inspirados"
+military_values_country_mod:0 "Valores Militares"
+strict_organization_state_mod:0 "Organización Estricta"
+siege_training_country_mod:0 "Entrenamiento de Asedio"
+naval_construction_country_mod:0 "Construcción Naval"
+grain_production_province_mod:0 "Producción de Grano"
+grain_distribution_state_mod:0 "Distribución de Grano"
+taxation_policies_state_mod:0 "Políticas de Impuestos"
+increased_tariffs_country_mod:0 "Incremento de Aranceles"
+organized_holdings_char_mod:0 "Posesiones Organizadas"
+land_appropration_country_mod:0 "Apropiación de Tierras"
+construction_leader_country_mod:0 "Líder Constructor"
+true_ruler_country_modifier:0 "Verdadero Líder"
+wise_advisors_country_mod:0 "Consejeros Sabios"
+head_of_administration_char_mod:0 "Jefe de la Administración"
+ambassadors_country_mod:0 "Embajadores"
+prosperity_for_all_country_mod:0 "Prosperidad para Todos"
+conversion_policies_state_mod:0 "Políticas de Conversión"
+mandatory_practice_country_mod:0 "Prácticas Obligatorias"
+divine_mandate_country_mod:0 "Mandato Divino"
+patronize_temples_province_mod:0 "Patrocinar Templos"
+religous_calendar_country_mod:0 "Calendario Religioso"
+bribery_country_mod:0 "Sobornos"
+bribe_pi_cost_modifier:0 "Costed de Sobornos"
+
+
+#Traits 
+
+philosopher_king_trait:0 "Rey Filósofo"
+philosopher_king_trait_desc:0 ""
+master_of_diplomacy_trait:0 "Maestro de la Diplomacia"
+master_of_diplomacy_trait_desc:0 ""
+veteran_warrior_trait:0 "Guerrero Veterano"
+veteran_warrior_trait_desc:0 ""
+master_of_trade_trait:0 "Maestro del Comercio"
+master_of_trade_trait_desc:0 ""
+
+
+#Non-Gui Tooltips
+add_martial_trait_tooltip:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] gana el rasgo #Y 'Guerrero Veterano'#!."
+add_zeal_trait_tooltip:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] gana el rasgo #Y 'Rey Filósofo'#!."
+add_civic_trait_tooltip:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] gana el rasgo #Y 'Maestro del Comercio'#!."
+add_oratory_trait_tooltip:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] gana el rasgo #Y 'Maestro de la Diplomacia'#!."
+add_og_thinker_trait_tooltip:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] gana el rasgo #Y 'Pensador Innovador'#!."
+add_random_ass_naval_trait_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] gana un rasgo #Y Naval#!."
+
+
+all_children_get_3_skill_points_tt:0 "Todos los niños ganarán entre #Y 1-3#! puntos de habilidad."
+already_focused_on_this_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] ya está enfocado en [SCOPE.GetRootScope.GetCharacter.Custom('current_character_focus_loc')|Y]"
+current_character_focus_loc_1:0 "Destreza"
+current_character_focus_loc_2:0 "Estrategia"
+current_character_focus_loc_3:0 "Máquinas de Asedio"
+current_character_focus_loc_4:0 "Liderazgo"
+current_character_focus_loc_5:0 "Popularidad con el Pueblo"
+current_character_focus_loc_6:0 "Oratoria"
+current_character_focus_loc_7:0 "Asuntos Extranjeros"
+current_character_focus_loc_8:0 "Familia"
+current_character_focus_loc_9:0 "Construcción"
+current_character_focus_loc_10:0 "Posesiones"
+current_character_focus_loc_11:0 "Comercio"
+current_character_focus_loc_12:0 "Riqueza"
+current_character_focus_loc_13:0 "Divinidad"
+current_character_focus_loc_14:0 "Filosofía"
+current_character_focus_loc_15:0 "Apoyo Sacerdotal"
+current_character_focus_loc_16:0 "Piedad"
+
+while_character_is_ruler_tooltip:0 "Mientras [SCOPE.GetRootScope.GetCharacter.GetName] es gobernante"
+
+already_focused_on_prowess_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] ya está enfocado en Destreza."
+has_taken_this_already_tooltip:0 "¡Esto ya ha sido completado!"
+does_not_have_enough_experience_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] no tiene ventajas disponibles."
+recently_selected_char_focus_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] solo puede cambiar de enfoque cada #Y 5#! años."
+must_be_an_adult_to_choose_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetNameWithNoTooltip] debe ser un adulto."
+can_only_change_rulers_focus_tt:0 "Solo se puede cambiar el enfoque del gobernante."
+dont_cheat_you_monkey_tooltip:0 "¡No se puede cambiar el enfoque de un personaje de otra nación!"
+
+#Needs Focus Tooltips
+does_not_have_a_martial_focus_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetName] no tiene un enfoque #Y Marcial#!."
+does_not_have_a_oratory_focus_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetName] no tiene un enfoque en #Y Oratoria#!."
+does_not_have_a_civic_focus_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetName] no tiene un enfoque #Y Cívico#!."
+does_not_have_a_zeal_focus_tt:0 "[SCOPE.GetRootScope.GetCharacter.GetName] no tiene un enfoque en #Y Fervor#!."
+
+#Martial Required Tooltips
+does_not_have_loyalty_and_respect_tt:0 "#Y 'Lealtad y Respeto'#! debe ser completado."
+does_not_have_loyal_generals_tt:0 "#Y 'Generales Leales'#! debe ser completado."
+does_not_have_naval_expansion_tt:0 "#Y 'Expansión Naval'#! debe ser completado."
+does_not_have_inspiring_commander_tt:0 "#Y 'Comandantes Inspirados'#! debe ser completado."
+does_not_have_siege_training_tt:0 "#Y 'Entrenamiento de Asedio'#! debe ser completado."
+does_not_have_naval_construction_tt:0 "#Y 'Construcción Naval'#! debe ser completado."
+does_not_have_strict_organization_tt:0 "#Y 'Organización Estricta'#! debe ser completado."
+does_not_have_military_values_tt:0 "#Y 'Valores Militares'#! debe ser completado."
+
+#Oratory Required Tooltips
+does_not_have_assert_authority_tt:0 "#Y 'Imponer Autoridad'#! debe ser completado."
+does_not_have_ambassadors_tt:0 "#Y 'Embajadores'#! debe ser completado."
+does_not_head_of_admin_tt:0 "#Y 'Jefe de la Administración'#! debe ser completado."
+does_not_have_hospitality_tt:0 "#Y 'Hospitalidad'#! debe ser completado."
+does_not_wise_advisors_tt:0 "#Y 'Consejeros Sabios'#! debe ser completado."
+does_not_have_sound_foundations_tt:0 "#Y 'Cimientos Sólidos'#! debe ser completado."
+does_not_have_bribery_tt:0 "#Y 'Sobornos'#! debe ser completado."
+does_not_have_true_ruler_tt:0 "#Y 'Verdadero Líder'#! debe ser completado."
+
+#CívicoRequired Tooltips
+does_not_have_land_appropriation_tt:0 "#Y 'Apropiación de Tierras'#! debe ser completado."
+does_not_have_construction_leader_tt:0 "#Y 'Líder Constructor'#! debe ser completado."
+does_not_have_holding_organization_tt:0 "#Y 'Holding Organization'#! debe ser completado."
+does_not_have_local_forums_tt:0 "#Y 'Foros Locales'#! debe ser completado."
+does_not_have_increased_tariffs_tt:0 "#Y 'Incrementar Aranceles'#! debe ser completado."
+does_not_have_taxation_policies_tt:0 "#Y 'Políticas de Impuestos'#! debe ser completado."
+does_not_have_grain_distribution_tt:0 "#Y 'Distribución de Grano'#! debe ser completado."
+does_not_have_local_administrators_tt:0 "#Y 'Administradores Locales'#! debe ser completado."
+
+#Zeal Required Tooltips
+does_not_have_observe_rituals_tt:0 "#Y 'Observar Rituales'#! debe ser completado."
+does_not_have_patronize_temples_tt:0 "#Y 'Patrocinar Templos'#! debe ser completado."
+does_not_have_divine_mandate_tt:0 "#Y 'Mandato Divino'#! debe ser completado."
+does_not_have_mandatory_practice_tt:0 "#Y 'Prácticas Obligatorias'#! debe ser completado."
+does_not_have_religous_calendar_tt:0 "#Y 'Calendario Religioso'#! debe ser completado."
+does_not_have_conversion_policies_tt:0 "#Y 'Políticas de Conversión'#! debe ser completado."
+does_not_have_legendary_ancestors_tt:0 "#Y 'Ancestros Legendarios'#! debe ser completado."
+does_not_have_divine_offerings_tt:0 "#Y 'Ofrendas Divinas'#! debe ser completado."
+does_not_have_prosperity_for_all_tt:0 "#Y 'Prosperidad para Todos'#! debe ser completado."
+
+
+#Martial Tree Button Tooltips
+PROWESS_FOCUS_TOOLTIP:0 "#T Enfoque en Destreza#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+STRATEGY_FOCUS_TOOLTIP:0 "#T Enfoque en Estrategia#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+SIEGECRAFT_FOCUS_TOOLTIP:0 "#T Enfoque en Máquinas de Asedio#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+COMMAND_FOCUS_TOOLTIP:0 "#T Enfoque en Liderazgo#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+LOYALTY_AND_RESPECT_TOOLTIP:0 "#T Lealtad y Respeto#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+LOYAL_GENERALS_TOOLTIP:0 "#T Generales Leales#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+INSPIRING_COMMANDER_TOOLTIP:0 "#T Comandante Inspirado#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+NAVAL_EXPANSION_TOOLTIP:0 "#T Expansión Naval#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+NAVAL_CONSTRUCTION_TOOLTIP:0 "#T Construcción Naval#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+SIEGE_TRAINING_TOOLTIP:0 "#T Entrenamiento de Asedio#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+MILITARY_VALUES_TOOLTIP:0 "#T Valores Militares#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+STRICT_ORGANIZATION_TOOLTIP:0 "#T Organización Estricta#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+VETERAN_WARRIOR_TOOLTIP:0 "#T Guerrero Veterano#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+#Oratory Tree Button Tooltips
+POPULIST_FOCUS_TOOLTIP:0 "#T Enfoque Populista#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+ORATION_FOCUS_TOOLTIP:0 "#T Enfoque en Oratoria#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+FOREIGN_AFFAIRS_FOCUS_TOOLTIP:0 "#T Enfoque en Asuntos Extranjeros#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+FAMILY_FOCUS_TOOLTIP:0 "#T Enfoque en la Familia#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+ASSERT_AUTHORITY_TOOLTIP:0 "#T Imponer Autoridad#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+HOSPITALITY_TOOLTIP:0 "#T Hospitalidad#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+HEAD_OF_ADMINISTRATION_TOOLTIP:0 "#T Jefe de la Administración#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+WISE_ADVISORS_TOOLTIP:0 "#T Consejeros Sabios#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+TRUE_RULER_TOOLTIP:0 "#T Verdadero Líder#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+SOUND_FOUNDATIONS_TOOLTIP:0 "#T Cimientos Sólidos#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+BRIBERY_TOOLTIP:0 "#T Sobornos#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+DIPLOMATIC_MASTER_TOOLTIP:0 "#T Maestro Diplomático¡#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+AMBASSADORS_TOOLTIP:0 "#T Embajadores#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+#CívicoTree Button Tooltips
+CONSTRUCTION_FOCUS_TOOLTIP:0 "#T Enfoque en Construcción#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+HOLDING_FOCUS_TOOLTIP:0 "#T Enfoque en Posesiones#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+COMMERCE_FOCUS_TOOLTIP:0 "#T Enfoque Comercial#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+WEALTH_FOCUS_TOOLTIP:0 "#T Enfoque en Riqueza#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+CONSTRUCTION_LEADER_TOOLTIP:0 "#T Líder Constructor#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+LAND_APPROPRIATION_TOOLTIP:0 "#T Apropiación de Tierras#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+HOLDING_ORGANIZATION_TOOLTIP:0 "#T Organización de Posesiones#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+LOCAL_FORUMS_TOOLTIP:0 "#T Foros Locales#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+INCREASED_TARIFFS_TOOLTIP:0 "#T Incrementar Aranceles#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+TAXATION_POLICIES_TOOLTIP:0 "#T Políticas de Impuestos#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+GRAIN_DISTIBUTION_TOOLTIP:0 "#T Distribución de Grano#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+LOCAL_ADMINISTRATORS_TOOLTIP:0 "#T Administradores Locales#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+MASTER_OF_TRADE_TOOLTIP:0 "#T Maestro del Comercio#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+#Zeal Tree Button Tooltips
+DIVINITY_FOCUS_TOOLTIP:0 "#T Enfoque en la Divinidad#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+PHILOSOPHY_FOCUS_TOOLTIP:0 "#T Enfoque Filosófico#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+PREISTLY_SUPPORT_FOCUS_TOOLTIP:0 "#T Enfoque en Apoyo Sacerdotal#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+PIETY_FOCUS_TOOLTIP:0 "#T Enfoque en Piedad#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+PATRONIZE_TEMPLES_TOOLTIP:0 "#T Patrocinar Templos#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+OBSERVE_RITUALS_TOOLTIP:0 "#T Observar Rituales#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+DIVINE_MANDATE_TOOLTIP:0 "#T Mandato Divino#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+RELIGOUS_CALENDAR_TOOLTIP:0 "#T Calendario Religioso#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+RELIGOUS_MANDATE_TOOLTIP:0 "#T Mandato Religioso#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+DIVINE_OFFERINGS_TOOLTIP:0 "#T Ofrendas Divinas¡#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+CONVERSION_POLICIES_TOOLTIP:0 "#T Políticas de Conversión#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+LEGENDARY_ANCESTORS_TOOLTIP:0 "#T Ancestros Legendarios#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+PROSPERITY_FOR_ALL_TOOLTIP:0 "#T Prosperidad para Todos#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+HEAD_OF_FAITH_TOOLTIP:0 "#T Rey Filósofo#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( CharacterWindow.GetCharacter.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+
+
+#Alert Tooltips
+
+MARTIAL_FOCUS_AVAILABLE_TOOLTIP:0 "#T Ventaja Marcial Disponible#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( AlertManager.GetPlayer.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+has_1_martial_perk_tooltip:0 "Podéis tomar una ventaja #R Marcial#!@military_icon!."
+
+ORATORY_FOCUS_AVAILABLE_TOOLTIP:0 "#T Ventaja de Oratoria Disponible#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( AlertManager.GetPlayer.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+has_1_oratory_perk_tooltip:0 "Podéis tomar una ventaja de #Y Oratoria#!@oratory_icon!."
+
+CIVIC_FOCUS_AVAILABLE_TOOLTIP:0 "#T Ventaja Cívica Disponible#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( AlertManager.GetPlayer.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+has_1_civic_perk_tooltip:0 "Podéis tomar una ventaja #G Cívica#!@civic_icon!."
+
+ZEAL_FOCUS_AVAILABLE_TOOLTIP:0 "#T Ventaja de Fervor Disponible#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( AlertManager.GetPlayer.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+has_1_zeal_perk_tooltip:0 "Podéis tomar una ventaja de #T Fervor#!@religious_icon!."
+
+
+#Events
+
+character_focus_events.1.t:0 "Enfoque Disponible"
+character_focus_events.1.desc:0 "[SCOPE.GetRootScope.GetCountry.GetRuler.GetName] puede elegir una ventaja de enfoque de personaje"
+character_focus_events.1.a:0 "Perfecto"
+
+character_focus_events.2.t:0 "100 puntos"
+character_focus_events.2.desc:0 "[SCOPE.GetRootScope.GetCountry.GetRuler.GetName] ha ganado 100 puntos"
+character_focus_events.2.a:0 "Perfecto"

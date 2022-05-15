@@ -1,0 +1,1119 @@
+﻿#All in the country scope
+all_amber_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = amber #Vanilla bug is forcing me to do this...can't use trade_goods here!!!!!fuck
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_amber_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = amber
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_amber = {
+	value = 0
+	add = all_amber_produced_in_world
+	multiply = 0.75
+}
+
+all_base_metals_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = base_metals #don't ask
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_base_metals_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = base_metals
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_base_metals = {
+	value = 0
+	add = all_base_metals_produced_in_world
+	multiply = 0.75
+}
+
+all_camels_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = camel
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_camels_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = camel
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_camels = {
+	value = 0
+	add = all_camels_produced_in_world
+	multiply = 0.75
+}
+
+all_livestock_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = cattle
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_livestock_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = cattle
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_livestock = {
+	value = 0
+	add = all_livestock_produced_in_world
+	multiply = 0.75
+}
+
+all_cloth_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = cloth
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_cloth_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = cloth
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_cloth = {
+	value = 0
+	add = all_cloth_produced_in_world
+	multiply = 0.75
+}
+
+all_dates_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = dates
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_dates_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = dates
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_dates = {
+	value = 0
+	add = all_dates_produced_in_world
+	multiply = 0.75
+}
+
+all_dye_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = dye
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_dye_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = dye
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_dye = {
+	value = 0
+	add = all_dye_produced_in_world
+	multiply = 0.75
+}
+
+all_earthware_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = earthware
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_earthware_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = earthware
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_earthware = {
+	value = 0
+	add = all_earthware_produced_in_world
+	multiply = 0.75
+}
+
+all_elephants_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = elephants
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_elephants_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = elephants
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_elephants = {
+	value = 0
+	add = all_elephants_produced_in_world
+	multiply = 0.75
+}
+
+all_fish_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = fish
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_fish_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = fish
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_fish = {
+	value = 0
+	add = all_fish_produced_in_world
+	multiply = 0.75
+}
+
+all_fur_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = fur
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_fur_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = fur
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_fur = {
+	value = 0
+	add = all_fur_produced_in_world
+	multiply = 0.75
+}
+all_gems_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = gems
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_gems_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = gems
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_gems = {
+	value = 0
+	add = all_gems_produced_in_world
+	multiply = 0.75
+}
+all_glass_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = glass
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_glass_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = glass
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_glass = {
+	value = 0
+	add = all_glass_produced_in_world
+	multiply = 0.75
+}
+all_grain_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = grain
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_grain_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = grain
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_grain = {
+	value = 0
+	add = all_grain_produced_in_world
+	multiply = 0.75
+}
+all_hemp_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = hemp
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_hemp_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = hemp
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_hemp = {
+	value = 0
+	add = all_hemp_produced_in_world
+	multiply = 0.75
+}
+all_honey_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = honey
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_honey_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = honey
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_honey = {
+	value = 0
+	add = all_honey_produced_in_world
+	multiply = 0.75
+}
+all_horses_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = horses
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_horses_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = horses
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_horses = {
+	value = 0
+	add = all_horses_produced_in_world
+	multiply = 0.75
+}
+all_incense_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = incense
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_incense_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = incense
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_incense = {
+	value = 0
+	add = all_incense_produced_in_world
+	multiply = 0.75
+}
+all_iron_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = iron
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_iron_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = iron
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_iron = {
+	value = 0
+	add = all_iron_produced_in_world
+	multiply = 0.75
+}
+all_leather_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = leather
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_leather_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = leather
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_leather = {
+	value = 0
+	add = all_leather_produced_in_world
+	multiply = 0.75
+}
+all_marble_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = marble
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_marble_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = marble
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_marble = {
+	value = 0
+	add = all_marble_produced_in_world
+	multiply = 0.75
+}
+all_olive_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = olive
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_olive_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = olive
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_olive = {
+	value = 0
+	add = all_olive_produced_in_world
+	multiply = 0.75
+}
+all_salt_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = salt
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_salt_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = salt
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_salt = {
+	value = 0
+	add = all_salt_produced_in_world
+	multiply = 0.75
+}
+all_papyrus_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = papyrus
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_papyrus_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = papyrus
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_papyrus = {
+	value = 0
+	add = all_papyrus_produced_in_world
+	multiply = 0.75
+}
+all_precious_metals_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = precious_metals
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_precious_metals_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = precious_metals
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_precious_metals = {
+	value = 0
+	add = all_precious_metals_produced_in_world
+	multiply = 0.75
+}
+all_silk_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = silk
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_silk_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = silk
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_silk = {
+	value = 0
+	add = all_silk_produced_in_world
+	multiply = 0.75
+}
+all_spices_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = spices
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_spices_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = spices
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_spices = {
+	value = 0
+	add = all_spices_produced_in_world
+	multiply = 0.75
+}
+all_steppe_horses_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = steppe_horses
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_steppe_horses_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = steppe_horses
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_steppe_horses = {
+	value = 0
+	add = all_steppe_horses_produced_in_world
+	multiply = 0.75
+}
+all_stone_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = stone
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_stone_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = stone
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_stone = {
+	value = 0
+	add = all_stone_produced_in_world
+	multiply = 0.75
+}
+all_vegetables_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = vegetables
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_vegetables_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = vegetables
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_vegetables = {
+	value = 0
+	add = all_vegetables_produced_in_world
+	multiply = 0.75
+}
+all_wild_game_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = wild_game
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_wild_game_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = wild_game
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_wild_game = {
+	value = 0
+	add = all_wild_game_produced_in_world
+	multiply = 0.75
+}
+all_wine_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = wine
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_wine_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = wine
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_wine = {
+	value = 0
+	add = all_wine_produced_in_world
+	multiply = 0.75
+}
+all_wood_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = wood
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_wood_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = wood
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_wood = {
+	value = 0
+	add = all_wood_produced_in_world
+	multiply = 0.75
+}
+all_sugar_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = sugar
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_sugar_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = sugar
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_sugar = {
+	value = 0
+	add = all_sugar_produced_in_world
+	multiply = 0.75
+}
+all_cedar_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = cedar
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_cedar_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = cedar
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_cedar = {
+	value = 0
+	add = all_cedar_produced_in_world
+	multiply = 0.75
+}
+all_myrrh_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = myrrh
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_myrrh_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = myrrh
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_myrrh = {
+	value = 0
+	add = all_myrrh_produced_in_world
+	multiply = 0.75
+}
+all_cinnabar_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = cinnabar
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_cinnabar_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = cinnabar
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_cinnabar = {
+	value = 0
+	add = all_cinnabar_produced_in_world
+	multiply = 0.75
+}
+
+all_lapis_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = lapis
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_lapis_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = lapis
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_lapis = {
+	value = 0
+	add = all_lapis_produced_in_world
+	multiply = 0.75
+}
+all_jade_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = jade
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_jade_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = jade
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_jade = {
+	value = 0
+	add = all_jade_produced_in_world
+	multiply = 0.75
+}
+all_fruits_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = fruits
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_fruits_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = fruits
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_fruits = {
+	value = 0
+	add = all_fruits_produced_in_world
+	multiply = 0.75
+}
+all_silphium_produced_in_world = {
+	value = 0
+	every_country = {
+		every_owned_province = {
+			limit = {
+				has_variable = silphium
+			}
+			add = num_goods_produced
+		}
+	}
+}
+
+player_silphium_produced = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_variable = silphium
+		}
+		add = num_goods_produced
+	}
+}
+
+75_percent_of_world_silphium = {
+	value = 0
+	add = all_silphium_produced_in_world
+	multiply = 0.75
+}

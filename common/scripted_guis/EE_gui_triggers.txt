@@ -1,0 +1,25 @@
+﻿#Triggers to show different windows for different event calls in eventwindow.gui
+showing_screen_1_trigger = {
+    scope = country
+    is_shown = {
+        has_variable = screen_1
+    }
+}
+showing_screen_2_trigger = {
+    scope = country
+    is_shown = {
+        has_variable = screen_2
+    }
+}
+showing_screen_3_trigger = {
+    scope = country
+    is_shown = {
+        has_variable = screen_3
+    }
+}
+showing_screen_4_trigger = {
+    scope = country
+    is_shown = {
+        has_variable = screen_4
+    }
+}

@@ -1,0 +1,270 @@
+﻿alcimachid = { #Creates any/every/random/ordered_alcimachid that functions as every alcimachid character.
+	base = living_character
+	conditions = {
+		has_trait = alcimachid
+	}
+}
+antigonids = { #Creates any/every/random/ordered_antigonids that functions as every antigonids character.
+	base = living_character
+	conditions = {
+		has_trait = antigonids
+	}
+}
+antipatrid = { #Creates any/every/random/ordered_antipatrid that functions as every antipatrid character.
+	base = living_character
+	conditions = {
+		has_trait = antipatrid
+	}
+}
+antipatrid_country = {
+	base = country
+	conditions = {
+		any_character = {
+			has_trait = antipatrid 
+		}
+	}
+}
+argeads = { #Creates any/every/random/ordered_argeads that functions as every argeads character.
+	base = living_character
+	conditions = {
+		has_trait = argeads
+	}
+}
+lagids = { #Creates any/every/random/ordered_lagids that functions as every lagids character.
+	base = living_character
+	conditions = {
+		has_trait = lagids
+	}
+}
+seleucids = { #Creates any/every/random/ordered_seleucids that functions as every seleucids character.
+	base = living_character
+	conditions = {
+		has_trait = seleucids
+	}
+}
+aeacidae = { #Creates any/every/random/ordered_aeacidae that functions as every aeacidae character.
+	base = living_character
+	conditions = {
+		has_trait = aeacidae
+	}
+}
+
+
+#Invictus Lists (RIP - Here lies the death of vanilla compatibility and my ability to read the error log - 5/5/22 1:32AM)
+
+agiad = { #Creates any/every/random/ordered_agiad that functions as every agiad character.
+	base = living_character
+	conditions = {
+		has_trait = agiad
+	}
+}
+achaemenid = { 
+	base = living_character
+	conditions = {
+		has_trait = achaemenid
+	}
+}
+maurya = { 
+	base = living_character
+	conditions = {
+		has_trait = maurya
+	}
+}
+zadok = {
+	base = living_character
+	conditions = {
+		has_trait = zadok
+	}
+}
+agathocles = {
+	base = living_character
+	conditions = {
+		has_trait = agathocles
+	}
+}
+orontid = {
+	base = living_character
+	conditions = {
+		has_trait = orontid
+	}
+}
+atropates = {
+	base = living_character
+	conditions = {
+		has_trait = atropates
+	}
+}
+barca = {
+	base = living_character
+	conditions = {
+		has_trait = barca
+	}
+}
+arsaces = {
+	base = living_character
+	conditions = {
+		has_trait = arsaces
+	}
+}
+spartocid = {
+	base = living_character
+	conditions = {
+		has_trait = spartocid
+	}
+}
+sophytid = {
+	base = living_character
+	conditions = {
+		has_trait = sophytid
+	}
+}
+diodotus = {
+	base = living_character
+	conditions = {
+		has_trait = diodotus
+	}
+}
+brennus = {
+	base = living_character
+	conditions = {
+		has_trait = brennus
+	}
+}
+illyrius = {
+	base = living_character
+	conditions = {
+		has_trait = illyrius
+	}
+}
+claudii = {
+	base = living_character
+	conditions = {
+		has_trait = claudii
+	}
+}
+cornelii = {
+	base = living_character
+	conditions = {
+		has_trait = cornelii
+	}
+}
+demosthenid = {
+	base = living_character
+	conditions = {
+		has_trait = demosthenid
+	}
+}
+mithridates = {
+	base = living_character
+	conditions = {
+		has_trait = mithridates
+	}
+}
+superbus = {
+	base = living_character
+	conditions = {
+		has_trait = superbus
+	}
+}
+vercingetorix = {
+	base = living_character
+	conditions = {
+		has_trait = vercingetorix
+	}
+}
+chola = {
+	base = living_character
+	conditions = {
+		has_trait = chola
+	}
+}
+pandya = {
+	base = living_character
+	conditions = {
+		has_trait = pandya
+	}
+}
+chera = {
+	base = living_character
+	conditions = {
+		has_trait = chera
+	}
+}
+kalinga = {
+	base = living_character
+	conditions = {
+		has_trait = kalinga
+	}
+}
+magonid = {
+	base = living_character
+	conditions = {
+		has_trait = magonid
+	}
+}
+hannonid = {
+	base = living_character
+	conditions = {
+		has_trait = hannonid
+	}
+}
+dido = {
+	base = living_character
+	conditions = {
+		has_trait = dido
+	}
+}
+blood_of_porus = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_porus
+	}
+}
+blood_of_vijaya = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_vijaya
+	}
+}
+blood_of_zipoetes = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_zipoetes
+	}
+}
+ariovistid = {
+	base = living_character
+	conditions = {
+		has_trait = ariovistid
+	}
+}
+battiad = {
+	base = living_character
+	conditions = {
+		has_trait = battiad
+	}
+}
+blood_of_menander = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_menander
+	}
+}
+blood_of_bharata = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_bharata
+	}
+}
+blood_of_aratus = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_aratus
+	}
+}
+blood_of_david = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_david
+	}
+}

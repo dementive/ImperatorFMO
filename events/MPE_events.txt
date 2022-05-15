@@ -1,0 +1,690 @@
+namespace = artifact_creation_events
+
+artifact_creation_events.1 = {
+    type = country_event
+
+    trigger = {
+        NOT = {
+            has_global_variable = artifacts_created
+        }
+    }
+
+    immediate = {
+        set_global_variable = artifacts_created
+        random_country = {
+            limit = { tag = CHL }
+            create_country_treasure = {
+                key = shield
+                icon = treasure_it_cantiaci_ornate_shield
+                character_modifier = {
+                    martial = 2
+                    monthly_character_experience = 0.5
+                }
+            }
+        }
+        treasure:shield = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = shield_2
+                icon = treasure_it_corieltauvi_shield
+                character_modifier = {
+                    martial = 1
+                    monthly_character_experience = 0.5
+                }
+            }
+        }
+        treasure:shield_2 = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = divine_spoon
+                icon = treasure_it_divine_spoons_of_durotriges
+                character_modifier = {
+                    zeal = 3
+                }
+            }
+        }
+        treasure:divine_spoon = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = axe
+                icon = golden_battle_axe
+                character_modifier = {
+                    martial = 2
+                    monthly_character_experience = 0.5
+                }
+            }
+        }
+        treasure:axe = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = axe_2
+                icon = cr_treasure_zalmoxis_axe_01
+                character_modifier = {
+                    martial = 1
+                }
+            }
+        }
+        treasure:axe_2 = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = armor
+                icon = cr_treasure_panoply_of_achilles_02
+                character_modifier = {
+                    martial = 1
+                    finesse = 1
+                }
+            }
+        }
+        treasure:armor = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = armor_2
+                icon = treasure_it_golden_cape_of_deceangli
+                character_modifier = {
+                    martial = 1
+                    zeal = 1
+                }
+            }
+        }
+        treasure:armor_2 = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            limit = {
+                NOT = { tag = CAR }
+            }
+            create_country_treasure = {
+                key = gorillas
+                icon = cr_treasure_skins_of_the_gorilla_02
+                character_modifier = {
+                    charisma = 2
+                    monthly_character_popularity = 0.5
+                }
+            }
+        }
+        treasure:gorillas = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = torc
+                icon = treasure_it_boii_chieftains_torc
+                character_modifier = {
+                    charisma = 2
+                    zeal = 1
+                }
+            }
+        }
+        treasure:torc = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = helmet
+                icon = treasure_it_helmet_of_zalmoxis
+                character_modifier = {
+                    charisma = 2
+                    zeal = 1
+                }
+            }
+        }
+        treasure:helmet = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = helmet_2
+                icon = treasure_it_veliocassian_tribal_helmet
+                character_modifier = {
+                    charisma = 2
+                    zeal = 1
+                }
+            }
+        }
+        treasure:helmet_2 = {
+            set_variable = character_artifact
+        }
+        random_country = {
+            create_country_treasure = {
+                key = mask
+                icon = treasure_it_mask_of_agamemnon
+                character_modifier = {
+                    charisma = 2
+                    zeal = 1
+                }
+            }
+        }
+        treasure:mask = {
+            set_variable = character_artifact
+        }
+    }
+}
+
+artifact_creation_events.2 = {
+    type = country_event
+    trigger = {
+        current_date > 610.1.1
+        NOT = {
+            has_global_variable = artifacts_recreated
+        }
+    }
+
+    immediate = {
+        set_global_variable = artifacts_recreated
+        if = {
+            limit = {
+                NOT = { exists = treasure:shield }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = shield
+                    icon = treasure_it_cantiaci_ornate_shield
+                    character_modifier = {
+                        martial = 1
+                        monthly_character_experience = 0.5
+                    }
+                }
+            }
+            treasure:shield = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:shield_2 }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = shield_2
+                    icon = treasure_it_corieltauvi_shield
+                    character_modifier = {
+                        martial = 1
+                        monthly_character_experience = 0.5
+                    }
+                }
+            }
+            treasure:shield_2 = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:divine_spoon }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = divine_spoon
+                    icon = treasure_it_divine_spoons_of_durotriges
+                    character_modifier = {
+                        zeal = 3
+                    }
+                }
+            }
+            treasure:divine_spoon = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:axe }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = axe
+                    icon = golden_battle_axe
+                    character_modifier = {
+                        martial = 2
+                        monthly_character_experience = 0.5
+                    }
+                }
+            }
+            treasure:axe = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:axe_2 }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = axe_2
+                    icon = cr_treasure_zalmoxis_axe_01
+                    character_modifier = {
+                        martial = 1
+                    }
+                }
+            }
+            treasure:axe_2 = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:armor }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = armor
+                    icon = cr_treasure_panoply_of_achilles_02
+                    character_modifier = {
+                        martial = 1
+                        finesse = 1
+                    }
+                }
+            }
+            treasure:armor = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:armor_2 }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = armor_2
+                    icon = treasure_it_golden_cape_of_deceangli
+                    character_modifier = {
+                        martial = 1
+                        zeal = 1
+                    }
+                }
+            }
+            treasure:armor_2 = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:gorillas }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = gorillas
+                    icon = cr_treasure_skins_of_the_gorilla_02
+                    character_modifier = {
+                        charisma = 2
+                        finesse = 1
+                    }
+                }
+            }
+            treasure:gorillas = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:torc }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = torc
+                    icon = treasure_it_boii_chieftains_torc
+                    character_modifier = {
+                        charisma = 2
+                        zeal = 1
+                    }
+                }
+            }
+            treasure:torc = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:helmet }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = helmet
+                    icon = treasure_it_helmet_of_zalmoxis
+                    character_modifier = {
+                        charisma = 2
+                        zeal = 1
+                    }
+                }
+            }
+            treasure:helmet = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:helmet_2 }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = helmet_2
+                    icon = treasure_it_veliocassian_tribal_helmet
+                    character_modifier = {
+                        charisma = 2
+                        zeal = 1
+                    }
+                }
+            }
+            treasure:helmet_2 = {
+                set_variable = character_artifact
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = treasure:mask }
+            }
+            random_country = {
+                create_country_treasure = {
+                    key = mask
+                    icon = treasure_it_mask_of_agamemnon
+                    character_modifier = {
+                        charisma = 2
+                        zeal = 1
+                    }
+                }
+            }
+            treasure:mask = {
+                set_variable = character_artifact
+            }
+        }
+    }
+}
+namespace = artifact_events
+
+artifact_events.1 = {
+    type = country_event
+    title = artifact_events.1.t
+    desc = artifact_events.1.desc
+    picture = throneroom
+    
+    left_portrait = current_ruler
+
+    trigger = {
+    
+    }
+
+    immediate = {
+        random_country_treasure = {
+            limit = {
+                has_variable = character_artifact
+            }
+            save_scope_as = artifact_1
+        }
+        random_country_treasure = {
+            limit = {
+                has_variable = character_artifact
+                NOT = { THIS = scope:artifact_1 }
+            }
+            save_scope_as = artifact_2
+        }
+        random_country_treasure = {
+            limit = {
+                has_variable = character_artifact
+                NOR = { 
+                    this = scope:artifact_1
+                    this = scope:artifact_2
+                }
+            }
+            save_scope_as = artifact_3
+        }
+        random_country_treasure = {
+            limit = {
+                has_variable = character_artifact
+                NOR = { 
+                    this = scope:artifact_1
+                    this = scope:artifact_2
+                    this = scope:artifact_3
+                }
+            }
+            save_scope_as = artifact_4
+        }
+    }
+    option = {      
+        name = artifact_events.1.a
+        trigger = {
+            exists = scope:artifact_1
+        }
+        scope:artifact_1 = {
+            transfer_treasure_to_character = root.current_ruler
+        }
+    }
+    option = {      
+        name = artifact_events.1.b
+        trigger = {
+            exists = scope:artifact_2
+        }
+        scope:artifact_2 = {
+            transfer_treasure_to_character = root.current_ruler
+        }
+    }
+    option = {      
+        name = artifact_events.1.c
+        trigger = {
+            exists = scope:artifact_3
+        }
+        scope:artifact_3 = {
+            transfer_treasure_to_character = root.current_ruler
+        }
+    }
+    option = {      
+        name = artifact_events.1.d
+        trigger = {
+            exists = scope:artifact_4
+        }
+        scope:artifact_4 = {
+            transfer_treasure_to_character = root.current_ruler
+        }
+    }
+}
+
+namespace = mpe_pop_events
+
+mpe_pop_events.1 = {
+    type = province_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_variable = priest_in_territory
+            }
+            change_variable = {
+                name = priest_in_territory
+                subtract = 1
+            }
+            if = {
+               limit = { var:priest_in_territory > 0 }
+               add_special_pop_province_modifier_effect = yes
+            }
+            else = {
+                limit = { var:priest_in_territory <= 0 }
+                remove_variable = priest_in_territory
+                if = {
+                    limit = {
+                        has_province_modifier = priests_converting_population_mod
+                    }
+                    remove_province_modifier = priests_converting_population_mod
+                }
+            }
+        }
+
+    }
+}
+
+mpe_pop_events.2 = {
+    type = country_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = { has_variable = num_of_priests_var }
+            change_variable = {
+                name = num_of_priests_var
+                subtract = 1
+            }
+            if = {
+                limit = { var:num_of_priests_var <= 0 }
+                remove_variable = num_of_priests_var
+            }
+        }
+    }
+}
+
+mpe_pop_events.3 = {
+    type = province_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_variable = merchant_in_territory
+            }
+            change_variable = {
+                name = merchant_in_territory
+                subtract = 1
+            }
+            if = {
+               limit = { var:merchant_in_territory > 0 }
+               add_special_pop_province_modifier_effect = yes
+            }
+            else = {
+                limit = { var:merchant_in_territory <= 0 }
+                remove_variable = merchant_in_territory
+                if = {
+                    limit = {
+                        has_province_modifier = merchants_in_province_mod
+                    }
+                    remove_province_modifier = merchants_in_province_mod
+                }
+            }
+        }
+    }
+}
+
+mpe_pop_events.4 = {
+    type = country_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = { has_variable = num_of_merchants_var }
+            change_variable = {
+                name = num_of_merchants_var
+                subtract = 1
+            }
+            if = {
+                limit = { var:num_of_merchants_var <= 0 }
+                remove_variable = num_of_merchants_var
+            }
+        }
+    }
+}
+mpe_pop_events.5 = {
+    type = province_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_variable = architects_in_territory
+            }
+            change_variable = {
+                name = architects_in_territory
+                subtract = 1
+            }
+            if = {
+               limit = { var:architects_in_territory > 0 }
+               add_special_pop_province_modifier_effect = yes
+            }
+            else = {
+                limit = { var:architects_in_territory <= 0 }
+                remove_variable = architects_in_territory
+                if = {
+                    limit = {
+                        has_province_modifier = architects_in_province_mod
+                    }
+                    remove_province_modifier = architects_in_province_mod
+                }
+            }
+        }
+    }
+}
+
+mpe_pop_events.6 = {
+    type = country_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = { has_variable = num_of_architects_var }
+            change_variable = {
+                name = num_of_architects_var
+                subtract = 1
+            }
+            if = {
+                limit = { var:num_of_architects_var <= 0 }
+                remove_variable = num_of_architects_var
+            }
+        }
+    }
+}
+
+mpe_pop_events.7 = {
+    type = province_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_variable = artists_in_territory
+            }
+            change_variable = {
+                name = artists_in_territory
+                subtract = 1
+            }
+            if = {
+               limit = { var:artists_in_territory > 0 }
+               add_special_pop_province_modifier_effect = yes
+            }
+            else = {
+                limit = { var:artists_in_territory <= 0 }
+                remove_variable = artists_in_territory
+                if = {
+                    limit = {
+                        has_province_modifier = artists_in_province_mod
+                    }
+                    remove_province_modifier = artists_in_province_mod
+                }
+            }
+        }
+    }
+}
+
+mpe_pop_events.8 = {
+    type = country_event
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = { has_variable = num_of_artists_var }
+            change_variable = {
+                name = num_of_artists_var
+                subtract = 1
+            }
+            if = {
+                limit = { var:num_of_artists_var <= 0 }
+                remove_variable = num_of_artists_var
+            }
+        }
+    }
+}

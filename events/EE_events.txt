@@ -1,0 +1,1642 @@
+﻿namespace = ee_events
+#Window opening events
+ee_events.1 = { #Governorship Window
+    type = major_country_event
+    title = ee_events.1.t
+    desc = ee_events.1.desc
+    picture = trade_port
+    trigger = {
+        NOT = { has_variable = screen_1 }
+    }
+
+    immediate = {
+        root = {
+            every_governorships = {
+                root = {
+                    add_to_variable_list = { 
+                        name = player_governorships
+                        target = prev
+                    }
+                }           
+            }
+        }
+        #This variable is what determines what gui screen to show
+        #Set and remove it here, then make a scripted gui that checks for it before making a new window.
+        #The new window will go in the main_country_event part of the eventwindow.gui, you can make as many custom windows as you want there
+    	set_variable = screen_1
+    }
+
+    option = {      
+        name = ee_events.1.a
+        remove_variable = screen_1
+        every_in_list = {
+            variable = player_governorships
+            root = {
+                remove_list_variable = {
+                    name = player_governorships
+                    target = prev
+                }
+            }
+        }
+        every_in_list = {
+            variable = player_governorship_states
+            root = {
+                remove_list_variable = {
+                    name = player_governorship_states
+                    target = prev
+                }
+            }
+        }   
+    }
+}
+
+ee_events.2 = { #Trade Good Bonuses
+    type = major_country_event
+    title = ee_events.2.t
+    desc = ee_events.2.desc
+    picture = trade_port
+    trigger = {
+        NOT = { has_variable = screen_2 }
+    }
+
+    immediate = {
+    	set_variable = screen_2
+    }
+
+    option = {      
+        name = ee_events.2.a
+        remove_variable = screen_2
+    }
+}
+
+ee_events.3 = { #Bloodline View
+    type = major_country_event
+    title = ee_events.3.t
+    desc = ee_events.3.desc
+    picture = ascetic
+    trigger = {
+        NOT = { has_variable = screen_3 }
+    }
+
+    immediate = {
+        set_variable = screen_3
+    }
+
+    option = {      
+        name = ee_events.3.a
+        remove_variable = screen_3
+    }
+}
+
+ee_events.4 = { #Arifact View
+    type = major_country_event
+    title = ee_events.4.t
+    desc = ee_events.4.desc
+    picture = ascetic
+    trigger = {
+        NOT = { has_variable = screen_4 }
+    }
+
+    immediate = {
+        current_ruler = {
+            every_character_treasure = {
+                root = {
+                    add_to_variable_list = { 
+                        name = player_artifacts
+                        target = prev
+                    }                    
+                }
+            }
+        }
+        set_variable = screen_4
+    }
+
+    option = {      
+        name = ee_events.4.a
+        remove_variable = screen_4
+        every_in_list = {
+            variable = player_artifacts
+            root = {
+                remove_list_variable = {
+                    name = player_artifacts
+                    target = prev
+                }
+            }
+        }
+    }
+}
+
+namespace = ee_economy_events
+#Actual events
+ee_economy_events.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        NOT = {
+            has_global_variable = economic_enhancement_setup_done
+        }
+    }
+
+    immediate = {
+        #Populate the world with trade centers
+        set_global_variable = economic_enhancement_setup_done
+        every_province = {
+            limit = {
+                OR = {
+                    province_id = 500
+                    province_id = 516
+                    province_id = 687
+                    province_id = 790
+                    province_id = 266
+                    province_id = 416
+                    province_id = 427
+                    province_id = 476
+                    province_id = 641
+                    province_id = 7506
+                    province_id = 476
+                    province_id = 911
+                    province_id = 4799
+                    province_id = 6678
+                    province_id = 7314
+                    province_id = 7081
+                    province_id = 6927
+                    province_id = 6917
+                    province_id = 6950
+                    province_id = 5618
+                    province_id = 3360
+                    province_id = 84
+                    province_id = 1570
+                    province_id = 1799
+                    province_id = 4549
+                    province_id = 4529
+                    province_id = 2325
+                    province_id = 1344
+                    province_id = 2021
+                    province_id = 7524
+                    province_id = 7209
+                    province_id = 4646
+                    province_id = 7575
+                    province_id = 1593
+                    province_id = 3481
+                    province_id = 1278
+                    province_id = 4440
+                    province_id = 379
+                    province_id = 1
+                    province_id = 3256
+                }
+            }
+            if = {
+                limit = {
+                    OR = {
+                        province_id = 500
+                        province_id = 516
+                        province_id = 687
+                        province_id = 790
+                        province_id = 266
+                        province_id = 416
+                        province_id = 427
+                        province_id = 476
+                        province_id = 7506
+                        province_id = 476
+                        province_id = 911
+                        province_id = 4799
+                        province_id = 6678
+                        province_id = 7314
+                        province_id = 7081
+                        province_id = 6927
+                        province_id = 6917
+                        province_id = 6950
+                        province_id = 5618
+                        province_id = 3360
+                        province_id = 84
+                        province_id = 1570
+                        province_id = 1799
+                        province_id = 4549
+                        province_id = 4529
+                        province_id = 2325
+                        province_id = 1344
+                        province_id = 2021
+                        province_id = 7524
+                        province_id = 7209
+                        province_id = 4646
+                        province_id = 7575
+                        province_id = 1593
+                        province_id = 3481
+                        province_id = 1278
+                    }
+                }
+                add_permanent_province_modifier = {
+                    name = regional_center_of_trade_level_2
+                }
+                set_variable = regional_trade_center          
+            }
+            if = {
+                limit = {
+                    OR = {
+                        province_id = 4440
+                        province_id = 379
+                        province_id = 1
+                        province_id = 3256
+                        province_id = 641
+                    }
+                }
+                add_permanent_province_modifier = {
+                    name = regional_center_of_trade_level_3
+                }
+                set_variable = regional_trade_center             
+            }
+        }
+        every_region = {
+            if = {
+                limit = {
+                    #Do this so there are not more than 4 trade centers in a region at game start.
+                    #90% of regions should have 3 centers but some will have 4 at game start.
+                    any_trade_center = {
+                        count < 1
+                    }
+                }
+                ordered_region_province = {
+                    limit = {
+                        NOR = {
+                            has_province_modifier = regional_center_of_trade_level_2
+                            has_province_modifier = regional_center_of_trade_level_3
+                        }
+                    }
+                    order_by = total_population
+                    max = 3
+                    add_permanent_province_modifier = {
+                        name = regional_center_of_trade_level_1
+                    }
+                    set_variable = regional_trade_center
+                }
+            }
+            else_if = {
+                limit = {
+                    any_trade_center = {
+                        count >= 1
+                    }
+                }
+                ordered_region_province = {
+                    limit = {
+                        NOR = {
+                            has_province_modifier = regional_center_of_trade_level_2
+                            has_province_modifier = regional_center_of_trade_level_3
+                        }
+                    }
+                    order_by = total_population
+                    max = 2
+                    add_permanent_province_modifier = {
+                        name = regional_center_of_trade_level_1
+                    }
+                    set_variable = regional_trade_center
+                }
+            }
+        }
+        every_province = {
+            set_trade_good_variable_effect = yes
+        }
+    }
+}
+
+ee_economy_events.2 = {
+    type = country_event
+    hidden = yes
+
+    #Cleanup event on decade/bi-yearly that will reassign variables in case trade goods have been changed
+    immediate = {
+        #Do this for every trade good
+        every_province = {
+            switch = {
+                trigger = has_variable
+                amber = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = amber }
+                        }
+                        remove_variable = amber
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                base_metals = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = base_metals }
+                        }
+                        remove_variable = base_metals
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                camel = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = camel }
+                        }
+                        remove_variable = camel
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                cattle = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = cattle }
+                        }
+                        remove_variable = cattle
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                cloth = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = cloth }
+                        }
+                        remove_variable = cloth
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                dates = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = dates }
+                        }
+                        remove_variable = dates
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                dye = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = dye }
+                        }
+                        remove_variable = dye
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                earthware = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = earthware }
+                        }
+                        remove_variable = earthware
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                elephants = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = elephants }
+                        }
+                        remove_variable = elephants
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                fish = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = fish }
+                        }
+                        remove_variable = fish
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                fur = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = fur }
+                        }
+                        remove_variable = fur
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                gems = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = gems }
+                        }
+                        remove_variable = gems
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                glass = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = glass }
+                        }
+                        remove_variable = glass
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                grain = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = grain }
+                        }
+                        remove_variable = grain
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                hemp = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = hemp }
+                        }
+                        remove_variable = hemp
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                honey = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = honey }
+                        }
+                        remove_variable = honey
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                horses = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = horses }
+                        }
+                        remove_variable = horses
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                incense = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = incense }
+                        }
+                        remove_variable = incense
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                iron = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = iron }
+                        }
+                        remove_variable = iron
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                leather = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = leather }
+                        }
+                        remove_variable = leather
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                marble = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = marble }
+                        }
+                        remove_variable = marble
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                olive = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = olive }
+                        }
+                        remove_variable = olive
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                papyrus = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = papyrus }
+                        }
+                        remove_variable = papyrus
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                precious_metals = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = precious_metals }
+                        }
+                        remove_variable = precious_metals
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                salt = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = salt }
+                        }
+                        remove_variable = salt
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                silk = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = silk }
+                        }
+                        remove_variable = silk
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                spices = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = spices }
+                        }
+                        remove_variable = spices
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                steppe_horses = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = steppe_horses }
+                        }
+                        remove_variable = steppe_horses
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                stone = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = stone }
+                        }
+                        remove_variable = stone
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                vegetables = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = vegetables }
+                        }
+                        remove_variable = vegetables
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                wild_game = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = wild_game }
+                        }
+                        remove_variable = wild_game
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                wine = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = wine }
+                        }
+                        remove_variable = wine
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                woad = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = woad }
+                        }
+                        remove_variable = woad
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+                wood = {
+                    if = {
+                        limit = {
+                            NOT = { trade_goods = wood }
+                        }
+                        remove_variable = wood
+                        set_trade_good_variable_effect = yes
+                    }
+                }
+            }
+        }
+    }
+}
+
+ee_economy_events.3 = {
+    type = country_event
+    hidden = yes
+    
+    left_portrait = current_ruler
+
+    trigger = {
+        num_of_cities >= 5
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 1
+            }
+            remove_hegemony_country_mods_effect = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_modifier = control_of_regional_trade_mod
+                    }
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }
+            else = {
+                remove_country_modifier = control_of_regional_trade_mod
+                add_country_modifier = {
+                    name =  control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 2
+            }
+            remove_hegemony_country_mods_effect = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_modifier = control_of_regional_trade_mod
+                    }
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }
+            else = {
+                remove_country_modifier = control_of_regional_trade_mod
+                add_country_modifier = {
+                    name =  control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }            
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 3
+            }
+            remove_hegemony_country_mods_effect = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_modifier = control_of_regional_trade_mod
+                    }
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }
+            else = {
+                remove_country_modifier = control_of_regional_trade_mod
+                add_country_modifier = {
+                    name =  control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }            
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 4
+            }
+            remove_hegemony_country_mods_effect = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_modifier = control_of_regional_trade_mod
+                    }
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }
+            else = {
+                remove_country_modifier = control_of_regional_trade_mod
+                add_country_modifier = {
+                    name =  control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }            
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 5
+            }
+            remove_hegemony_country_mods_effect = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_modifier = control_of_regional_trade_mod
+                    }
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }
+            else = {
+                remove_country_modifier = control_of_regional_trade_mod
+                add_country_modifier = {
+                    name =  control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+                add_country_modifier = {
+                    name = control_of_regional_trade_mod
+                    duration = -1
+                    mode = add_and_extend
+                }
+            }            
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 6
+            }
+            remove_hegemony_country_mods_effect = yes
+            remove_country_modifier = control_of_regional_trade_mod
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 7
+            }
+            remove_hegemony_country_mods_effect = yes
+            remove_country_modifier = control_of_regional_trade_mod
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 8
+            }
+            remove_hegemony_country_mods_effect = yes
+            remove_country_modifier = control_of_regional_trade_mod
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 9
+            }
+            remove_hegemony_country_mods_effect = yes
+            remove_country_modifier = control_of_regional_trade_mod
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue = 10
+            }
+            remove_hegemony_country_mods_effect = yes
+            remove_country_modifier = control_of_regional_trade_mod
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+            add_country_modifier = {
+                name =  control_of_regional_trade_mod
+                duration = -1
+                mode = add_and_extend
+            }
+        }
+        #Between 10 and and 25 give a special modifier. At 25 give a "Hegemony" Modifier
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue  > 10
+                governorships_that_are_above_90_percent_svalue  < 25
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_modifier = dominating_regional_trade }
+                }
+                add_country_modifier = {
+                    name = dominating_regional_trade
+                    duration = -1
+                }
+            }
+            if = {
+                limit = { has_country_modifier = control_of_regional_trade_mod }
+                remove_country_modifier = control_of_regional_trade_mod
+            }
+            if = {
+                limit = { has_country_modifier = trade_hegemony_mod }
+                remove_country_modifier = trade_hegemony_mod
+            }
+        }
+        else_if = {
+            limit = {
+                governorships_that_are_above_90_percent_svalue  >= 25
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_modifier = trade_hegemony_mod }
+                }
+                add_country_modifier = {
+                    name = trade_hegemony_mod
+                    duration = -1
+                }
+            }
+            if = {
+                limit = { has_country_modifier = dominating_regional_trade }
+                remove_country_modifier = dominating_regional_trade
+            }
+            if = {
+                limit = {
+                    has_country_modifier = control_of_regional_trade_mod
+                }
+                remove_country_modifier = control_of_regional_trade_mod
+            }
+        }
+    }
+}
+
+ee_economy_events.4 = {
+    type = country_event
+    hidden = yes
+
+    immediate = {
+        remove_trade_good_trading_modifiers_effect = yes  #Removes modifiers if value is below proper amount.
+        if = {
+            limit = {
+                player_amber_produced >= 75_percent_of_world_amber
+            }
+            add_country_modifier = {
+                name = trading_in_amber_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_base_metals_produced >= 75_percent_of_world_base_metals
+            }
+            add_country_modifier = {
+                name = trading_in_base_metals_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_camels_produced >= 75_percent_of_world_camels
+            }
+            add_country_modifier = {
+                name = trading_in_camels_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_livestock_produced >= 75_percent_of_world_livestock
+            }
+            add_country_modifier = {
+                name = trading_in_livestock_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_cloth_produced >= 75_percent_of_world_cloth
+            }
+            add_country_modifier = {
+                name = trading_in_cloth_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_dates_produced >= 75_percent_of_world_dates
+            }
+            add_country_modifier = {
+                name = trading_in_dates_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_dye_produced >= 75_percent_of_world_dye
+            }
+            add_country_modifier = {
+                name = trading_in_dye_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_earthware_produced >= 75_percent_of_world_earthware
+            }
+            add_country_modifier = {
+                name = trading_in_earthware_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_elephants_produced >= 75_percent_of_world_elephants
+            }
+            add_country_modifier = {
+                name = trading_in_elephants_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_fish_produced >= 75_percent_of_world_fish
+            }
+            add_country_modifier = {
+                name = trading_in_fish_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_fur_produced >= 75_percent_of_world_fur
+            }
+            add_country_modifier = {
+                name = trading_in_fur_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_gems_produced >= 75_percent_of_world_gems
+            }
+            add_country_modifier = {
+                name = trading_in_gems_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_glass_produced >= 75_percent_of_world_glass
+            }
+            add_country_modifier = {
+                name = trading_in_glass_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_grain_produced >= 75_percent_of_world_grain
+            }
+            add_country_modifier = {
+                name = trading_in_grain_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_hemp_produced >= 75_percent_of_world_hemp
+            }
+            add_country_modifier = {
+                name = trading_in_hemp_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_honey_produced >= 75_percent_of_world_honey
+            }
+            add_country_modifier = {
+                name = trading_in_honey_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_horses_produced >= 75_percent_of_world_horses
+            }
+            add_country_modifier = {
+                name = trading_in_horses_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_incense_produced >= 75_percent_of_world_incense
+            }
+            add_country_modifier = {
+                name = trading_in_incense_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_iron_produced >= 75_percent_of_world_iron
+            }
+            add_country_modifier = {
+                name = trading_in_iron_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_leather_produced >= 75_percent_of_world_leather
+            }
+            add_country_modifier = {
+                name = trading_in_leather_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_marble_produced >= 75_percent_of_world_marble
+            }
+            add_country_modifier = {
+                name = trading_in_marble_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_olive_produced >= 75_percent_of_world_olive
+            }
+            add_country_modifier = {
+                name = trading_in_olive_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_salt_produced >= 75_percent_of_world_salt
+            }
+            add_country_modifier = {
+                name = trading_in_salt_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_papyrus_produced >= 75_percent_of_world_papyrus
+            }
+            add_country_modifier = {
+                name = trading_in_papyrus_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_precious_metals_produced >= 75_percent_of_world_precious_metals
+            }
+            add_country_modifier = {
+                name = trading_in_precious_metals_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_silk_produced >= 75_percent_of_world_silk
+            }
+            add_country_modifier = {
+                name = trading_in_silk_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_spices_produced >= 75_percent_of_world_spices
+            }
+            add_country_modifier = {
+                name = trading_in_spices_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_steppe_horses_produced >= 75_percent_of_world_steppe_horses
+            }
+            add_country_modifier = {
+                name = trading_in_steppe_horses_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_stone_produced >= 75_percent_of_world_stone
+            }
+            add_country_modifier = {
+                name = trading_in_stone_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_vegetables_produced >= 75_percent_of_world_vegetables
+            }
+            add_country_modifier = {
+                name = trading_in_vegetables_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_wild_game_produced >= 75_percent_of_world_wild_game
+            }
+            add_country_modifier = {
+                name = trading_in_wild_game_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_wine_produced >= 75_percent_of_world_wine
+            }
+            add_country_modifier = {
+                name = trading_in_wine_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_wood_produced >= 75_percent_of_world_wood
+            }
+            add_country_modifier = {
+                name = trading_in_wood_mod
+                duration = -1
+            }
+        } 
+        if = {
+            limit = {
+                player_sugar_produced >= 75_percent_of_world_sugar
+            }
+            add_country_modifier = {
+                name = trading_in_sugar_mod
+                duration = -1
+            }
+        }  
+        if = {
+            limit = {
+                player_cedar_produced >= 75_percent_of_world_cedar
+            }
+            add_country_modifier = {
+                name = trading_in_cedar_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_myrrh_produced >= 75_percent_of_world_myrrh
+            }
+            add_country_modifier = {
+                name = trading_in_myrrh_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_cinnabar_produced >= 75_percent_of_world_cinnabar
+            }
+            add_country_modifier = {
+                name = trading_in_cinnabar_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_lapis_produced >= 75_percent_of_world_lapis
+            }
+            add_country_modifier = {
+                name = trading_in_lapis_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_jade_produced >= 75_percent_of_world_jade
+            }
+            add_country_modifier = {
+                name = trading_in_jade_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_fruits_produced >= 75_percent_of_world_fruits
+            }
+            add_country_modifier = {
+                name = trading_in_fruits_mod
+                duration = -1
+            }
+        }
+        if = {
+            limit = {
+                player_silphium_produced >= 75_percent_of_world_silphium
+            }
+            add_country_modifier = {
+                name = trading_in_silphium_mod
+                duration = -1
+            }
+        }
+    }
+}
+
+ee_economy_events.5 = {
+    type = province_event
+    hidden = yes
+    immediate = {
+        add_permanent_province_modifier = {
+            name = regional_center_of_trade_level_2
+        } 
+        remove_province_modifier = regional_center_of_trade_level_1
+    }
+}
+ee_economy_events.6 = {
+    type = province_event
+    hidden = yes
+    immediate = {
+        add_permanent_province_modifier = {
+            name = regional_center_of_trade_level_3
+        } 
+        remove_province_modifier = regional_center_of_trade_level_2
+    }
+}
+ee_economy_events.7 = {
+    type = province_event
+    hidden = yes
+    immediate = {
+        add_permanent_province_modifier = {
+            name = regional_center_of_trade_level_4
+        } 
+        remove_province_modifier = regional_center_of_trade_level_3
+    }
+}
+ee_economy_events.8 = {
+    type = province_event
+    hidden = yes
+    immediate = {
+        add_permanent_province_modifier = {
+            name = regional_center_of_trade_level_5
+        } 
+        remove_province_modifier = regional_center_of_trade_level_4
+    }
+}
+
+ee_economy_events.9 = {
+    type = country_event
+    hidden = yes
+    trigger = {
+        #If any regions has less than 3 trade centers make them all have 3 trade centers.
+        #This uses a scripted list for performance reasons. The list is based on region_province
+        any_region = {
+            any_trade_center = {
+                count < 3
+            }
+        }
+    }
+    immediate = {
+        every_region = {
+            limit = {
+                any_trade_center = {
+                    count < 3
+                }
+            }
+            ordered_region_province = {
+                limit = {
+                    NOR = {
+                        has_province_modifier = regional_center_of_trade_level_1
+                        has_province_modifier = regional_center_of_trade_level_2
+                        has_province_modifier = regional_center_of_trade_level_3
+                        has_province_modifier = regional_center_of_trade_level_4
+                        has_province_modifier = regional_center_of_trade_level_5
+                    }
+                }
+                order_by = total_population
+                max = 1
+                random_list = {
+                    3 = {
+                        add_permanent_province_modifier = {
+                            name = regional_center_of_trade_level_1
+                        }
+                    }
+                    1 = {
+                        add_permanent_province_modifier = {
+                            name = regional_center_of_trade_level_2
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ee_economy_events.11 = {
+    type = province_event
+    hidden = yes
+
+    immediate = {
+        add_permanent_province_modifier = {
+            name = regional_center_of_trade_level_1
+        }
+    }
+}
+
+ee_economy_events.12 = {
+    type = country_event
+    hidden = yes
+    trigger = {
+        weighted_calc_true_if = {
+            amount = 10
+            9 = { stability > 9}
+            1 = { treasury > 5000 }
+            2 = { treasury > 9000 }
+        }
+    }
+    immediate = {
+        add_political_influence = 100
+    }
+}

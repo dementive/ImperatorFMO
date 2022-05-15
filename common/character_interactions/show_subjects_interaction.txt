@@ -1,0 +1,46 @@
+﻿find_current_subject_countries_2 = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_arrange_marriage"
+	
+	message = no
+	
+	
+	potential_trigger = {
+		scope:actor = {
+			is_ai = no
+		}
+		hidden:scope:target = {
+			is_alive = yes
+			is_ruler = yes
+			employer = scope:actor
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+			#Will only show up if you have subjects
+			employer = {
+				is_subject = no
+				any_country = {
+					is_subject_of = scope:actor
+				}
+			}
+		}
+	}
+	
+	
+	allowed_trigger = {
+
+	}
+	
+	#This hard-coded trigger is what pulls up the actualy subject interaction screen
+	#It will create a target list of countries based on the triggers that are specified here.
+	country_target_trigger = {
+		NOT = { this = scope:actor }
+		is_subject_of = scope:actor
+	}
+	
+	effect = {
+
+	}
+}
