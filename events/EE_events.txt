@@ -597,15 +597,6 @@ ee_economy_events.2 = {
                         set_trade_good_variable_effect = yes
                     }
                 }
-                woad = {
-                    if = {
-                        limit = {
-                            NOT = { trade_goods = woad }
-                        }
-                        remove_variable = woad
-                        set_trade_good_variable_effect = yes
-                    }
-                }
                 wood = {
                     if = {
                         limit = {

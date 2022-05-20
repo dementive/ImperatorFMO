@@ -7,6 +7,10 @@ bad_guys_quarter_of_total_provinces = {
 	value = this.num_of_cities
 	divide = 4
 }
+bad_guys_half_of_total_provinces = {
+	value = this.num_of_cities
+	divide = 2
+}
 bad_guys_controlled_provinces = {
 	value = this.num_of_cities
 	subtract = {
@@ -17,6 +21,14 @@ bad_guys_controlled_provinces = {
 			add = 1
 		}
 	}
+}
+
+bad_guys_total_army_size = {
+	value = 0
+	every_country_sub_unit = {
+		add = 0.5 #each subunit is 500, so add .5 so it can be compared to threat_in_owned_land.
+	}
+	multiply = 4
 }
 
 subtract_10_percent_monthly_income = {
@@ -36,7 +48,6 @@ bad_guys_gold_adding_svalue = {
 }
 
 bad_guys_gold_actual_add_svalue = {
-	value = 0
 	add = bad_guys_gold_adding_svalue
 	max = bad_guys_gold_max_svalue
 }

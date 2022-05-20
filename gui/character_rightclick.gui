@@ -2,7 +2,7 @@
 base_sub_window = {
 	gfxtype = windowgfx
 	name = "character_rightclick"
-	
+	using = DementiveFadeStates
 	parentanchor = top|left
 	size = { 336 440 }
 	widgetanchor = top|left
@@ -69,6 +69,7 @@ base_sub_window = {
 					size = { 37 50 }
 					alpha = 0.95
 					texture = "gfx/interface/icons/shared_icons/bloodline_icon.dds"
+					using = RedGlowEffect
 				}
 				blockoverride "On_click" 
 				{ 

@@ -354,14 +354,14 @@ client_state = {
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = yes
-	costs_diplomatic_slot = no
+	costs_diplomatic_slot = yes
 	subject_can_cancel = no
 	
 	has_limited_diplomacy = yes
 	only_trade_with_overlord=  yes
 	
 	overlord_modifier = {
-		happiness_for_same_culture_modifier = -0.04
+
 	}
 	subject_modifier = {
 		ruler_popularity_gain = -0.05
