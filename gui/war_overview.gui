@@ -667,6 +667,9 @@ base_window = {
 			}
 			on_start = "[GetVariableSystem.Clear( 'destablize_up' )]"
 			on_start = "[GetVariableSystem.Clear( 'reparations_up' )]"
+			on_start = "[GetVariableSystem.Clear( 'delegitimize_up' )]"
+			on_start = "[GetVariableSystem.Clear( 'steal_knowledge_up' )]"
+			on_start = "[GetVariableSystem.Clear( 'extort_population_up' )]"
 			duration = 0.2
 		}
 		movable = no
@@ -873,16 +876,17 @@ base_window = {
 				tooltip = "[WarOverview.GetWarScoreTooltip]"
 			}
 		}
+		#Peace Deal buttons
 		vbox = {
-			position = { -87 -120 }
+			position = { 15 -50 }
 			layoutpolicy_vertical = expanding
 			layoutpolicy_horizontal = expanding
 			
 			margin_widget = {
-				size = { 365 62 }
+				size = { 530 62 }
 				flowcontainer = {
 					direction = horizontal
-					spacing = 50
+					spacing = 40
 					container = {
 						icon_button_square_sound = {
 							datacontext = "[GetScriptedGui('demand_reparations_button')]"
@@ -973,21 +977,153 @@ base_window = {
 							}
 						}
 					}
+					container = {
+						icon_button_square_sound = {
+							datacontext = "[GetScriptedGui('delegitimize_administration_button')]"
+							size = { 60 60 }
+							visible = "[Not(GetVariableSystem.Exists('delegitimize_up'))]"
+							blockoverride "On_click"
+							{
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[GetVariableSystem.Toggle('delegitimize_up')]"
+							}
+							tooltip = "DELEGITIMIZE_TT"
+							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_accept" }
+							blockoverride "Icon" 
+							{
+							 	texture = "gfx/interface/icons/shared_icons/legitimacy.dds" size = { 50 50 }
+							}
+						}
+						icon_button_square_sound = {
+							datacontext = "[GetScriptedGui('delegitimize_administration_button_cancel')]"
+							size = { 60 60 }
+							visible = "[GetVariableSystem.Exists('delegitimize_up')]"
+							blockoverride "On_click"
+							{
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[GetVariableSystem.Toggle('delegitimize_up')]"
+							}
+							tooltip = "#T Cancel Delegitimize Administration#!"
+							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_decline" }
+							blockoverride "Icon" 
+							{
+							 	texture = "gfx/interface/icons/shared_icons/legitimacy.dds" size = { 50 50 }
+							}
+							blockoverride "Glow"
+							{
+								glow_radius = 2
+								color = { 1.0 0.85 0.45 0.8 }
+							}
+						}						
+					}
+					container = {
+						icon_button_square_sound = {
+							datacontext = "[GetScriptedGui('steal_knowledge_button')]"
+							size = { 60 60 }
+							visible = "[Not(GetVariableSystem.Exists('steal_knowledge_up'))]"
+							blockoverride "On_click"
+							{
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[GetVariableSystem.Toggle('steal_knowledge_up')]"
+							}
+							tooltip = "STEAL_KNOWLEDGE_TT"
+							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_accept" }
+							blockoverride "Icon" 
+							{
+							 	texture = "gfx/interface/icons/shared_icons/research.dds" size = { 50 50 }
+							}
+						}
+						icon_button_square_sound = {
+							datacontext = "[GetScriptedGui('steal_knowledge_button_cancel')]"
+							size = { 60 60 }
+							visible = "[GetVariableSystem.Exists('steal_knowledge_up')]"
+							blockoverride "On_click"
+							{
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[GetVariableSystem.Toggle('steal_knowledge_up')]"
+							}
+							tooltip = "#T Cancel Delegitimize Administration#!"
+							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_decline" }
+							blockoverride "Icon" 
+							{
+							 	texture = "gfx/interface/icons/shared_icons/research.dds" size = { 50 50 }
+							}
+							blockoverride "Glow"
+							{
+								glow_radius = 2
+								color = { 1.0 0.85 0.45 0.8 }
+							}
+						}						
+					}
+					container = {
+						icon_button_square_sound = {
+							datacontext = "[GetScriptedGui('extort_population_button')]"
+							size = { 60 60 }
+							visible = "[Not(GetVariableSystem.Exists('extort_population_up'))]"
+							blockoverride "On_click"
+							{
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[GetVariableSystem.Toggle('extort_population_up')]"
+							}
+							tooltip = "EXTORT_POPULATION_TT"
+							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_accept" }
+							blockoverride "Icon" 
+							{
+							 	texture = "gfx/interface/icons/shared_icons/population.dds" size = { 50 50 }
+							}
+						}
+						icon_button_square_sound = {
+							datacontext = "[GetScriptedGui('extort_population_button_cancel')]"
+							size = { 60 60 }
+							visible = "[GetVariableSystem.Exists('extort_population_up')]"
+							blockoverride "On_click"
+							{
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
+								onclick = "[GetVariableSystem.Toggle('extort_population_up')]"
+							}
+							tooltip = "#T Cancel Extort Population#!"
+							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_decline" }
+							blockoverride "Icon" 
+							{
+							 	texture = "gfx/interface/icons/shared_icons/population.dds" size = { 50 50 }
+							}
+							blockoverride "Glow"
+							{
+								glow_radius = 2
+								color = { 1.0 0.85 0.45 0.8 }
+							}
+						}						
+					}
 				}
 			}
 		}
 		textbox = {
 			parentanchor = center
-			position = { -50 60 }
+			position = { -67 60 }
 			using = BaseFontM
 			using = Black_FontColor
 			fontsize = 20
 
 			text = "Demand Gold"
 		}
+		textbox = {
+			parentanchor = center
+			position = { -85 -120 }
+			using = BaseFontM
+			using = Black_FontColor
+			fontsize = 30
+
+			text = "Peace Deals"
+		}
 		flowcontainer = {
 			parentanchor = center
-			position = { 12 100 }
+			position = { -5 100 }
 			direction = horizontal
 			spacing = 10
 			button_minus_war = {
@@ -1014,7 +1150,7 @@ base_window = {
 			}
 		}
 		flowcontainer = {
-			position = { 0 155 }
+			position = { -15 145 }
 			spacing = 10 
 			parentanchor = center
 			icon_and_text = {
@@ -1038,7 +1174,7 @@ base_window = {
 					texture = "gfx/interface/icons/shared_icons/aggressive_expansion.dds" 
 				}
 				blockoverride "Text" { 
-					text = "[Player.MakeScope.Var('aggressive_expansion_cost').GetValue|1]" 
+					text = "[Player.MakeScope.Var('aggressive_expansion_cost').GetValue|0]" 
 					using = BaseFontL
 					using = Black_FontColor
 				}
@@ -1049,7 +1185,7 @@ base_window = {
 		}
 		text_button_square = {
 			parentanchor = center
-			position = { 125 210 }
+			position = { 108 205 }
 			size = { 225 24 }
 			name = "accept_button"
 			datacontext = "[GetScriptedGui('send_final_offer_button')]"
@@ -1077,8 +1213,6 @@ base_window = {
 				{
 					alpha = 0.95
 				}
-				
-				#put old stuff here
 
 				parentanchor = hcenter
 				visible = "[Not(WarOverview.GetWar.IsCivilWar)]"
@@ -1112,7 +1246,7 @@ base_window = {
 						using = BaseFontS
 						using = Black_FontColor
 						elide = right
-						fontsize = 18
+						fontsize = 16
 						margin = { 4 0 }
 						#parentanchor = center
 					}
