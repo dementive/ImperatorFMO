@@ -1046,7 +1046,7 @@ base_window = {
 								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( WarOverview.GetWar.MakeScope ).AddScope('player', Player.MakeScope).End )]"
 								onclick = "[GetVariableSystem.Toggle('steal_knowledge_up')]"
 							}
-							tooltip = "#T Cancel Delegitimize Administration#!"
+							tooltip = "#T Cancel Steal Knowledge#!"
 							blockoverride "ClickSound" { clicksound = "event:/SFX/UI/Diplomacy/sfx_ui_diplomacy_offer_decline" }
 							blockoverride "Icon" 
 							{

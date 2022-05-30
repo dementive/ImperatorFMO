@@ -1183,6 +1183,22 @@ send_final_offer_button = { #This runs the effects and checks if Ai will accept.
 			if = {
 				limit = { has_variable = steal_knowledge_peace_treaty_var }
 				add_innovation = 1
+				add_research = {
+					technology = civic_tech
+					value = 5
+				}
+				add_research = {
+					technology = oratory_tech
+					value = 5
+				}
+				add_research = {
+					technology = military_tech
+					value = 5
+				}
+				add_research = {
+					technology = religious_tech
+					value = 5
+				}
 			}
 			if = {
 				limit = {
