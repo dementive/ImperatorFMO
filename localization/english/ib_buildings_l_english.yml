@@ -1,0 +1,35 @@
+﻿l_english:
+  #Vanilla
+  military_building:0 "Conscription Camp"
+  commerce_building:0 "Commercial District"
+  workshop_building:1 "Production District"
+  aqueduct_building:0 "Sanitation Works"
+  #Mod
+  foundry_building:0 "Workshop"
+  military_harbor_building:0 "Shipyard"
+  trade_harbor_building:0 "Trade Harbor"
+  food_trader_building:0 "Farmer's Market"
+  shrine_building:0 "Shrine"
+  tavern_building:0 "Tavern"
+  nobles_building:0 "Noble District"
+  citizen_building:0 "Citizen District"
+  freemen_building:0 "Freemen District"
+  slave_building:0 "Slave Trader"
+  hunting_camps:0 "Hunting Camps"
+  logging_camps:0 "Logging Camps"
+  shipyards:0 "Shipyard"
+  sanctuary_building:0 "Sanctuary"
+  villa_building:0 "Villa Estate"
+  arena_building:0 "Arena" #prospect
+  #settlement
+  local_forum_building:0 "Colonia"
+
+ construct_happiness_buildings_TOOLTIP:0 "#t Construct Public Buildings#!"
+ construct_happiness_buildings:0 "Construct Public Buildings"
+
+ construct_pop_buildings_TOOLTIP:0 "#t Construct Population Buildings#!"
+ construct_pop_buildings:0 "Construct Population Buildings"
+
+ enables_foundry_building_tt:0 "Unlocks the #Y Workshop#! City building."
+ hunting_camps_tooltip:0 "Requires #Y Wild Game#! or #Y Fur#!."
+ logging_camps_tooltip:0 "Requires #Y Wood#!."

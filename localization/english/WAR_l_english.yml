@@ -1,5 +1,11 @@
 ﻿l_english:
 
+#War goal
+
+conquer_wargoal_2:0 "Conquer"
+ war_goal_conquer_wargoal_2:0 "Take $PROV$"
+ war_goal_conquer_wargoal_2_desc:0 "War goal is to take $PROV$."
+
 #PEACE TREATIES
 
 player_is_the_defending_leader:0 "[player.GetName] is the War Leader."

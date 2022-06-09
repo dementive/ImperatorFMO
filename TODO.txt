@@ -1,0 +1,18 @@
+# Python script for trade goods
+
+# Add a confirmation loc to all of the trade good focus scripted guis.
+
+# Come up with 4 new province investments
+
+
+#CHANGELOG
+
+# Reworked the province view, added unique terrain gfx for some territories.
+
+# Nocb cost and break truce cost has been reduced.
+
+# Extended the end date to 1000 from 727
+
+# Integrated the Improved Buildings mod
+
+# Conquest wargoal should have cheaper conquer cost after 675.1.1

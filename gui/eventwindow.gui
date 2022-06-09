@@ -1729,22 +1729,22 @@ base_window = { ####Currently unused in vanilla
 							spacing = 100
 							bloodline_button = {
 								size = { 47 47 }
-								datacontext = "[GetScriptedGui('show_illyrius_characters_button')]" 
+								datacontext = "[GetScriptedGui('show_fabii_characters_button')]" 
 								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
 								blockoverride "Icon" { 
-									texture = "gfx/interface/icons/traits/illyrius.dds" 
+									texture = "gfx/interface/icons/traits/fabii.dds" 
 									size = { 50 50 } 
 									position = { 3 5 }
 								}
 								blockoverride "Text" { 
-									text = "Illyrius"
-									position = { 25 0 }
+									text = "Fabii"
+									position = { 31 0 }
 								}
 								blockoverride "On_click" { 
 									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]" 
 									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
 								}
-								tooltip = "SHOW_ILLYRIUS_CHARACTERS"
+								tooltip = "SHOW_FABII_CHARACTERS"
 							}
 							bloodline_button = {
 								size = { 47 47 }
@@ -2209,6 +2209,44 @@ base_window = { ####Currently unused in vanilla
 									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
 								}
 								tooltip = "SHOW_DAVID_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_magas_characters_button')]" 
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" { 
+									texture = "gfx/interface/icons/traits/magas.dds" 
+									size = { 50 50 } 
+									position = { 3 5 }
+								}
+								blockoverride "Text" { 
+									text = "Magas"
+									position = { 31 0 }
+								}
+								blockoverride "On_click" { 
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]" 
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_MAGAS_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_illyrius_characters_button')]" 
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" { 
+									texture = "gfx/interface/icons/traits/illyrius.dds" 
+									size = { 50 50 } 
+									position = { 3 5 }
+								}
+								blockoverride "Text" { 
+									text = "Illyrius"
+									position = { 25 0 }
+								}
+								blockoverride "On_click" { 
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]" 
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_ILLYRIUS_CHARACTERS"
 							}
 							#bloodline_button = {
 							#	size = { 42 42 }

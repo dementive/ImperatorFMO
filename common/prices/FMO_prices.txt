@@ -1,0 +1,16 @@
+﻿war_breaking_truce = {
+	stability = 30
+	aggressive_expansion = 25
+	war_exhaustion = 1
+}
+
+war_no_cb = {
+	political_influence = 10
+	aggressive_expansion = 7
+	war_exhaustion = 3
+}
+
+fabricate_claim = {
+	political_influence = 30
+	aggressive_expansion = 2
+} 

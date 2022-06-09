@@ -1,0 +1,57 @@
+﻿# INSTRUCTIONS:
+# -------------
+# conquer_cost = cost of taking provinces
+#
+# WAR GOAL TYPES:
+#	- take_province
+#	- naval_superiority
+#	- superiority					#If conquer cost in superiority wars is less than 0, AI will always try and select.
+#	- enforce_military_access
+#	- independence
+# --------------------------------------------------------------
+
+conquer_wargoal = {
+	type = take_province
+	allow = {
+		is_subject = no
+		current_date < 700.1.1
+	}
+	
+	attacker = {
+		conquer_cost = -0.25
+	}
+	defender = {
+	}
+	ticking_war_score = 0.5
+}
+
+conquer_wargoal_2 = {
+	type = take_province
+	allow = {
+		is_subject = no
+		current_date >= 700.1.1
+	}
+	
+	attacker = {
+		conquer_cost = -0.4 # -0.25
+	}
+	defender = {
+		conquer_cost = -0.25
+	}
+	ticking_war_score = 0.5
+}
+
+raiding_wargoal = {
+	type = superiority
+	
+	allow = {
+		is_subject = no
+	}
+	
+	attacker = {
+		conquer_cost = 1.5 # 2
+	}
+	defender = {
+	}
+	ticking_war_score = 0.5
+}

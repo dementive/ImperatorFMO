@@ -14,12 +14,8 @@
 }
 show_alcimachid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_alcimachid = {
-            #order_by = age
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -31,9 +27,6 @@ show_alcimachid_characters_button = {
 }
 show_antigonids_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_antigonids = {
             root = {
@@ -47,9 +40,6 @@ show_antigonids_characters_button = {
 }
 show_antipatrid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_antipatrid = {
             root = {
@@ -63,9 +53,6 @@ show_antipatrid_characters_button = {
 }
 show_argeads_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_argeads = {
             root = {
@@ -79,9 +66,6 @@ show_argeads_characters_button = {
 }
 show_lagids_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_lagids = {
             root = {
@@ -95,9 +79,6 @@ show_lagids_characters_button = {
 }
 show_seleucids_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_seleucids = {
             root = {
@@ -111,9 +92,6 @@ show_seleucids_characters_button = {
 }
 show_aeacidae_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_aeacidae = {
             root = {
@@ -125,13 +103,8 @@ show_aeacidae_characters_button = {
         }
     }
 }
-#Invictus
-
 show_agiad_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_agiad = {
             root = {
@@ -145,9 +118,6 @@ show_agiad_characters_button = {
 }
 show_achaemenid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_achaemenid = {
             root = {
@@ -161,9 +131,6 @@ show_achaemenid_characters_button = {
 }
 show_maurya_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_maurya = {
             root = {
@@ -177,9 +144,6 @@ show_maurya_characters_button = {
 }
 show_zadok_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_zadok = {
             root = {
@@ -193,9 +157,6 @@ show_zadok_characters_button = {
 }
 show_agathocles_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_agathocles = {
             root = {
@@ -209,9 +170,6 @@ show_agathocles_characters_button = {
 }
 show_orontid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_orontid = {
             root = {
@@ -225,9 +183,6 @@ show_orontid_characters_button = {
 }
 show_atropates_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_atropates = {
             root = {
@@ -241,9 +196,6 @@ show_atropates_characters_button = {
 }
 show_barca_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_barca = {
             root = {
@@ -257,9 +209,6 @@ show_barca_characters_button = {
 }
 show_arsaces_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_arsaces = {
             root = {
@@ -273,9 +222,6 @@ show_arsaces_characters_button = {
 }
 show_spartocid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_spartocid = {
             root = {
@@ -289,9 +235,6 @@ show_spartocid_characters_button = {
 }
 show_sophytid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_sophytid = {
             root = {
@@ -305,9 +248,6 @@ show_sophytid_characters_button = {
 }
 show_diodotus_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_diodotus = {
             root = {
@@ -321,9 +261,6 @@ show_diodotus_characters_button = {
 }
 show_brennus_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_brennus = {
             root = {
@@ -337,9 +274,6 @@ show_brennus_characters_button = {
 }
 show_illyrius_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_illyrius = {
             root = {
@@ -353,9 +287,6 @@ show_illyrius_characters_button = {
 }
 show_claudii_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_claudii = {
             root = {
@@ -369,9 +300,6 @@ show_claudii_characters_button = {
 }
 show_cornelii_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_cornelii = {
             root = {
@@ -383,11 +311,21 @@ show_cornelii_characters_button = {
         }
     }
 }
+show_fabii_characters_button = {
+    scope = country
+    effect = {
+        every_fabii = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
 show_demosthenid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_demosthenid = {
             root = {
@@ -401,9 +339,6 @@ show_demosthenid_characters_button = {
 }
 show_mithridates_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_mithridates = {
             root = {
@@ -417,9 +352,6 @@ show_mithridates_characters_button = {
 }
 show_superbus_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_superbus = {
             root = {
@@ -433,9 +365,6 @@ show_superbus_characters_button = {
 }
 show_vercingetorix_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_vercingetorix = {
             root = {
@@ -449,9 +378,6 @@ show_vercingetorix_characters_button = {
 }
 show_chola_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_chola = {
             root = {
@@ -465,9 +391,6 @@ show_chola_characters_button = {
 }
 show_pandya_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_pandya = {
             root = {
@@ -481,9 +404,6 @@ show_pandya_characters_button = {
 }
 show_chera_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_chera = {
             root = {
@@ -497,9 +417,6 @@ show_chera_characters_button = {
 }
 show_kalinga_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_kalinga = {
             root = {
@@ -513,9 +430,6 @@ show_kalinga_characters_button = {
 }
 show_magonid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_magonid = {
             root = {
@@ -529,9 +443,6 @@ show_magonid_characters_button = {
 }
 show_hannonid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_hannonid = {
             root = {
@@ -545,9 +456,6 @@ show_hannonid_characters_button = {
 }
 show_dido_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_dido = {
             root = {
@@ -561,9 +469,6 @@ show_dido_characters_button = {
 }
 show_blood_of_porus_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_porus = {
             root = {
@@ -577,9 +482,6 @@ show_blood_of_porus_characters_button = {
 }
 show_blood_of_vijaya_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_vijaya = {
             root = {
@@ -593,9 +495,6 @@ show_blood_of_vijaya_characters_button = {
 }
 show_blood_of_zipoetes_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_zipoetes = {
             root = {
@@ -609,9 +508,6 @@ show_blood_of_zipoetes_characters_button = {
 }
 show_ariovistid_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_ariovistid = {
             root = {
@@ -625,9 +521,6 @@ show_ariovistid_characters_button = {
 }
 show_battiad_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_battiad = {
             root = {
@@ -641,9 +534,6 @@ show_battiad_characters_button = {
 }
 show_blood_of_menander_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_menander = {
             root = {
@@ -657,9 +547,6 @@ show_blood_of_menander_characters_button = {
 }
 show_blood_of_bharata_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_bharata = {
             root = {
@@ -673,9 +560,6 @@ show_blood_of_bharata_characters_button = {
 }
 show_blood_of_aratus_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_aratus = {
             root = {
@@ -689,11 +573,21 @@ show_blood_of_aratus_characters_button = {
 }
 show_blood_of_david_characters_button = {
     scope = country
-    is_valid = {
-
-    }
     effect = {
         every_blood_of_david = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_magas_characters_button = {
+    scope = country
+    effect = {
+        every_magas = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list

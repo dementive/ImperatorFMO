@@ -1,70 +1,58 @@
-﻿alcimachid = { #Creates any/every/random/ordered_alcimachid that functions as every alcimachid character.
+﻿alcimachid = {
 	base = living_character
 	conditions = {
 		has_trait = alcimachid
 	}
 }
-antigonids = { #Creates any/every/random/ordered_antigonids that functions as every antigonids character.
+antigonids = {
 	base = living_character
 	conditions = {
 		has_trait = antigonids
 	}
 }
-antipatrid = { #Creates any/every/random/ordered_antipatrid that functions as every antipatrid character.
+antipatrid = {
 	base = living_character
 	conditions = {
 		has_trait = antipatrid
 	}
 }
-antipatrid_country = {
-	base = country
-	conditions = {
-		any_character = {
-			has_trait = antipatrid 
-		}
-	}
-}
-argeads = { #Creates any/every/random/ordered_argeads that functions as every argeads character.
+argeads = {
 	base = living_character
 	conditions = {
 		has_trait = argeads
 	}
 }
-lagids = { #Creates any/every/random/ordered_lagids that functions as every lagids character.
+lagids = {
 	base = living_character
 	conditions = {
 		has_trait = lagids
 	}
 }
-seleucids = { #Creates any/every/random/ordered_seleucids that functions as every seleucids character.
+seleucids = {
 	base = living_character
 	conditions = {
 		has_trait = seleucids
 	}
 }
-aeacidae = { #Creates any/every/random/ordered_aeacidae that functions as every aeacidae character.
+aeacidae = {
 	base = living_character
 	conditions = {
 		has_trait = aeacidae
 	}
 }
-
-
-#Invictus Lists (RIP - Here lies the death of vanilla compatibility and my ability to read the error log - 5/5/22 1:32AM)
-
-agiad = { #Creates any/every/random/ordered_agiad that functions as every agiad character.
+agiad = {
 	base = living_character
 	conditions = {
 		has_trait = agiad
 	}
 }
-achaemenid = { 
+achaemenid = {
 	base = living_character
 	conditions = {
 		has_trait = achaemenid
 	}
 }
-maurya = { 
+maurya = {
 	base = living_character
 	conditions = {
 		has_trait = maurya
@@ -146,6 +134,12 @@ cornelii = {
 	base = living_character
 	conditions = {
 		has_trait = cornelii
+	}
+}
+fabii = {
+	base = living_character
+	conditions = {
+		has_trait = fabii
 	}
 }
 demosthenid = {
@@ -266,5 +260,11 @@ blood_of_david = {
 	base = living_character
 	conditions = {
 		has_trait = blood_of_david
+	}
+}
+magas = {
+	base = living_character
+	conditions = {
+		has_trait = magas
 	}
 }

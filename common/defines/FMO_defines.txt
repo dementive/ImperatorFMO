@@ -1,7 +1,7 @@
 ﻿#FMO makes tweaks to various defines to help increase performance in any way possible so my new mechanics can shit on performance instead of the base game.
 #Also some changes to some minor things that I don't like about the game.
 NGame = {
-	END_DATE = "900.1.1"
+	END_DATE = "1000.1.1"
 	AUTOPEACE_DAYS_SINCE_LAST_BATTLE = 2160 # No automatic whitepeace if there's been a battle in the war within this defined amount
 }
 
@@ -9,7 +9,7 @@ NCountry = {
 	SLAVE_DISTRO_MIN_NUM_OF_STATES = 5  #Slaves captured will be distributed to these number of states near the capital plus capital unless there are less states, changed to 5 for less capital famines
 	POTENTIAL_MISSION_COUNT = 5 # Number of random missions to pick between
 	BASE_FORT_LIMIT_PER_STATE = 6
-	DEIFIED_RULERS_EXPIRE = 60 # Years before a deified ruler that has not been in a pantheon is forgotten and removed
+	DEIFIED_RULERS_EXPIRE = 100 # Years before a deified ruler that has not been in a pantheon is forgotten and removed
 }
 
 NCombat = {
@@ -37,6 +37,10 @@ NFamily = {
 	# MINOR FAMILY GROWTH
 	MAX_MINOR_CHARACTER_YEARLY_GROWTH = 2;
 	MINOR_FAMILY_COURT_MULTIPLIER = 0.18 #creates a larger minor pool
+}
+NDiplomacy = {
+	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 8	# 3		# Battle score bonus from winning battles 
+	WARSCORE_MAX_FROM_BATTLES = 50	# 40			# maximum amount to get from a battles .
 }
 NAI = {
 
@@ -78,4 +82,14 @@ NAI = {
 	# NOTE: I reduced this from 3 to 2. This should help with performance becuase there will be less wars planned I think.
 
 	MAX_PLANNED_WARS = 2 #How many wars can we plan at any one time? clamped between 1 and Min( Aggressivesness / 50, MAX_PLANNED_WARS )
+
+
+	#Buildings (improved buildings defines)
+	BUILD_DURING_WAR_DELAY = 6					# Months the AI will wait before building buildings while at war
+	BUILD_MONTHS_AWAY_FROM_WAR_THRESHOLD = 2	# If the AI is less than this number of months away from declaring war they will hold building construction	
+	BUILD_TROOPS_DELAY = 10						# Delay added to the build counter if the AI wants to build troops, effectively prioritizing troop construction
+	BUILD_REPEAT_TIME = 30						# Time window ( in days ) since last build date that the AI has to quickly queue another building to the front of the plan ( if it can afford it etc. ), else it will be queued at the end
+	BUILD_INSTANT_GOLD_THRESHOLD = 750.0		# If the AI has more than this much gold left after construction it will try to instantly queue another build
+	BUILD_DELAY = 10								# Default time the AI will wait before trying to build another building unless it decides to do so instantly
+	DESTROY_THRESHOLD = 0						# If the AI weight of any building is less than or equal to this the AI might destroy it
 }

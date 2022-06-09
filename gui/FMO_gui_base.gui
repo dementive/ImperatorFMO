@@ -77,14 +77,28 @@ template red_button_tiled_texture
 	texture = "gfx/interface/base_parts/background_red.dds"
 	#color = { 1 1 1 1 }
 }
+template light_red_button_tiled_texture
+{
+	texture = "gfx/interface/icons/shared_icons/background_light_red.dds"
+}
 template blue_button_tiled_texture
 {
 	texture = "gfx/interface/icons/shared_icons/background_blue.dds"
 	#color = { 1 1 1 1 }
 }
+template light_blue_button_tiled_texture
+{
+	texture = "gfx/interface/icons/shared_icons/background_light_blue.dds"
+	#color = { 1 1 1 1 }
+}
 template green_button_tiled_texture
 {
 	texture = "gfx/interface/icons/shared_icons/background_green.dds"
+	#color = { 1 1 1 1 }
+}
+template light_green_button_tiled_texture
+{
+	texture = "gfx/interface/icons/shared_icons/background_light_green.dds"
 	#color = { 1 1 1 1 }
 }
 template yellow_button_tiled_texture
@@ -357,8 +371,8 @@ types Base_GUI_Types
 
 					block "On_click" { }
 					icon = {
-						position = { 0 -3 }
-						size = { 36 36 }
+						size = { 50 50 } 
+						position = { 3 5 }
 						block "Icon" { texture = "gfx/interface/icons/_default.dds" }
 						parentanchor = center
 					}
@@ -1028,6 +1042,80 @@ types Base_GUI_Types
 			
 		}
 	}
+	type icon_button_square_light_red = widget {
+		size = { @Icon_button_size_M @Icon_button_size_M }
+		background = {
+			name = "Shadow"
+			texture = "gfx/interface/base_parts/button_square_dropshadow_x16y16bd.dds"
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			spriteType = corneredtiled
+			spriteborder = { 8 8 }
+			margin_left = 4
+			margin_bottom = 4
+			alpha = 0.01
+			
+			block "Drop_shadow" 
+			{
+				# If this is not a button/unclickable, set this visible to no.
+				visible = yes
+			}			
+		}
+		
+		background = {
+			name = "Base"
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			using = flat_background_dark
+			spriteType = Corneredtiled
+			alpha = 0.875
+		}
+		
+		button = {
+			name = "button red border"
+			using = light_red_button_tiled_texture
+			spriteType = Corneredtiled
+			spriteborder = { 200 200 }
+			gfxtype = framedbuttongfx
+			size = { 100% 100% }
+
+			framesize = { 200 200 }
+			upframe = 1
+			overframe = 2
+			downframe = 3
+			disableframe = 16		
+			block "On_click" { }
+						
+			modify_texture = {
+				name = "Alpha"
+				texture = "gfx/interface/base_parts/button2_outer_x8y8bd_alpha.dds"
+				blend_mode = alphamultiply
+				spriteType = Corneredtiled
+				spriteborder = { 8.5 8.75 }
+			}
+			using = ButtonBorderTear
+			
+			modify_texture = {
+				name = "Decay"
+				texture = "gfx/interface/base_parts/demanded_rot.dds"
+				blend_mode = alphamultiply
+				spriteType = Corneredtiled
+				alpha = 0.1
+			}
+
+			
+			icon = {
+				widgetanchor = center
+				parentanchor = center
+				
+				block "IconSize" { size = { 38 38 } }
+				block "Icon" 
+				{
+					# Override with the relevant Icon.
+					texture = "gfx/interface/icons/temp_icon.dds"
+				}	
+			}
+			
+		}
+	}
 	type icon_button_square_blue = widget {
 		size = { @Icon_button_size_M @Icon_button_size_M }
 		background = {
@@ -1103,6 +1191,81 @@ types Base_GUI_Types
 			
 		}
 	}
+	type icon_button_square_light_blue = widget {
+		size = { @Icon_button_size_M @Icon_button_size_M }
+		background = {
+			name = "Shadow"
+			texture = "gfx/interface/base_parts/button_square_dropshadow_x16y16bd.dds"
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			spriteType = corneredtiled
+			spriteborder = { 8 8 }
+			margin_left = 4
+			margin_bottom = 4
+			alpha = 0.01
+			
+			block "Drop_shadow" 
+			{
+				# If this is not a button/unclickable, set this visible to no.
+				visible = yes
+			}			
+		}
+		
+		background = {
+			name = "Base"
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			using = flat_background_dark
+			spriteType = Corneredtiled
+			alpha = 0.875
+		}
+		
+		button = {
+			name = "button red border"
+			using = light_blue_button_tiled_texture
+			spriteType = Corneredtiled
+			spriteborder = { 200 200 }
+			gfxtype = framedbuttongfx
+			size = { 100% 100% }
+
+			framesize = { 200 200 }
+			upframe = 3
+			overframe = 1
+			downframe = 3
+			disableframe = 4
+			
+			block "On_click" { }
+						
+			modify_texture = {
+				name = "Alpha"
+				texture = "gfx/interface/base_parts/button2_outer_x8y8bd_alpha.dds"
+				blend_mode = alphamultiply
+				spriteType = Corneredtiled
+				spriteborder = { 8.5 8.75 }
+			}
+			using = ButtonBorderTear
+			
+			modify_texture = {
+				name = "Decay"
+				texture = "gfx/interface/base_parts/demanded_rot.dds"
+				blend_mode = alphamultiply
+				spriteType = Corneredtiled
+				alpha = 0.1
+			}
+
+			
+			icon = {
+				widgetanchor = center
+				parentanchor = center
+				
+				block "IconSize" { size = { 38 38 } }
+				block "Icon" 
+				{
+					# Override with the relevant Icon.
+					texture = "gfx/interface/icons/temp_icon.dds"
+				}	
+			}
+			
+		}
+	}
 	type icon_button_square_green = widget {
 		size = { @Icon_button_size_M @Icon_button_size_M }
 		background = {
@@ -1133,6 +1296,81 @@ types Base_GUI_Types
 		button = {
 			name = "button red border"
 			using = green_button_tiled_texture
+			spriteType = Corneredtiled
+			spriteborder = { 200 200 }
+			gfxtype = framedbuttongfx
+			size = { 100% 100% }
+
+			framesize = { 200 200 }
+			upframe = 3
+			overframe = 1
+			downframe = 3
+			disableframe = 4
+			
+			block "On_click" { }
+						
+			modify_texture = {
+				name = "Alpha"
+				texture = "gfx/interface/base_parts/button2_outer_x8y8bd_alpha.dds"
+				blend_mode = alphamultiply
+				spriteType = Corneredtiled
+				spriteborder = { 8.5 8.75 }
+			}
+			using = ButtonBorderTear
+			
+			modify_texture = {
+				name = "Decay"
+				texture = "gfx/interface/base_parts/demanded_rot.dds"
+				blend_mode = alphamultiply
+				spriteType = Corneredtiled
+				alpha = 0.1
+			}
+
+			
+			icon = {
+				widgetanchor = center
+				parentanchor = center
+				
+				block "IconSize" { size = { 38 38 } }
+				block "Icon" 
+				{
+					# Override with the relevant Icon.
+					texture = "gfx/interface/icons/temp_icon.dds"
+				}	
+			}
+			
+		}
+	}
+	type icon_button_square_light_green = widget {
+		size = { @Icon_button_size_M @Icon_button_size_M }
+		background = {
+			name = "Shadow"
+			texture = "gfx/interface/base_parts/button_square_dropshadow_x16y16bd.dds"
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			spriteType = corneredtiled
+			spriteborder = { 8 8 }
+			margin_left = 4
+			margin_bottom = 4
+			alpha = 0.01
+			
+			block "Drop_shadow" 
+			{
+				# If this is not a button/unclickable, set this visible to no.
+				visible = yes
+			}			
+		}
+		
+		background = {
+			name = "Base"
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			using = flat_background_dark
+			spriteType = Corneredtiled
+			alpha = 0.875
+		}
+		
+		button = {
+			name = "button red border"
+			using = light_green_button_tiled_texture
 			spriteType = Corneredtiled
 			spriteborder = { 200 200 }
 			gfxtype = framedbuttongfx
