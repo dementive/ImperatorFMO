@@ -1,4 +1,20 @@
-﻿is_level_2_trade_center_at_start = {
+﻿character_artifact_trigger = {
+	OR = {
+		THIS = treasure:shield
+		THIS = treasure:shield_2
+		THIS = treasure:divine_spoon
+		THIS = treasure:axe
+		THIS = treasure:axe_2
+		THIS = treasure:armor
+		THIS = treasure:armor_2
+		THIS = treasure:gorillas
+		THIS = treasure:torc
+		THIS = treasure:helmet
+		THIS = treasure:helmet_2
+		THIS = treasure:mask
+	}
+}
+is_level_2_trade_center_at_start = {
 	province_id = 500
 	province_id = 516
 	province_id = 687

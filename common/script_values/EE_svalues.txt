@@ -1,4 +1,25 @@
-﻿#################TRADE VALUES
+﻿#Vanilla province investment scaling gold cost, increased.
+calc_governor_investment_fee = { 
+	value = 0
+	if = {
+		limit = {
+			has_variable = num_state_investments
+		}
+		add = {
+			value = 25 #vanilla = 20
+			multiply = {
+				value = var:num_state_investments
+				#multiply = {
+				#	value = var:num_state_investments
+				#	multiply = 0.5
+				#}
+			}
+		}
+	}
+}
+
+
+#################TRADE VALUES
 all_governorship_trade_svalue = {
 	value = 0
 	every_governorship_state = {

@@ -76,17 +76,6 @@ subject_interaction_individual_focus_change_button = {
     is_valid = {
 		trigger_if = {
 			limit = {
-				has_variable = recently_changed_subject_focus_var
-			}
-			#custom_tooltip = {
-			#	text = "not_summoned_war_council_recently_tt"
-				NOT = {
-					has_variable = recently_changed_subject_focus_var
-				}
-			#}
-		}
-		trigger_if = {
-			limit = {
 				NOT = { political_influence >= 25 }
 			}
 			political_influence >= 25

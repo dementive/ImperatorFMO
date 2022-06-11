@@ -22,9 +22,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:shield = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = shield_2
@@ -35,9 +32,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:shield_2 = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = divine_spoon
@@ -46,9 +40,6 @@ artifact_creation_events.1 = {
                     zeal = 3
                 }
             }
-        }
-        treasure:divine_spoon = {
-            set_variable = character_artifact
         }
         random_country = {
             create_country_treasure = {
@@ -60,9 +51,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:axe = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = axe_2
@@ -71,9 +59,6 @@ artifact_creation_events.1 = {
                     martial = 1
                 }
             }
-        }
-        treasure:axe_2 = {
-            set_variable = character_artifact
         }
         random_country = {
             create_country_treasure = {
@@ -85,9 +70,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:armor = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = armor_2
@@ -97,9 +79,6 @@ artifact_creation_events.1 = {
                     zeal = 1
                 }
             }
-        }
-        treasure:armor_2 = {
-            set_variable = character_artifact
         }
         random_country = {
             limit = {
@@ -114,9 +93,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:gorillas = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = torc
@@ -126,9 +102,6 @@ artifact_creation_events.1 = {
                     zeal = 1
                 }
             }
-        }
-        treasure:torc = {
-            set_variable = character_artifact
         }
         random_country = {
             create_country_treasure = {
@@ -140,9 +113,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:helmet = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = helmet_2
@@ -153,9 +123,6 @@ artifact_creation_events.1 = {
                 }
             }
         }
-        treasure:helmet_2 = {
-            set_variable = character_artifact
-        }
         random_country = {
             create_country_treasure = {
                 key = mask
@@ -165,9 +132,6 @@ artifact_creation_events.1 = {
                     zeal = 1
                 }
             }
-        }
-        treasure:mask = {
-            set_variable = character_artifact
         }
     }
 }
@@ -198,9 +162,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:shield = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -216,9 +177,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:shield_2 = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -232,9 +190,6 @@ artifact_creation_events.2 = {
                         zeal = 3
                     }
                 }
-            }
-            treasure:divine_spoon = {
-                set_variable = character_artifact
             }
         }
         if = {
@@ -251,9 +206,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:axe = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -267,9 +219,6 @@ artifact_creation_events.2 = {
                         martial = 1
                     }
                 }
-            }
-            treasure:axe_2 = {
-                set_variable = character_artifact
             }
         }
         if = {
@@ -286,9 +235,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:armor = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -303,9 +249,6 @@ artifact_creation_events.2 = {
                         zeal = 1
                     }
                 }
-            }
-            treasure:armor_2 = {
-                set_variable = character_artifact
             }
         }
         if = {
@@ -322,9 +265,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:gorillas = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -339,9 +279,6 @@ artifact_creation_events.2 = {
                         zeal = 1
                     }
                 }
-            }
-            treasure:torc = {
-                set_variable = character_artifact
             }
         }
         if = {
@@ -358,9 +295,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:helmet = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -376,9 +310,6 @@ artifact_creation_events.2 = {
                     }
                 }
             }
-            treasure:helmet_2 = {
-                set_variable = character_artifact
-            }
         }
         if = {
             limit = {
@@ -393,9 +324,6 @@ artifact_creation_events.2 = {
                         zeal = 1
                     }
                 }
-            }
-            treasure:mask = {
-                set_variable = character_artifact
             }
         }
     }
@@ -417,20 +345,20 @@ artifact_events.1 = {
     immediate = {
         random_country_treasure = {
             limit = {
-                has_variable = character_artifact
+                character_artifact_trigger = yes
             }
             save_scope_as = artifact_1
         }
         random_country_treasure = {
             limit = {
-                has_variable = character_artifact
+                character_artifact_trigger = yes
                 NOT = { THIS = scope:artifact_1 }
             }
             save_scope_as = artifact_2
         }
         random_country_treasure = {
             limit = {
-                has_variable = character_artifact
+                character_artifact_trigger = yes
                 NOR = { 
                     this = scope:artifact_1
                     this = scope:artifact_2
@@ -440,7 +368,7 @@ artifact_events.1 = {
         }
         random_country_treasure = {
             limit = {
-                has_variable = character_artifact
+                character_artifact_trigger = yes
                 NOR = { 
                     this = scope:artifact_1
                     this = scope:artifact_2

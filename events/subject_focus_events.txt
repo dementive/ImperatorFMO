@@ -661,10 +661,6 @@ subject_focus_individual.2 = {  #Change Subject Focus
             }
         }
     }
-    after = {
-        #No cooldown
-        remove_variable = recently_changed_subject_focus_var
-    }
 }
 
 subject_focus_individual.3 = {  #Divert Trade

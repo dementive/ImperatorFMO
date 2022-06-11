@@ -1136,15 +1136,6 @@ send_final_offer_button = { #This runs the effects and checks if Ai will accept.
 							NOT = { has_variable = ai_will_not_accept }
 						}
 				}
-				trigger_else = {
-					limit = {
-						NOT = { has_variable = ai_acceptance_var }
-					}
-					custom_tooltip = {
-						text = has_not_sent_an_offer_yet_tt
-						has_variable = ai_acceptance_var
-					}
-				}
 			}
 		}
 	}

@@ -33,3 +33,21 @@
  enables_foundry_building_tt:0 "Unlocks the #Y Workshop#! City building."
  hunting_camps_tooltip:0 "Requires #Y Wild Game#! or #Y Fur#!."
  logging_camps_tooltip:0 "Requires #Y Wood#!."
+ enclosure_building_tt:0 "Requires #Y Livestock#!."
+ nomad_camp_building_tt:0 "Requires #Y Desert#!, #Y Desert Hills#!, or #Y Oasis#! terrain."
+
+ #Roma Invicta
+commons_building:0 "Town Commons"
+crafts_workshop_building:0 "Crafts Workshop"
+sacred_enclosure_building:0 "Sacred Enclosure"
+reservoir_building:0 "Reservoir"
+council_of_elders_building:0 "Council of Elders"
+nomad_camp_building:0 "Nomad Camp"
+enclosure_building:0 "Enclosure"
+
+
+#New
+
+settlement_blacksmith:0 "Blacksmith"
+settlement_entertainment_complex:0 "Entertainment Complex"
+settlement_market:0 "Market"

@@ -1,18 +1,24 @@
-# Python script for trade goods
-
-# Add a confirmation loc to all of the trade good focus scripted guis.
-
-# Come up with 4 new province investments
-
-
 #CHANGELOG
+
+# 4 new province investments
+
+#	1. Organize Administration - Increase tax by 2%
+#	2. Increased Procription - Increase manpower by 2%
+#	3. Academic Pursuits - Increase local_research_points_modifier by 1%
+#	4. Civilization Effort - Increase local_migration_speed_modifier by 1% and local_pop_promotion_speed_modifier by 1%
+
+# Province Investments will now be permenant, losing a province will no longer remove them.
 
 # Reworked the province view, added unique terrain gfx for some territories.
 
-# Nocb cost and break truce cost has been reduced.
+# Nocb cost and break truce cost have been reduced.
 
 # Extended the end date to 1000 from 727
 
 # Integrated the Improved Buildings mod
 
+# Integrated some settlement buildings from "Roma Invicta - Buildings" mod.
+
 # Conquest wargoal should have cheaper conquer cost after 675.1.1
+
+# Metroplis territories can now "Coordinate Urban Development", permanently increasing their civilization level. This can be taken until civilization reaches 100.

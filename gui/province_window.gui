@@ -28,11 +28,12 @@ types ProvinceWindow
 				{
 					# Override with the relevant Icon.
 					texture = "gfx/interface/icons/temp_icon.dds"
-				}	
-				block "On_click" { }
+				}
+				block "On_click" { }	
 				distribute_visual_state = yes
 				alwaystransparent = no
 			}
+			block "On_click" { }
 			background = {
 				name = "Base"
 				using = flat_background_white
@@ -1373,11 +1374,11 @@ window = {
 									visible = "[ProvinceWindow.IsPlayerProvince]"
 									icon_button_square = {
 										size = { @icon_button_size @icon_button_size }
-										datacontext = "[GetScriptedGui('invest_in_state_button_military')]"
+										datacontext = "[GetScriptedGui('invest_in_state_button_administration')]"
 										blockoverride "Icon"
 										{
-											texture = "gfx/interface/icons/shared_icons/install_provincial_procurators.dds"
-											size = { @icon_size @icon_size }
+											texture = "gfx/interface/icons/shared_icons/admin_investment_icon.dds"
+											size = { 50 50 }
 										}
 										visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 										enabled = "[And( ProvinceWindow.IsPlayerProvince, ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End ))]"
@@ -1386,16 +1387,16 @@ window = {
 											onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 											clicksound = "event:/SFX/UI/Province/sfx_ui_province_improvement"
 										}
-										tooltip = "INVEST_IN_STATE_BUTTON_MILITARY_BUTTON_TOOLTIP"
+										tooltip = "INVEST_IN_STATE_BUTTON_ADMIN_BUTTON_TOOLTIP"
 										using = tooltip_se 
 									}
 									icon_button_square = {
 										size = { @icon_button_size @icon_button_size }
-										datacontext = "[GetScriptedGui('invest_in_state_button_military')]"
+										datacontext = "[GetScriptedGui('invest_in_state_button_manpower')]"
 										blockoverride "Icon"
 										{
-											texture = "gfx/interface/icons/shared_icons/install_provincial_procurators.dds"
-											size = { @icon_size @icon_size }
+											texture = "gfx/interface/icons/shared_icons/manpower_investment_icon.dds"
+											size = { 40 40 }
 										}
 										visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 										enabled = "[And( ProvinceWindow.IsPlayerProvince, ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End ))]"
@@ -1404,15 +1405,15 @@ window = {
 											onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 											clicksound = "event:/SFX/UI/Province/sfx_ui_province_improvement"
 										}
-										tooltip = "INVEST_IN_STATE_BUTTON_MILITARY_BUTTON_TOOLTIP"
+										tooltip = "INVEST_IN_STATE_BUTTON_MANPOWER_BUTTON_TOOLTIP"
 										using = tooltip_se
 									}
 									icon_button_square = {
 										size = { @icon_button_size @icon_button_size }
-										datacontext = "[GetScriptedGui('invest_in_state_button_military')]"
+										datacontext = "[GetScriptedGui('invest_in_state_button_academic')]"
 										blockoverride "Icon"
 										{
-											texture = "gfx/interface/icons/shared_icons/install_provincial_procurators.dds"
+											texture = "gfx/interface/icons/shared_icons/research_user.dds"
 											size = { @icon_size @icon_size }
 										}
 										visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
@@ -1422,16 +1423,16 @@ window = {
 											onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 											clicksound = "event:/SFX/UI/Province/sfx_ui_province_improvement"
 										}
-										tooltip = "INVEST_IN_STATE_BUTTON_MILITARY_BUTTON_TOOLTIP"
+										tooltip = "INVEST_IN_STATE_BUTTON_ACADEMIC_BUTTON_TOOLTIP"
 										using = tooltip_se
 									}
 									icon_button_square = {
 										size = { @icon_button_size @icon_button_size }
-										datacontext = "[GetScriptedGui('invest_in_state_button_military')]"
+										datacontext = "[GetScriptedGui('invest_in_state_button_civ')]"
 										blockoverride "Icon"
 										{
-											texture = "gfx/interface/icons/shared_icons/install_provincial_procurators.dds"
-											size = { @icon_size @icon_size }
+											texture = "gfx/interface/icons/shared_icons/migrate.dds"
+											size = { 35 35 }
 										}
 										visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 										enabled = "[And( ProvinceWindow.IsPlayerProvince, ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End ))]"
@@ -1440,7 +1441,7 @@ window = {
 											onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ProvinceWindow.GetState.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
 											clicksound = "event:/SFX/UI/Province/sfx_ui_province_improvement"
 										}
-										tooltip = "INVEST_IN_STATE_BUTTON_MILITARY_BUTTON_TOOLTIP"
+										tooltip = "INVEST_IN_STATE_BUTTON_CIV_BUTTON_TOOLTIP"
 										using = tooltip_se
 									}
 								}
@@ -1971,25 +1972,6 @@ window = {
 						size = { 760 173 }
 						position = { 3 0 }
 						texture = "gfx/interface/icons/terrain/desert_valley_big.dds"
-						modify_texture = {
-							name = "City_Alpha"
-							texture = "gfx/interface/base_parts/province_terrain_alpha.dds"
-							blend_mode = alphamultiply
-						}
-						tooltipwidget = {
-							terrain_tooltip_base = {
-								datacontext = "[ProvinceWindow.GetProvince.GetTerrain]"
-							}
-						}
-						using = tooltip_nw
-						
-					}
-					icon = {
-						datacontext = "[GetScriptedGui('has_semi_arid_terrain_trigger')]" 
-						visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).End )]"
-						size = { 760 173 }
-						position = { 3 0 }
-						texture = "gfx/interface/icons/terrain/semi_arid_big.dds"
 						modify_texture = {
 							name = "City_Alpha"
 							texture = "gfx/interface/base_parts/province_terrain_alpha.dds"
@@ -4013,7 +3995,7 @@ window = {
 				}				
 			}
 			textbox = {
-				visible = "[And(ProvinceWindow.IsPlayerProvince, Not(EqualTo_string( ProvinceWindow.GetProvince.GetRank.GetKey, 'city_metropolis' )))]"
+				visible = "[ProvinceWindow.IsPlayerProvince]"
 				parentanchor = left
 				position = { 325 60 }
 				using = HeaderFont
@@ -4111,6 +4093,24 @@ window = {
 				}
 				visible = "[And(ProvinceWindow.IsPlayerProvince, EqualTo_string( ProvinceWindow.GetProvince.GetRank.GetKey, 'settlement' ))]"
 				using = tooltip_above
+			}
+			icon_button_square = {
+				visible = "[And(ProvinceWindow.IsPlayerProvince, EqualTo_string( ProvinceWindow.GetProvince.GetRank.GetKey, 'city_metropolis' ))]"
+				datacontext = "[GetScriptedGui('increase_civilization_cap_button')]"
+				position = { 350 102 }
+				size = { 70 70 }
+				blockoverride "Icon"
+				{
+					texture = "gfx/interface/icons/shared_icons/coordinate_urban_development.dds"
+					size = { 60 60 }
+				}
+				tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+				blockoverride "On_click"
+				{	
+					clicksound = "event:/SFX/UI/Province/sfx_ui_province_improvement"
+					enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+					onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+				}	
 			}
 			icon_button_square_light_red = {
 				size = { 210 92 }

@@ -21,7 +21,7 @@
 			#Will only show up if you have an artifact
 			employer = {
 				any_country_treasure = {
-					has_variable = character_artifact
+					character_artifact_trigger = yes
 				}
 			}
 		}

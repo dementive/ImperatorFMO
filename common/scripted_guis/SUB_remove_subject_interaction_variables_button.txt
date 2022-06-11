@@ -44,15 +44,6 @@ remove_subject_interaction_variables_button = {
 	    }
 	    if = {
 	    	limit = {
-	    		has_variable = recently_changed_subject_focus_var
-	    	}
-	    	if = {
-	    		limit = { var:recently_changed_subject_focus_var <= 1 }
-	    		remove_variable = recently_changed_subject_focus_var
-	    	}
-	    }
-	    if = {
-	    	limit = {
 	    		has_variable = recently_forced_religion_change_var
 	    	}
 	    	if = {
@@ -85,15 +76,6 @@ remove_subject_interaction_variables_button = {
 	    	if = {
 	    		limit = { var:recently_took_manpower_var <= 1 }
 	    		remove_variable = recently_took_manpower_var
-	    	}
-	    }
-	    if = {
-	    	limit = {
-	    		has_variable = recently_civilized_tribal_vassal
-	    	}
-	    	if = {
-	    		limit = { var:recently_civilized_tribal_vassal <= 1 }
-	    		remove_variable = recently_civilized_tribal_vassal
 	    	}
 	    }
 	    if = {

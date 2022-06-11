@@ -991,35 +991,15 @@ base_window = {
 		movable = no
 		state = {
 			name = _show
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_unlock_military_tradition"
 			}	
-			next = fadein
 		}
-		
-		state = {
-			name = fadein
-			
-			animation = {
-				alpha = 1
-			}
-			duration = 0.25
-		}
-		
 		state = {
 			name = _hide
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Generic/2.0/sfx_ui_window_tab_close"
 			}
-			duration = 0.25
 		}
 		position = { 0 0 }
 		visible = "[GetVariableSystem.HasValue( 'show_martial_focus', 'yes' )]"
@@ -1661,35 +1641,17 @@ base_window = {
 		movable = no
 		state = {
 			name = _show
-			
-			animation = {
-				alpha = 0
-			}
+
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_oratory"
-			}	
-			next = fadein
-		}
-		
-		state = {
-			name = fadein
-			
-			animation = {
-				alpha = 1
 			}
-			duration = 0.25
 		}
 		
 		state = {
 			name = _hide
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Generic/2.0/sfx_ui_window_tab_close"
 			}
-			duration = 0.25
 		}
 		position = { 0 0 }
 		visible = "[GetVariableSystem.HasValue( 'show_oratory_focus', 'yes' )]"
@@ -2293,35 +2255,15 @@ base_window = {
 		movable = no
 		state = {
 			name = _show
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Character/Generic/sfx_ui_character_economy"
 			}	
-			next = fadein
-		}
-		
-		state = {
-			name = fadein
-			
-			animation = {
-				alpha = 1
-			}
-			duration = 0.25
-		}
-		
+		}		
 		state = {
 			name = _hide
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Generic/2.0/sfx_ui_window_tab_close"
 			}
-			duration = 0.25
 		}
 		position = { 0 0 }
 		visible = "[GetVariableSystem.HasValue( 'show_civic_focus', 'yes' )]"
@@ -2925,35 +2867,16 @@ base_window = {
 		movable = no
 		state = {
 			name = _show
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_religious"
 			}	
-			next = fadein
-		}
-		
-		state = {
-			name = fadein
-			
-			animation = {
-				alpha = 1
-			}
-			duration = 0.25
 		}
 		
 		state = {
 			name = _hide
-			
-			animation = {
-				alpha = 0
-			}
 			start_sound = {
 				soundeffect = "event:/SFX/UI/Generic/2.0/sfx_ui_window_tab_close"
 			}
-			duration = 0.25
 		}
 		position = { 0 0 }
 		visible = "[GetVariableSystem.HasValue( 'show_zeal_focus', 'yes' )]"
