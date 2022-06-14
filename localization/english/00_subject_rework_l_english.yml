@@ -1,5 +1,9 @@
 ﻿l_english:
 
+ SUBJECTS:0 "Subjects"
+ DIPLOMATIC:0 "Diplomatic"
+ OUR_SUBJECTS:0 "Our subjects"
+
 find_current_subject_countries_2:0 "Subject Management"
 find_current_subject_countries_2_act:0 "Manage your subject nations with various subject interactions."
 find_current_subject_countries_2_select_title:0 "Subject Management"

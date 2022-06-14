@@ -1,4 +1,62 @@
+#TODO
+
+#Diplomatic interactions
+
+
+#Art
+
+#SUBJECT INTERACTIONS
+
+# Levy Soldiers subject interaction icon (take manpower from a subject)
+
+# Contribute to Capital subject interateraction icon (take a few pops from a subject)
+
+# Force into War subject interaction icon (force rebellious subject into all current wars)
+
+# Divert Trade subject interaction icon (take some trade from your subject)
+
+# Bestow Gifts subject interaction icon (give gifts to a subject to increase their opinion)
+
+# Change subject focus icons (set a something for a subject to focus on)
+
+#SPECIAL POPS
+
+# Send priest icon (send a priest to a province to convert help convert the pops)
+
+# Send merchant icon (send a merchant to help make more money in a province)
+
+# Send Architect icon (send a architect to help build stuff in a province)
+
+# Send artists icon (send an artist to a province to help assimilate and make pops happy)
+
+
+#PROVINCE INVESTMENTS
+
+# Civilization Effort (increase pop promotion/migration)
+
+# Academic Pursuit (increase local research points)
+
+# Increase Proscription (increase manpower in the province)
+
+# Organize Administration (increase tax in the province)
+
+
+#MISC
+
+# An icon that can be used to represent the regional trade centers.
+
+# An icon that is clicked on to open the view that shows a characters artifacts.
+
+# An icon to represent character focus experience (different than statemenship)
+
+
+
+
+
+
 #CHANGELOG
+
+# Moved subject interactions into diplo view, they are no longer opened with a character interaction.
 
 # 4 new province investments
 
@@ -22,3 +80,6 @@
 # Conquest wargoal should have cheaper conquer cost after 675.1.1
 
 # Metroplis territories can now "Coordinate Urban Development", permanently increasing their civilization level. This can be taken until civilization reaches 100.
+
+
+# Fixed bug where artifact character interaction wouldn't show up
