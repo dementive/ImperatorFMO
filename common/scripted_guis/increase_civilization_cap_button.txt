@@ -6,7 +6,7 @@
 
 	saved_scopes = {
 		player
-	}
+	} 
 
 	is_valid = {
 		trigger_if = {
@@ -52,10 +52,26 @@
 			has_city_status = yes
 		}
 		civilization_value < 100
+
+		add_civilization_scaling_gold_cost_trigger = yes
 	}
 	effect = {
 		hidden:scope:player = {
-			pay_price = price_local_civ_button
+			if = {
+				limit = {
+					has_variable = free_investments
+					var:free_investments > 0
+				}
+				custom_tooltip = "reduce_investments_by_1"
+				change_variable = {
+					name = free_investments
+					add = -1
+				}
+			}
+			else = {
+				pay_price = price_local_civ_button
+				root = { add_civilization_scaling_gold_cost_effect = yes }
+			}
 		}
 		custom_tooltip = "city_output_reduced_ttt"
 		show_as_tooltip = {

@@ -1,4 +1,55 @@
-﻿set_trade_good_variable_effect = {
+﻿add_civilization_scaling_gold_cost_effect = {
+    if = {
+        limit = {
+            has_variable = num_civ_investments
+            scope:player = {
+                is_ai = no
+            }
+        }
+        scope:player = {
+            hidden_effect = {
+                add_treasury = {
+                    value = root.calc_civ_cap_fee
+                    multiply = -1
+                }
+            }
+            custom_tooltip = CIVILIZATION_GOLD_SCALE_TT
+        }
+        hidden_effect = {
+            every_state_province = { 
+                limit = {
+                    exists = holding_owner
+                }
+                holding_owner = {
+                    add_gold = {
+                        value = root.calc_civ_cap_fee
+                        divide = 4
+                    }
+                }
+            }
+        }
+    }
+}
+increment_civ_investment_count = {
+    if = {
+        limit = {
+            NOT = {
+                has_variable = num_civ_investments
+            }
+        }
+        set_variable = {
+            name = num_civ_investments
+            value = 1
+        }
+    }
+    else = {
+        change_variable = {
+            name = num_civ_investments
+            add = 1
+        }
+    }
+}
+set_trade_good_variable_effect = {
     switch = {
         trigger = trade_goods
         amber = { set_variable = amber }

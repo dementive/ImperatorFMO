@@ -150,6 +150,7 @@ state_improvement.5 = { #City level civilization
 		owner = {
 			trigger_event = { id = state_improvement.18 }
 		}
+		increment_civ_investment_count = yes
 	}
 }
 

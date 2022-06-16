@@ -22,3 +22,9 @@ dynasty_member_on_throne = {
 	value = 50
 	yearly_decay = 1
 }
+
+# Stance
+
+domination_stance_opmod = {
+	value = -100
+}

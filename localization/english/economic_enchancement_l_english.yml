@@ -1,5 +1,20 @@
 ﻿l_english:
+
+#Stances
+
+cooperative_stance:0 "Cooperative Stance"
+cooperative_stance_desc:0 "A #Y Cooperative#! diplomatic stance means that our nation will do everything possible to cooperate with our neighbors to prevent conflict."
+domination_stance:0 "Domination Stance"
+domination_stance_desc:0 "A #Y Domination#! diplomatic stance means that our nation is soley focues on dominating those around use. All who see our armies tremble in fear, for they know, soon they will be conquered.\n\n#R All nations will have -100 opinion of us#!"
+supremacist_stance:0 "Supremacist Stance"
+supremacist_stance_desc:0 "A #Y Supremacist#! diplomatic stance means that our people hold themselves above all others, increasing the rate pops will assimilate to our primary culture.\n\n#Y Every year that this stance is active there is a 75% chance 1 pop in the capital region will assimilate to our culture#!."
+
+domination_stance_opmod:0 "Domination Stance"
+send_gift_cost_modifier:0 "Send Gift Cost"
+
 #ECONOMY
+
+CIVILIZATION_GOLD_SCALE_TT:0 "Our current investments here add an additional cost of [SCOPE.ScriptValue('calc_civ_cap_fee')|R]@gold!\nThis money will be given to the holding owner if ther is one."
 
 GOV_TRADE_TT:0 "Goods produced by us in [Governorship.GetName] is: #Y [GuiScope.SetRoot( Governorship.MakeScope ).ScriptValue('all_governorship_trade_svalue')|0]#!\nTotal goods produced in [Governorship.GetName] is: #Y [GuiScope.SetRoot( Governorship.GetRegion.MakeScope ).ScriptValue('all_region_trade_svalue')|0]#!"
 GOV_TRADE_VALUE_TT:0 "[Governorship.GetCapital.GetOwner.GetName|Y] has #Y [GuiScope.SetRoot( Governorship.MakeScope ).ScriptValue('percentage_of_trade_value_in_region_svalue')|0%]#! of the trade value in [Governorship.GetName|Y]\n\n#TF Trade value is a measure of the total goods produced and commerce value in a region. If we have 90% of the trade value in a region then we will gain a commerce modifier.\nFor every region that is over 90% the modifier will increase in strength. If we have 90% trade power in 25 or more regions then [Governorship.GetCapital.GetOwner.GetName] will be proclaimed the Trade Hegemon."

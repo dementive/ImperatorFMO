@@ -1,9 +1,12 @@
-#TODO
+TODO
+
+#Make Ideas eu4 style with groups.
 
 #Diplomatic interactions
 
+#Hybrid Cultures with a massive script
 
-#Art
+Art that would be nice to have
 
 #SUBJECT INTERACTIONS
 
@@ -40,6 +43,13 @@
 
 # Organize Administration (increase tax in the province)
 
+#DIPLOMATIC STANCES
+
+# cooperative_stance
+
+# domination_stance
+
+# supremacist_stance
 
 #MISC
 
@@ -54,7 +64,9 @@
 
 
 
-#CHANGELOG
+CHANGELOG
+
+# Added 3 new Diplomatic Stances
 
 # Moved subject interactions into diplo view, they are no longer opened with a character interaction.
 
@@ -77,9 +89,10 @@
 
 # Integrated some settlement buildings from "Roma Invicta - Buildings" mod.
 
+# Got some building icons from Pureon
+
 # Conquest wargoal should have cheaper conquer cost after 675.1.1
 
-# Metroplis territories can now "Coordinate Urban Development", permanently increasing their civilization level. This can be taken until civilization reaches 100.
-
+# Metroplis territories can now "Coordinate Urban Development", permanently increasing their civilization level. This can be taken until civilization reaches 100 but has a scaling cost.
 
 # Fixed bug where artifact character interaction wouldn't show up

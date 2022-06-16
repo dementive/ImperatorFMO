@@ -475,6 +475,8 @@ base_window = {
 		################################################################
 		vbox = {
 			flowcontainer = {
+				visible = "[Not(IsDataModelEmpty(Player.MakeScope.GetList('player_subjects')))]"
+				#datamodel = "[Player.MakeScope.GetList('player_subjects')]"
 				flowcontainer = {
 					parentanchor = bottom
 					text_button_square_highlighted = {
@@ -509,6 +511,7 @@ base_window = {
 				}
 
 				scrollarea = {
+					visible = "[Not(IsDataModelEmpty(Player.MakeScope.GetList('player_subjects')))]"
 					layoutpolicy_vertical = expanding
 					using = VerticalScrollAreaCutOff
 
@@ -2308,8 +2311,8 @@ base_window = {
 	base_sub_window = {
 			layer = top
 			visible = "[DiplomaticView.IsShowStances]"
-			size = { 420 234 } 
-			position = { 638 666 }
+			size = { 420 324 } 
+			position = { 638 566 }
 			name = "stance_selector"
 
 			blockoverride "Title_text"
@@ -2327,9 +2330,9 @@ base_window = {
 			}
 
 			scrollarea = {
-				position = { 0 44 }
+				position = { 0 38 }
 				parentanchor = hcenter
-				size = { 388 224 }
+				size = { 388 274 }
 
 				scrollbarpolicy_horizontal = always_off
 							

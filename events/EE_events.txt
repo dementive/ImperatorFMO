@@ -13,11 +13,11 @@ ee_events.1 = { #Governorship Window
         root = {
             every_governorships = {
                 root = {
-                    add_to_variable_list = { 
+                    add_to_variable_list = {
                         name = player_governorships
                         target = prev
                     }
-                }           
+                }
             }
         }
         #This variable is what determines what gui screen to show
@@ -26,7 +26,7 @@ ee_events.1 = { #Governorship Window
     	set_variable = screen_1
     }
 
-    option = {      
+    option = {
         name = ee_events.1.a
         remove_variable = screen_1
         every_in_list = {
@@ -46,7 +46,7 @@ ee_events.1 = { #Governorship Window
                     target = prev
                 }
             }
-        }   
+        }
     }
 }
 
@@ -63,7 +63,7 @@ ee_events.2 = { #Trade Good Bonuses
     	set_variable = screen_2
     }
 
-    option = {      
+    option = {
         name = ee_events.2.a
         remove_variable = screen_2
     }
@@ -82,7 +82,7 @@ ee_events.3 = { #Bloodline View
         set_variable = screen_3
     }
 
-    option = {      
+    option = {
         name = ee_events.3.a
         remove_variable = screen_3
     }
@@ -101,17 +101,17 @@ ee_events.4 = { #Arifact View
         current_ruler = {
             every_character_treasure = {
                 root = {
-                    add_to_variable_list = { 
+                    add_to_variable_list = {
                         name = player_artifacts
                         target = prev
-                    }                    
+                    }
                 }
             }
         }
         set_variable = screen_4
     }
 
-    option = {      
+    option = {
         name = ee_events.4.a
         remove_variable = screen_4
         every_in_list = {
@@ -228,7 +228,7 @@ ee_economy_events.1 = {
                 }
                 add_permanent_province_modifier = {
                     name = regional_center_of_trade_level_2
-                }        
+                }
             }
             if = {
                 limit = {
@@ -242,7 +242,7 @@ ee_economy_events.1 = {
                 }
                 add_permanent_province_modifier = {
                     name = regional_center_of_trade_level_3
-                }             
+                }
             }
         }
         every_region = {
@@ -610,7 +610,7 @@ ee_economy_events.2 = {
 ee_economy_events.3 = {
     type = country_event
     hidden = yes
-    
+
     left_portrait = current_ruler
 
     trigger = {
@@ -678,7 +678,7 @@ ee_economy_events.3 = {
                     duration = -1
                     mode = add_and_extend
                 }
-            }            
+            }
         }
         else_if = {
             limit = {
@@ -724,7 +724,7 @@ ee_economy_events.3 = {
                     duration = -1
                     mode = add_and_extend
                 }
-            }            
+            }
         }
         else_if = {
             limit = {
@@ -780,7 +780,7 @@ ee_economy_events.3 = {
                     duration = -1
                     mode = add_and_extend
                 }
-            }            
+            }
         }
         else_if = {
             limit = {
@@ -846,7 +846,7 @@ ee_economy_events.3 = {
                     duration = -1
                     mode = add_and_extend
                 }
-            }            
+            }
         }
         else_if = {
             limit = {
@@ -1436,7 +1436,7 @@ ee_economy_events.4 = {
                 name = trading_in_wood_mod
                 duration = -1
             }
-        } 
+        }
         if = {
             limit = {
                 player_sugar_produced >= 75_percent_of_world_sugar
@@ -1445,7 +1445,7 @@ ee_economy_events.4 = {
                 name = trading_in_sugar_mod
                 duration = -1
             }
-        }  
+        }
         if = {
             limit = {
                 player_cedar_produced >= 75_percent_of_world_cedar
@@ -1518,7 +1518,7 @@ ee_economy_events.5 = {
     immediate = {
         add_permanent_province_modifier = {
             name = regional_center_of_trade_level_2
-        } 
+        }
         remove_province_modifier = regional_center_of_trade_level_1
     }
 }
@@ -1528,7 +1528,7 @@ ee_economy_events.6 = {
     immediate = {
         add_permanent_province_modifier = {
             name = regional_center_of_trade_level_3
-        } 
+        }
         remove_province_modifier = regional_center_of_trade_level_2
     }
 }
@@ -1538,7 +1538,7 @@ ee_economy_events.7 = {
     immediate = {
         add_permanent_province_modifier = {
             name = regional_center_of_trade_level_4
-        } 
+        }
         remove_province_modifier = regional_center_of_trade_level_3
     }
 }
@@ -1548,7 +1548,7 @@ ee_economy_events.8 = {
     immediate = {
         add_permanent_province_modifier = {
             name = regional_center_of_trade_level_5
-        } 
+        }
         remove_province_modifier = regional_center_of_trade_level_4
     }
 }

@@ -1,0 +1,112 @@
+yearly_country_pulse = {
+
+	on_actions = {
+		FMO_diplo_stance_effects
+	}
+	effect = {
+		#Vanilla
+		if = {
+			limit = { NOT = { has_global_variable = stormbringer } }
+			random_country = {
+				limit = {
+					num_of_cities >= 25
+					war = no
+				}
+				trigger_event = {
+					id = storm.1 #Seas
+					days = { 10 60 }
+				}
+				trigger_event = {
+					id = storm.11 #Deserts
+					days = { 10 60 }
+				}
+				trigger_event = {
+					id = storm.21 #Snowstorms
+				}
+				trigger_event = {
+					id = storm.25
+					days = 2
+				}
+			}
+			set_global_variable = stormbringer
+		}
+		#seasonal food
+		trigger_event = { id = harvest.1 days = 333 }
+		trigger_event = { id = harvest.2 days = 148 }
+		trigger_event = { id = monsoon.1 days = 148 }
+	}
+}
+
+FMO_diplo_stance_effects = {
+	trigger = {
+		is_ai = no
+	}
+	effect = {
+		if = {
+			limit = {
+				diplomatic_stance = supremacist_stance
+			}
+			random = {
+				chance = 75
+				capital_scope.governorship = {
+					random_governorship_state = {
+						limit = {
+							any_state_province = {
+								any_pops_in_province = {
+									pop_culture != root.culture
+								}
+							}
+						}
+						random_state_province = {
+							limit = {
+								any_pops_in_province = {
+									pop_culture != root.culture
+								}
+							}
+							random_pops_in_province = {
+								limit = {
+									pop_culture != root.culture
+								}
+								set_pop_culture = root.culture
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				diplomatic_stance = domination_stance
+			}
+			every_country = {
+				add_opinion = {
+					modifier = domination_stance_opmod
+					target = root
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { diplomatic_stance = domination_stance }
+				any_country = {
+					has_opinion = {
+						modifier = domination_stance_opmod
+						target = root
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_opinion = {
+						modifier = domination_stance_opmod
+						target = root
+					}
+				}
+				remove_opinion = {
+					modifier = domination_stance_opmod
+					target = root
+				}
+			}
+		}
+	}
+}

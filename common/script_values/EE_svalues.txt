@@ -18,6 +18,21 @@ calc_governor_investment_fee = {
 	}
 }
 
+calc_civ_cap_fee = { 
+	value = 0
+	if = {
+		limit = {
+			has_variable = num_civ_investments
+		}
+		add = {
+			value = 25 #vanilla = 20
+			multiply = {
+				value = var:num_civ_investments
+			}
+		}
+	}
+}
+
 
 #################TRADE VALUES
 all_governorship_trade_svalue = {
