@@ -14,4 +14,4 @@ architects_in_province_mod = {
 artists_in_province_mod = {
 	local_pop_assimilation_speed = 1
 	local_happiness_for_same_culture_modifier = 0.025
-}
+} 

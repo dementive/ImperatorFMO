@@ -14,7 +14,7 @@ send_gift_cost_modifier:0 "Send Gift Cost"
 
 #ECONOMY
 
-CIVILIZATION_GOLD_SCALE_TT:0 "Our current investments here add an additional cost of [SCOPE.ScriptValue('calc_civ_cap_fee')|R]@gold!\nThis money will be given to the holding owner if ther is one."
+CIVILIZATION_GOLD_SCALE_TT:0 "Our current investments here add an additional cost of [SCOPE.ScriptValue('calc_civ_cap_fee')|R]@gold!\nThis money will be given to the holding owner if their is one."
 
 GOV_TRADE_TT:0 "Goods produced by us in [Governorship.GetName] is: #Y [GuiScope.SetRoot( Governorship.MakeScope ).ScriptValue('all_governorship_trade_svalue')|0]#!\nTotal goods produced in [Governorship.GetName] is: #Y [GuiScope.SetRoot( Governorship.GetRegion.MakeScope ).ScriptValue('all_region_trade_svalue')|0]#!"
 GOV_TRADE_VALUE_TT:0 "[Governorship.GetCapital.GetOwner.GetName|Y] has #Y [GuiScope.SetRoot( Governorship.MakeScope ).ScriptValue('percentage_of_trade_value_in_region_svalue')|0%]#! of the trade value in [Governorship.GetName|Y]\n\n#TF Trade value is a measure of the total goods produced and commerce value in a region. If we have 90% of the trade value in a region then we will gain a commerce modifier.\nFor every region that is over 90% the modifier will increase in strength. If we have 90% trade power in 25 or more regions then [Governorship.GetCapital.GetOwner.GetName] will be proclaimed the Trade Hegemon."

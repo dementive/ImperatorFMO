@@ -262,6 +262,7 @@ ee_economy_events.1 = {
                         }
                     }
                     order_by = total_population
+                    check_range_bounds = no
                     max = 3
                     add_permanent_province_modifier = {
                         name = regional_center_of_trade_level_1
@@ -282,6 +283,7 @@ ee_economy_events.1 = {
                         }
                     }
                     order_by = total_population
+                    check_range_bounds = no
                     max = 2
                     add_permanent_province_modifier = {
                         name = regional_center_of_trade_level_1
@@ -1583,6 +1585,7 @@ ee_economy_events.9 = {
                     }
                 }
                 order_by = total_population
+                check_range_bounds = no
                 max = 1
                 random_list = {
                     3 = {
