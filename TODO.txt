@@ -1,98 +1,124 @@
-TODO
+----- TODO -----
 
-#Make Ideas eu4 style with groups.
+ Fix progress bar tooltips that only go halfway
 
-#Diplomatic interactions
+ Make character focus modifiers more interesting
 
-#Hybrid Cultures with a massive script
+ Find a new icon for the urban development button
 
-Art that would be nice to have
+----- Art that would be nice to have -----
 
-#SUBJECT INTERACTIONS
+----- SUBJECT INTERACTIONS -----
 
-# Levy Soldiers subject interaction icon (take manpower from a subject)
+ Levy Soldiers subject interaction icon (take manpower from a subject)
 
-# Contribute to Capital subject interateraction icon (take a few pops from a subject)
+ Contribute to Capital subject interateraction icon (take a few pops from a subject)
 
-# Force into War subject interaction icon (force rebellious subject into all current wars)
+ Force into War subject interaction icon (force rebellious subject into all current wars)
 
-# Divert Trade subject interaction icon (take some trade from your subject)
+ Divert Trade subject interaction icon (take some trade from your subject)
 
-# Bestow Gifts subject interaction icon (give gifts to a subject to increase their opinion)
+ Bestow Gifts subject interaction icon (give gifts to a subject to increase their opinion)
 
-# Change subject focus icons (set a something for a subject to focus on)
+ Change subject focus icons (set a something for a subject to focus on)
 
-#SPECIAL POPS
+----- SPECIAL POPS -----
 
-# Send priest icon (send a priest to a province to convert help convert the pops)
+ Send priest icon (send a priest to a province to convert help convert the pops)
 
-# Send merchant icon (send a merchant to help make more money in a province)
+ Send merchant icon (send a merchant to help make more money in a province)
 
-# Send Architect icon (send a architect to help build stuff in a province)
+ Send Architect icon (send a architect to help build stuff in a province)
 
-# Send artists icon (send an artist to a province to help assimilate and make pops happy)
-
-
-#PROVINCE INVESTMENTS
-
-# Civilization Effort (increase pop promotion/migration)
-
-# Academic Pursuit (increase local research points)
-
-# Increase Proscription (increase manpower in the province)
-
-# Organize Administration (increase tax in the province)
-
-#DIPLOMATIC STANCES
-
-# cooperative_stance
-
-# domination_stance
-
-# supremacist_stance
-
-#MISC
-
-# An icon that can be used to represent the regional trade centers.
-
-# An icon that is clicked on to open the view that shows a characters artifacts.
-
-# An icon to represent character focus experience (different than statemenship)
+ Send artists icon (send an artist to a province to help assimilate and make pops happy)
 
 
+----- PROVINCE INVESTMENTS -----
 
 
+ Civilization Effort (increase pop promotion/migration)
+
+ Academic Pursuit (increase local research points)
+
+ Increase Proscription (increase manpower in the province)
+
+ Organize Administration (increase tax in the province)
+
+DIPLOMATIC STANCES
+
+ cooperative_stance
+
+ domination_stance
+
+ supremacist_stance
+
+ ----- MISC -----
+
+ An icon that can be used to represent the regional trade centers.
+
+ An icon that is clicked on to open the view that shows a characters artifacts.
+
+ An icon to represent character focus experience (different than statemenship)
 
 
-CHANGELOG
+----- CHANGELOG -----
 
-# Added 3 new Diplomatic Stances
+ Added 3 new Diplomatic Stances
 
-# Moved subject interactions into diplo view, they are no longer opened with a character interaction.
+ Moved subject interactions into diplo view, they are no longer opened with a character interaction.
 
-# 4 new province investments
+ 4 new province investments
 
-#	1. Organize Administration - Increase tax by 2%
-#	2. Increased Procription - Increase manpower by 2%
-#	3. Academic Pursuits - Increase local_research_points_modifier by 1%
-#	4. Civilization Effort - Increase local_migration_speed_modifier by 1% and local_pop_promotion_speed_modifier by 1%
+	1. Organize Administration - Increase tax by 2%
+	2. Increased Procription - Increase manpower by 2%
+	3. Academic Pursuits - Increase local_research_points_modifier by 1%
+	4. Civilization Effort - Increase local_migration_speed_modifier by 1% and local_pop_promotion_speed_modifier by 1%
 
-# Province Investments will now be permenant, losing a province will no longer remove them.
+ Province Investments will now be permenant, losing a province will no longer remove them.
 
-# Reworked the province view, added unique terrain gfx for some territories.
+ Reworked the province view, added unique terrain gfx for some territories.
 
-# Nocb cost and break truce cost have been reduced.
+ Nocb cost and break truce cost have been reduced.
 
-# Extended the end date to 1000 from 727
+ Extended the end date to 1000 from 727
 
-# Integrated the Improved Buildings mod
+ Integrated the Improved Buildings mod
 
-# Integrated some settlement buildings from "Roma Invicta - Buildings" mod.
+ Integrated some settlement buildings from "Roma Invicta - Buildings" mod.
 
-# Got some building icons from Pureon
+ Got some building icons from Pureon
 
-# Conquest wargoal should have cheaper conquer cost after 675.1.1
+ Conquest wargoal should have cheaper conquer cost after 675.1.1
 
-# Metroplis territories can now "Coordinate Urban Development", permanently increasing their civilization level. This can be taken until civilization reaches 100 but has a scaling cost.
+ Metroplis territories can now "Coordinate Urban Development", permanently increasing their civilization level. This can be taken until civilization reaches 100 but has a scaling cost.
 
-# Fixed bug where artifact character interaction wouldn't show up
+ Fixed bug where artifact character interaction wouldn't show up
+
+ Decreased the cost of religious conversions
+
+Settlement:
+
+1. Enclosure
+2. Hunting Camps
+3. Logging Camps
+4. Blacksmith
+5. Market
+6. Nomad Camp
+7. Council of Elders
+8. Reservoir
+9. Entertainment Complex
+10. Town Commons
+11. Crafts Workshop
+12. Villa Estate
+
+
+City:
+
+1. Citizen District
+2. Freemen District
+3. Slave Trader
+4. Noble District
+5. Farmer's Market
+6. Tavern
+7. Shrine
+8. Shipyard

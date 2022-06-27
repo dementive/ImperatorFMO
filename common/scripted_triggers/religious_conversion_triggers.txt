@@ -1,0 +1,79 @@
+﻿#Religion Conversion Triggers
+
+potential_change_religion_trigger = { #Used by all decisions to change Religion
+	NOT = { religion = $RELIGION$ }
+	OR = {
+		any_character = {
+			has_religion = $RELIGION$
+			prisoner = no
+			country = employer
+			is_adult = yes
+			trigger_if = {
+				limit = {
+					employer = {
+						gender_equality = no
+					}
+				}
+				is_female = no
+			}
+			NOT = { has_character_modifier = foreign_citizen }
+			NOT = { has_trait = olympic_competitor }
+		}
+		any_owned_province = {
+			count >= 5
+			dominant_province_religion = $RELIGION$
+		}
+	}
+}
+
+could_change_religion_trigger = { #Used by all decisions to change Religion
+	political_influence >= 135
+	trigger_if = { #monarchy
+		limit = { is_monarchy = yes }
+		legitimacy >= 70
+	}
+	trigger_else_if = { #Republic
+		limit = { is_republic = yes }
+		has_senate_approval >= 0.3
+	}
+	trigger_else = { #Tribe
+		any_character = {
+			count = all
+			OR = {
+				is_clan_chief = no
+				loyalty >= 60
+			}
+		}
+	}
+	NOT = {
+		has_country_modifier = recent_convert_modifier
+	}
+
+	OR = {
+		hidden:capital_scope = {
+			custom_tooltip = {
+				text = big_religion_in_capital_tooltip
+				any_pops_in_province = {
+					count >= majority_of_free_men_in_capital_svalue
+					pop_religion = $RELIGION$
+					NOT = { pop_type = slaves }
+				}
+			}
+		}
+		AND = {
+			custom_tooltip = {
+				text = big_religion_in_country_tooltip
+				religion_pops_in_country = {
+					target = $RELIGION$
+					value >= 20
+				}
+			}
+			custom_tooltip = {
+				text = pantheon_deity_tooltip
+				any_pantheon_deity = {
+					deity_religion = $RELIGION$
+				}
+			}
+		}
+	}
+}
