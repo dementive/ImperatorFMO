@@ -1,4 +1,13 @@
-﻿remove_bloodline_list_variables_button = {
+﻿char_can_royal_marry_trigger = {
+    scope = character
+    is_shown = {
+        age > 10
+        is_ruler = no
+        is_married = no
+    }
+}
+
+remove_bloodline_list_variables_button = {
     scope = country
     effect = {
         every_in_list = {
