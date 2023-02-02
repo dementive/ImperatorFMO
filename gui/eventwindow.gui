@@ -266,6 +266,17 @@ base_window = {
 							tooltip = "[EventWindow.GetDebugInfo]"
 							alpha = 0.8
 						}
+						icon = {
+							name = "event_theme_icon"
+							size = { 600 239 }
+							texture = "[EventWindow.GetThemeIcon]"
+							tooltip = "[EventWindow.GetDebugInfo]"
+							modify_texture = {
+								texture = "gfx/interface/base_parts/event_picture_alpha_big.dds"
+								blend_mode = alphamultiply
+							}
+							alpha = 0.8
+						}
 					}
 
 					scrollarea = {
@@ -332,6 +343,17 @@ base_window = {
 							tooltip = "[EventWindow.GetDebugInfo]"
 							alpha = 0.8
 						}
+						icon = {
+							name = "event_theme_icon"
+							size = { 600 239 }
+							texture = "[EventWindow.GetThemeIcon]"
+							tooltip = "[EventWindow.GetDebugInfo]"
+							modify_texture = {
+								texture = "gfx/interface/base_parts/event_picture_alpha_big.dds"
+								blend_mode = alphamultiply
+							}
+							alpha = 0.8
+						}
 					}
 					widget = { size = { 0 10 } }
 					scrollarea = {
@@ -368,6 +390,13 @@ base_window = {
 				}
 				widget = {
 					size = { 0 34 }
+
+					state = {
+						name = show_hotkey_marker
+						trigger_when = "[Player.Exists]"
+
+						on_start = "[PdxGuiWidget.AccessParent.FindChild('hotkey_marker').Show]"
+					}
 				}
 				fixedgridbox = {
 					parentanchor = hcenter
@@ -378,6 +407,56 @@ base_window = {
 					item = {
 						container = {
 							using = eventbutton
+
+							state = {
+								name = first_button
+								on_start = "[EventOption.Select]"
+							}
+
+							# state = {
+							# 	name = trigger_hotkey_marker
+							# 	#datacontext = "[GetScriptedGui('confirm_hotkey_minor')]"
+							# 	#trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							#
+							# 	on_start = "[PdxGuiTriggerAllAnimations('show_hotkey_marker')]"
+							# }
+
+							button = {
+								name = "hotkey_marker"
+								position = { 16 0 }
+								size = { 30 30 }
+								visible = no
+								tooltip = "enter_hotkey"
+
+								gfxtype = togglepushbuttongfx
+								shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+								framesize = { 40 40 }
+								datacontext = "[GetScriptedGui('confirm_hotkey')]"
+								down = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+								button = { # this actually triggers the button
+									size = { 0 0 }
+									shortcut = "confirm"
+									datacontext = "[GetScriptedGui('confirm_hotkey')]"
+									visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[PdxGuiWidget.AccessParent.AccessParent.TriggerAnimation('first_button')]"
+								}
+
+								icon = {
+									texture = "gfx/icons/confirm.dds"
+									size = { 18 18 }
+									parentanchor = center
+									alpha = 0.9
+									visible = "[Not(EventOption.IsHighlighted)]"
+								}
+
+								icon = {
+									texture = "gfx/icons/confirm_blue.dds"
+									visible = "[EventOption.IsHighlighted]"
+									size = { 18 18 }
+									parentanchor = center
+								}
+							}
 						}
 					}
 				}

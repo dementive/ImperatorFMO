@@ -30,10 +30,6 @@
 			}
 			set_global_variable = stormbringer
 		}
-		#seasonal food
-		trigger_event = { id = harvest.1 days = 333 }
-		trigger_event = { id = harvest.2 days = 148 }
-		trigger_event = { id = monsoon.1 days = 148 }
 	}
 }
 
