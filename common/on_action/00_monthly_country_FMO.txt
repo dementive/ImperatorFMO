@@ -3,21 +3,6 @@
 		monthly_check_for_100_experience
 		monthly_reparation_payments_on_action
 	}
-
-	effect = {
-		if = {
-			limit = {
-				OR = {
-					has_variable = me_ant_start_flag
-					has_variable = me_mac_start_flag
-					tag = EGY
-					tag = SEL
-				}
-				war_with = c:TRE
-			}
-			trigger_event = me_thrace_3_new_philhellene_policy.201
-		}
-	}
 }
 monthly_reparation_payments_on_action = {
 	effect = {

@@ -16,6 +16,10 @@ chinese_bloodlines = ["qin_bloodline","chu_bloodline","wei_bloodline","zhou_bloo
 
 lotr_bloodlines = ["strong_blood_of_numenor", "blood_of_numenor", "house_of_gil_galad", "house_of_elrond", "house_of_galadriel", "house_of_cirdan", "elf_lord", "blood_of_isildur", "blood_of_anarion", "blood_of_aldarion", "blood_of_thorondur", "house_of_hurin", "prince_of_numenor", "blood_of_eorl", "saruman", "line_of_durin"]
 
-for i in lotr_bloodlines:
-	#print_bloodlines_scripted_lists(i)
-	print_bloodlines_scripted_guis(i)
+lotr_rings = ["vilya", "nenya", "narya", "Angya", "Sindya", "Taurya", "Vanya", "Urya", "Tuclya", "Tinya", "orom", "sakhla", "adash", "juru", "mebat", "khanto", "sapthan", "nitir", "uri", "owns_one_ring_trait"]
+
+lotr_races = ["elf", "dwarf", "orc", "halfling", "maia", "nazgul"]
+
+for i in lotr_races:
+	print_bloodlines_scripted_lists(i)
+	#print_bloodlines_scripted_guis(i)

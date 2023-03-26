@@ -1648,6 +1648,636 @@ base_window = { ####Currently unused in vanilla
 								alpha = 0.5
 							}
 						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 205
+							container = {}
+							container = {
+								textbox = {
+									name = "Text"
+									autoresize = yes
+									font = HeaderFont
+									fontsize = 32
+									using = BaseFontM	
+									using = Black_FontColor
+									alpha = 0.8
+									fontsize_min = 12
+									text = "Rings"
+								}
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_vilya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/vilya.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Vilya"
+									position = { 35 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_VILYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_nenya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/nenya.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Nenya"
+									position = { 31 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_NENYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_narya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/narya.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Narya"
+									position = { 34 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_NARYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_angya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/angya.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Angya"
+									position = { 33 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_ANGYA_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_sindya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_dwarven.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Sindya"
+									position = { 35 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_SINDYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_taurya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thranduil.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Taurya"
+									position = { 31 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_TAURYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_vanya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thorin.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Vanya"
+									position = { 34 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_VANYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_urya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_nazgul.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Urya"
+									position = { 33 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_URYA_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_tuclya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thranduil.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Tuclya"
+									position = { 30 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_TUCLYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_tinya_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_nazgul.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Tinya"
+									position = { 31 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_TINYA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_orom_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/vilya.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Orom"
+									position = { 34 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_OROM_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_sakhla_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_dwarven.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Sakhla"
+									position = { 33 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_SAKHLA_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_adash_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thorin.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Adash"
+									position = { 35 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_ADASH_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_juru_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_dwarven.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Juru"
+									position = { 41 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_JURU_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_mebat_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thranduil.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Mebat"
+									position = { 31 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_MEBAT_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_khanto_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_barahir.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Khanto"
+									position = { 27 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_KHANTO_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_sapthan_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_barahir.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Sapthan"
+									position = { 28 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_SAPTHAN_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_nitir_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thranduil.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Nitir"
+									position = { 35 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_NITIR_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_uri_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/ring_thorin.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Uri"
+									position = { 44 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_URI_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_owns_one_ring_trait_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/owns_one_ring_trait.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "One Ring"
+									position = { 19 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_ONE_RING_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 90
+							container = {}
+							container = {
+								textbox = {
+									name = "Text"
+									autoresize = yes
+									font = HeaderFont
+									fontsize = 32
+									using = BaseFontM	
+									using = Black_FontColor
+									alpha = 0.8
+									fontsize_min = 12
+									text = "War of the Rings Races"
+								}
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_elf_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/elf.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Elf"
+									position = { 47 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_ELF_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_dwarf_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/dwarf.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Dwarf"
+									position = { 33 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_DWARF_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_orc_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/orc.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Orc"
+									position = { 43 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_ORC_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_halfling_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/halfling.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Halfling"
+									position = { 17 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_HALFLING_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+						flowcontainer = {
+							direction = horizontal
+							spacing = 100
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_maia_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/maia.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Maia"
+									position = { 37 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_MAIA_CHARACTERS"
+							}
+							bloodline_button = {
+								size = { 47 47 }
+								datacontext = "[GetScriptedGui('show_nazgul_characters_button')]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+								blockoverride "Icon" {
+									texture = "gfx/interface/icons/traits/nazgul.dds"
+									size = { 50 50 }
+									position = { 4 6 }
+								}
+								blockoverride "Text" {
+									text = "Nazgul"
+									position = { 29 0 }
+								}
+								blockoverride "On_click" {
+									onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+									onclick = "[GetVariableSystem.Set( 'show_bloodline_window', 'yes' )]"
+								}
+								tooltip = "SHOW_NAZGUL_CHARACTERS"
+							}
+						}
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
 					}
 				}
 
@@ -1658,31 +2288,41 @@ base_window = { ####Currently unused in vanilla
 			datacontext = "[GetScriptedGui('showing_screen_4_trigger')]"
 			visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 			flowcontainer = {
-				name = "Bottom"
 				direction = horizontal
 				position = { 0 0 }
 				ignoreinvisible = yes
 				widget = {
 					size = { 650 0 }
 				}
-			}
-			widget = {
-				visible = "[IsDataModelEmpty(Player.MakeScope.GetList('player_artifacts'))]"
-				size = { 100% 28 }
-				#position = { 0 0 }
 
-				textbox = {
-					position = { 0 180 }
-					parentanchor = hcenter
-					maximumsize = { 100 100 }
-					size = { 100 100 }
-					using = HeaderFont
-					using = Black_FontColor
-					text = "This character has no articacts"
-					align = center
-					fontsize = 28
-					alpha = 0.85
+			}
+			scrollarea = {
+				position = { 10 55 }
+				size = { 632 455 }
+				scrollbar_vertical = {
+					using = VerticalScrollBar
 				}
+				scrollbarpolicy_horizontal = always_off
+				scrollwidget = {
+
+					flowcontainer = {
+						position = { 67 0 }
+						direction = vertical
+
+						container = {}
+						container = {}
+						spacing = 25
+						container = {
+							icon = {
+								texture = "gfx/interface/icons/arrows/arrow_texture_black.dds"
+								size = { 655 2 }
+								position = { -110 -5 }
+								alpha = 0.5
+							}
+						}
+					}
+				}
+
 			}
 		}
 	}

@@ -1,0 +1,36 @@
+﻿elf = {
+	base = living_character
+	conditions = {
+		has_trait = elf
+	}
+}
+dwarf = {
+	base = living_character
+	conditions = {
+		has_trait = dwarf
+	}
+}
+orc = {
+	base = living_character
+	conditions = {
+		has_trait = orc
+	}
+}
+halfling = {
+	base = living_character
+	conditions = {
+		has_trait = halfling
+	}
+}
+maia = {
+	base = living_character
+	conditions = {
+		has_trait = maia
+	}
+}
+nazgul = {
+	base = living_character
+	conditions = {
+		has_trait = nazgul
+	}
+}

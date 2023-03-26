@@ -716,7 +716,7 @@ base_window = {
 	}
 	main_bloodline_button = {
 		size = { 40 40 }
-		position = { -221 336 }
+		position = { -225 336 }
 		parentanchor = top|right
 		datacontext = "[GetScriptedGui('open_bloodline_view_button')]" 
 		enabled = "[And(ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End ), Not(HasOpenEventWindow))]"
@@ -735,22 +735,21 @@ base_window = {
 	}
 	#main_bloodline_button = {
 	#	size = { 40 40 }
-	#	position = { -227 336 }
+	#	position = { -185 336 }
 	#	parentanchor = top|right
 	#	datacontext = "[GetScriptedGui('open_artifact_view_button')]" 
-	#	visible = "[CharacterWindow.GetCharacter.IsRuler]"
 	#	enabled = "[And(ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End ), Not(HasOpenEventWindow))]"
 	#	blockoverride "Icon" 
 	#	{ 
 	#		size = { 45 45 }
 	#		alpha = 0.95
-	#		texture = "gfx/interface/icons/shared_icons/political_influence.dds"
+	#		texture = "gfx/interface/icons/treasures/lotr_treasure_one_ring.dds"
 	#	}
 	#	blockoverride "On_click" 
 	#	{ 
 	#		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
 	#	}
-	#	tooltip = "Artifacts"
+	#	tooltip = "SHOW_ALL_RINGS__TT"
 	#}
 	#Open/Close Focus Buttons
 	open_focus_button = {

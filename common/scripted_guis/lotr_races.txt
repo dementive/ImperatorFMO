@@ -1,0 +1,78 @@
+﻿show_elf_characters_button = {
+    scope = country
+    effect = {
+        every_elf = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_dwarf_characters_button = {
+    scope = country
+    effect = {
+        every_dwarf = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_orc_characters_button = {
+    scope = country
+    effect = {
+        every_orc = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_halfling_characters_button = {
+    scope = country
+    effect = {
+        every_halfling = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_maia_characters_button = {
+    scope = country
+    effect = {
+        every_maia = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_nazgul_characters_button = {
+    scope = country
+    effect = {
+        every_nazgul = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}

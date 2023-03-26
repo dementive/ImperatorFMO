@@ -27,6 +27,8 @@ max_level_trade_center_tt:0 "[SCOPE.GetRootScope.GetProvince.GetName|Y] is alrea
 COUNTRY_FLAG_TTT:0 "#T [Country.GetName]#!\n[Country.GetRankName] from the region of [Country.GetCapital.GetArea.GetRegion.GetName]."
 SHOW_ALL_BLOODLINES__TT:0 "#T Show Bloodlines#!\n\n#TF This will show all bloodlines and all characters with bloodlines.#!"
 
+SHOW_ALL_RINGS__TT:0 "#T Show Rings#!\n\n#TF This will show all characters that have rings.#!"
+
 #Trade Good tooltips
 AMBER_TRADE_LEADER_TT:0 "#T Set Production Focus#!\n\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n\nWe must produce #Y [GuiScope.SetRoot( Player.MakeScope ).ScriptValue('75_percent_of_world_amber')|0]#! #Y Amber#! to gain a unique trading in #Y Amber#! modifier\nWe currently produce #Y [GuiScope.SetRoot( Player.MakeScope ).ScriptValue('player_amber_produced')|0]#!\n\n#TF A modifier is gained when at least 75% of the production of a trade good is controlled.#!"
 BASE_METALS_LEADER_TT:0 "#T Set Production Focus#!\n\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n\nWe must produce #Y [GuiScope.SetRoot( Player.MakeScope ).ScriptValue('75_percent_of_world_base_metals')|0]#! #Y Base Metals#! to gain a unique trading in #Y Base Metals#! modifier\nWe currently produce #Y [GuiScope.SetRoot( Player.MakeScope ).ScriptValue('player_base_metals_produced')|0]#!\n\n#TF A modifier is gained when at least 75% of the production of a trade good is controlled.#!"
@@ -165,7 +167,7 @@ ee_events.3.t:0 "Bloodlines"
 ee_events.3.desc:0 "desc"
 ee_events.3.a:0 "f"
 
-ee_events.4.t:0 "Artifacts"
+ee_events.4.t:0 "Rings"
 ee_events.4.desc:0 "desc"
 ee_events.4.a:0 "f"
 
@@ -451,8 +453,43 @@ SHOW_BLOOD_OF_ANARION_CHARACTERS:0 "#T Show characters with the Blood of Anarion
 SHOW_BLOOD_OF_ALDARION_CHARACTERS:0 "#T Show characters with the Blood of Aldarion#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 SHOW_BLOOD_OF_THORONDUR_CHARACTERS:0 "#T Show characters with the Blood of Thorondur#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 SHOW_HOUSE_OF_HURIN_CHARACTERS:0 "#T Show characters with the House of Hurin trait#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
-
-SHOW_PRINCE_OF_NUMENOR_CHARACTERS:0 "#T Show characters with the Prince of Numenortrait#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_PRINCE_OF_NUMENOR_CHARACTERS:0 "#T Show characters with the Prince of Numenor trait#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 SHOW_BLOOD_OF_EORL_CHARACTERS:0 "#T Show characters with the Blood of Eorl#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 SHOW_SARUMAN_CHARACTERS:0 "#T Show characters with the House of Saruman#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 SHOW_LINE_OF_DURIN_CHARACTERS:0 "#T Show characters with the House of Line of Durin trait#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+
+# Races
+SHOW_ELF_CHARACTERS:0 "#T Show characters with the Elf race#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_DWARF_CHARACTERS:0 "#T Show characters with the Dwarf race#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_ORC_CHARACTERS:0 "#T Show characters with the Orc race#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_HALFLING_CHARACTERS:0 "#T Show characters with the Halfling race#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_MAIA_CHARACTERS:0 "#T Show characters with the Maia race#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_NAZGUL_CHARACTERS:0 "#T Show characters with the Nazgul race#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+# Rings
+
+SHOW_VILYA_CHARACTERS:0 "#T Show characters with the Vilya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_NENYA_CHARACTERS:0 "#T Show characters with the Nenya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_NARYA_CHARACTERS:0 "#T Show characters with the Narya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_ANGYA_CHARACTERS:0 "#T Show characters with the Angya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+SHOW_SINDYA_CHARACTERS:0 "#T Show characters with the Sindya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_TAURYA_CHARACTERS:0 "#T Show characters with the Taurya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_VANYA_CHARACTERS:0 "#T Show characters with the Vanya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_URYA_CHARACTERS:0 "#T Show characters with the Urya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+SHOW_TUCLYA_CHARACTERS:0 "#T Show characters with the Tuclya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_TINYA_CHARACTERS:0 "#T Show characters with the Tinya ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_OROM_CHARACTERS:0 "#T Show characters with the Orom ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_SAKHLA_CHARACTERS:0 "#T Show characters with the Sakhla ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+SHOW_ADASH_CHARACTERS:0 "#T Show characters with the Adash ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_JURU_CHARACTERS:0 "#T Show characters with the Juru ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_MEBAT_CHARACTERS:0 "#T Show characters with the Mebat ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_KHANTO_CHARACTERS:0 "#T Show characters with the Khanto ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+
+SHOW_SAPTHAN_CHARACTERS:0 "#T Show characters with the Sapthan ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_NITIR_CHARACTERS:0 "#T Show characters with the Nitir ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_URI_CHARACTERS:0 "#T Show characters with the Uri ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_ONE_RING_CHARACTERS:0 "#T Show character with the One Ring#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"

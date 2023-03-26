@@ -1,0 +1,260 @@
+﻿show_vilya_characters_button = {
+    scope = country
+    effect = {
+        every_vilya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_nenya_characters_button = {
+    scope = country
+    effect = {
+        every_nenya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_narya_characters_button = {
+    scope = country
+    effect = {
+        every_narya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Angya_characters_button = {
+    scope = country
+    effect = {
+        every_Angya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Sindya_characters_button = {
+    scope = country
+    effect = {
+        every_Sindya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Taurya_characters_button = {
+    scope = country
+    effect = {
+        every_Taurya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Vanya_characters_button = {
+    scope = country
+    effect = {
+        every_Vanya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Urya_characters_button = {
+    scope = country
+    effect = {
+        every_Urya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Tuclya_characters_button = {
+    scope = country
+    effect = {
+        every_Tuclya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_Tinya_characters_button = {
+    scope = country
+    effect = {
+        every_Tinya = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_orom_characters_button = {
+    scope = country
+    effect = {
+        every_orom = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_sakhla_characters_button = {
+    scope = country
+    effect = {
+        every_sakhla = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_adash_characters_button = {
+    scope = country
+    effect = {
+        every_adash = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_juru_characters_button = {
+    scope = country
+    effect = {
+        every_juru = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_mebat_characters_button = {
+    scope = country
+    effect = {
+        every_mebat = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_khanto_characters_button = {
+    scope = country
+    effect = {
+        every_khanto = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_sapthan_characters_button = {
+    scope = country
+    effect = {
+        every_sapthan = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_nitir_characters_button = {
+    scope = country
+    effect = {
+        every_nitir = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_uri_characters_button = {
+    scope = country
+    effect = {
+        every_uri = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_owns_one_ring_trait_characters_button = {
+    scope = country
+    effect = {
+        every_owns_one_ring_trait = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}

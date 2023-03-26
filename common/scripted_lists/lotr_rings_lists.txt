@@ -1,0 +1,120 @@
+﻿vilya = {
+	base = living_character
+	conditions = {
+		has_trait = vilya
+	}
+}
+nenya = {
+	base = living_character
+	conditions = {
+		has_trait = nenya
+	}
+}
+narya = {
+	base = living_character
+	conditions = {
+		has_trait = narya
+	}
+}
+Angya = {
+	base = living_character
+	conditions = {
+		has_trait = Angya
+	}
+}
+Sindya = {
+	base = living_character
+	conditions = {
+		has_trait = Sindya
+	}
+}
+Taurya = {
+	base = living_character
+	conditions = {
+		has_trait = Taurya
+	}
+}
+Vanya = {
+	base = living_character
+	conditions = {
+		has_trait = Vanya
+	}
+}
+Urya = {
+	base = living_character
+	conditions = {
+		has_trait = Urya
+	}
+}
+Tuclya = {
+	base = living_character
+	conditions = {
+		has_trait = Tuclya
+	}
+}
+Tinya = {
+	base = living_character
+	conditions = {
+		has_trait = Tinya
+	}
+}
+orom = {
+	base = living_character
+	conditions = {
+		has_trait = orom
+	}
+}
+sakhla = {
+	base = living_character
+	conditions = {
+		has_trait = sakhla
+	}
+}
+adash = {
+	base = living_character
+	conditions = {
+		has_trait = adash
+	}
+}
+juru = {
+	base = living_character
+	conditions = {
+		has_trait = juru
+	}
+}
+mebat = {
+	base = living_character
+	conditions = {
+		has_trait = mebat
+	}
+}
+khanto = {
+	base = living_character
+	conditions = {
+		has_trait = khanto
+	}
+}
+sapthan = {
+	base = living_character
+	conditions = {
+		has_trait = sapthan
+	}
+}
+nitir = {
+	base = living_character
+	conditions = {
+		has_trait = nitir
+	}
+}
+uri = {
+	base = living_character
+	conditions = {
+		has_trait = uri
+	}
+}
+owns_one_ring_trait = {
+	base = living_character
+	conditions = {
+		has_trait = owns_one_ring_trait
+	}
+}
