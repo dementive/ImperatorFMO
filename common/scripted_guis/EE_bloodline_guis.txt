@@ -21,10 +21,10 @@ remove_bloodline_list_variables_button = {
         }
     }
 }
-show_alcimachid_characters_button = {
+show_strong_blood_of_numenor_characters_button = {
     scope = country
     effect = {
-        every_alcimachid = {
+        every_strong_blood_of_numenor = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -34,10 +34,10 @@ show_alcimachid_characters_button = {
         }
     }
 }
-show_antigonids_characters_button = {
+show_blood_of_numenor_characters_button = {
     scope = country
     effect = {
-        every_antigonids = {
+        every_blood_of_numenor = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -47,10 +47,10 @@ show_antigonids_characters_button = {
         }
     }
 }
-show_antipatrid_characters_button = {
+show_house_of_gil_galad_characters_button = {
     scope = country
     effect = {
-        every_antipatrid = {
+        every_house_of_gil_galad = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -60,10 +60,10 @@ show_antipatrid_characters_button = {
         }
     }
 }
-show_argeads_characters_button = {
+show_house_of_elrond_characters_button = {
     scope = country
     effect = {
-        every_argeads = {
+        every_house_of_elrond = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -73,10 +73,10 @@ show_argeads_characters_button = {
         }
     }
 }
-show_lagids_characters_button = {
+show_house_of_galadriel_characters_button = {
     scope = country
     effect = {
-        every_lagids = {
+        every_house_of_galadriel = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -86,10 +86,10 @@ show_lagids_characters_button = {
         }
     }
 }
-show_seleucids_characters_button = {
+show_house_of_cirdan_characters_button = {
     scope = country
     effect = {
-        every_seleucids = {
+        every_house_of_cirdan = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -99,10 +99,10 @@ show_seleucids_characters_button = {
         }
     }
 }
-show_aeacidae_characters_button = {
+show_elf_lord_characters_button = {
     scope = country
     effect = {
-        every_aeacidae = {
+        every_elf_lord = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -112,10 +112,10 @@ show_aeacidae_characters_button = {
         }
     }
 }
-show_agiad_characters_button = {
+show_blood_of_isildur_characters_button = {
     scope = country
     effect = {
-        every_agiad = {
+        every_blood_of_isildur = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -125,10 +125,10 @@ show_agiad_characters_button = {
         }
     }
 }
-show_achaemenid_characters_button = {
+show_blood_of_anarion_characters_button = {
     scope = country
     effect = {
-        every_achaemenid = {
+        every_blood_of_anarion = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -138,10 +138,10 @@ show_achaemenid_characters_button = {
         }
     }
 }
-show_maurya_characters_button = {
+show_blood_of_aldarion_characters_button = {
     scope = country
     effect = {
-        every_maurya = {
+        every_blood_of_aldarion = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -151,10 +151,10 @@ show_maurya_characters_button = {
         }
     }
 }
-show_zadok_characters_button = {
+show_blood_of_thorondur_characters_button = {
     scope = country
     effect = {
-        every_zadok = {
+        every_blood_of_thorondur = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -164,10 +164,10 @@ show_zadok_characters_button = {
         }
     }
 }
-show_agathocles_characters_button = {
+show_house_of_hurin_characters_button = {
     scope = country
     effect = {
-        every_agathocles = {
+        every_house_of_hurin = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -177,10 +177,10 @@ show_agathocles_characters_button = {
         }
     }
 }
-show_orontid_characters_button = {
+show_prince_of_numenor_characters_button = {
     scope = country
     effect = {
-        every_orontid = {
+        every_prince_of_numenor = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -190,10 +190,10 @@ show_orontid_characters_button = {
         }
     }
 }
-show_atropates_characters_button = {
+show_blood_of_eorl_characters_button = {
     scope = country
     effect = {
-        every_atropates = {
+        every_blood_of_eorl = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -203,10 +203,10 @@ show_atropates_characters_button = {
         }
     }
 }
-show_barca_characters_button = {
+show_saruman_characters_button = {
     scope = country
     effect = {
-        every_barca = {
+        every_saruman = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list
@@ -216,387 +216,10 @@ show_barca_characters_button = {
         }
     }
 }
-show_arsaces_characters_button = {
+show_line_of_durin_characters_button = {
     scope = country
     effect = {
-        every_arsaces = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_spartocid_characters_button = {
-    scope = country
-    effect = {
-        every_spartocid = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_sophytid_characters_button = {
-    scope = country
-    effect = {
-        every_sophytid = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_diodotus_characters_button = {
-    scope = country
-    effect = {
-        every_diodotus = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_brennus_characters_button = {
-    scope = country
-    effect = {
-        every_brennus = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_illyrius_characters_button = {
-    scope = country
-    effect = {
-        every_illyrius = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_claudii_characters_button = {
-    scope = country
-    effect = {
-        every_claudii = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_cornelii_characters_button = {
-    scope = country
-    effect = {
-        every_cornelii = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_fabii_characters_button = {
-    scope = country
-    effect = {
-        every_fabii = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_demosthenid_characters_button = {
-    scope = country
-    effect = {
-        every_demosthenid = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_mithridates_characters_button = {
-    scope = country
-    effect = {
-        every_mithridates = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_superbus_characters_button = {
-    scope = country
-    effect = {
-        every_superbus = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_vercingetorix_characters_button = {
-    scope = country
-    effect = {
-        every_vercingetorix = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_chola_characters_button = {
-    scope = country
-    effect = {
-        every_chola = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_pandya_characters_button = {
-    scope = country
-    effect = {
-        every_pandya = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_chera_characters_button = {
-    scope = country
-    effect = {
-        every_chera = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_kalinga_characters_button = {
-    scope = country
-    effect = {
-        every_kalinga = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_magonid_characters_button = {
-    scope = country
-    effect = {
-        every_magonid = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_hannonid_characters_button = {
-    scope = country
-    effect = {
-        every_hannonid = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_dido_characters_button = {
-    scope = country
-    effect = {
-        every_dido = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_porus_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_porus = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_vijaya_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_vijaya = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_zipoetes_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_zipoetes = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_ariovistid_characters_button = {
-    scope = country
-    effect = {
-        every_ariovistid = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_battiad_characters_button = {
-    scope = country
-    effect = {
-        every_battiad = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_menander_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_menander = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_bharata_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_bharata = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_aratus_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_aratus = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_blood_of_david_characters_button = {
-    scope = country
-    effect = {
-        every_blood_of_david = {
-            root = {
-                add_to_variable_list = {
-                    name = player_bloodline_list
-                    target = prev
-                }
-            }
-        }
-    }
-}
-show_magas_characters_button = {
-    scope = country
-    effect = {
-        every_magas = {
+        every_line_of_durin = {
             root = {
                 add_to_variable_list = {
                     name = player_bloodline_list

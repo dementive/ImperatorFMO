@@ -85,14 +85,11 @@ set_trade_good_variable_effect = {
         wild_game = { set_variable = wild_game }
         wine = { set_variable = wine }
         wood = { set_variable = wood }
-        sugar = { set_variable = sugar }
-        cedar = { set_variable = cedar }
-        myrrh = { set_variable = myrrh }
-        cinnabar = { set_variable = cinnabar }
-        lapis = { set_variable = lapis }
-        jade = { set_variable = jade }
-        fruits = { set_variable = fruits }
-        silphium = { set_variable = silphium }
+
+        pipeweed = { set_variable = pipeweed }
+        mithril = { set_variable = mithril }
+        mumakil = { set_variable = mumakil }
+        whale = { set_variable = whale }
     }
 }
 
@@ -345,59 +342,31 @@ remove_trade_good_trading_modifiers_effect = {
     }
     if = {
         limit = {
-            has_country_modifier = trading_in_sugar_mod
-            player_sugar_produced < 75_percent_of_world_sugar
+            has_country_modifier = trading_in_pipeweed_mod
+            player_pipeweed_produced < 75_percent_of_world_pipeweed
         }
-        remove_country_modifier = trading_in_sugar_mod
+        remove_country_modifier = trading_in_pipeweed_mod
     }
     if = {
         limit = {
-            has_country_modifier = trading_in_cedar_mod
-            player_cedar_produced < 75_percent_of_world_cedar
+            has_country_modifier = trading_in_mithril_mod
+            player_mithril_produced < 75_percent_of_world_mithril
         }
-        remove_country_modifier = trading_in_cedar_mod
+        remove_country_modifier = trading_in_mithril_mod
     }
     if = {
         limit = {
-            has_country_modifier = trading_in_myrrh_mod
-            player_myrrh_produced < 75_percent_of_world_myrrh
+            has_country_modifier = trading_in_mumakil_mod
+            player_mumakil_produced < 75_percent_of_world_mumakil
         }
-        remove_country_modifier = trading_in_myrrh_mod
+        remove_country_modifier = trading_in_mumakil_mod
     }
     if = {
         limit = {
-            has_country_modifier = trading_in_cinnabar_mod
-            player_cinnabar_produced < 75_percent_of_world_cinnabar
+            has_country_modifier = trading_in_whale_mod
+            player_whale_produced < 75_percent_of_world_whale
         }
-        remove_country_modifier = trading_in_cinnabar_mod
-    }
-    if = {
-        limit = {
-            has_country_modifier = trading_in_lapis_mod
-            player_lapis_produced < 75_percent_of_world_lapis
-        }
-        remove_country_modifier = trading_in_lapis_mod
-    }
-    if = {
-        limit = {
-            has_country_modifier = trading_in_jade_mod
-            player_jade_produced < 75_percent_of_world_jade
-        }
-        remove_country_modifier = trading_in_jade_mod
-    }
-    if = {
-        limit = {
-            has_country_modifier = trading_in_fruits_mod
-            player_fruits_produced < 75_percent_of_world_fruits
-        }
-        remove_country_modifier = trading_in_fruits_mod
-    }
-    if = {
-        limit = {
-            has_country_modifier = trading_in_silphium_mod
-            player_silphium_produced < 75_percent_of_world_silphium
-        }
-        remove_country_modifier = trading_in_silphium_mod
+        remove_country_modifier = trading_in_whale_mod
     }
 }
 remove_trade_good_focus_variables_effect = {
@@ -436,13 +405,10 @@ remove_trade_good_focus_variables_effect = {
         wild_game_focus = { remove_variable = wild_game_focus }
         wine_focus = { remove_variable = wine_focus }
         wood_focus = { remove_variable = wood_focus }
-        sugar_focus = { set_variable = sugar_focus }
-        cedar_focus = { set_variable = cedar_focus }
-        myrrh_focus= { set_variable = myrrh_focus }
-        cinnabar_focus = { set_variable = cinnabar_focus }
-        lapis_focus = { set_variable = lapis_focus }
-        jade_focus = { set_variable = jade_focus }
-        fruits_focus = { set_variable = fruits_focus }
-        silphium_focus = { set_variable = silphium_focus }        
+
+        pipeweed_focus = { remove_variable = pipeweed_focus }
+        mithril_focus = { remove_variable = mithril_focus }
+        mumakil_focus= { remove_variable = mumakil_focus }
+        whale_focus = { remove_variable = whale_focus }
     }
 }

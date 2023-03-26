@@ -199,52 +199,29 @@
 			has_variable = wood_focus
 		}
 	}
+	
 	text = {
 		localization_key = current_trade_good_focus_loc_35
 		trigger = {
-			has_variable = sugar_focus
+			has_variable = pipeweed_focus
 		}
 	}
 	text = {
 		localization_key = current_trade_good_focus_loc_36
 		trigger = {
-			has_variable = cedar_focus
+			has_variable = mithril_focus
 		}
 	}
 	text = {
 		localization_key = current_trade_good_focus_loc_37
 		trigger = {
-			has_variable = myrrh_focus
+			has_variable = mumakil_focus
 		}
 	}
 	text = {
 		localization_key = current_trade_good_focus_loc_38
 		trigger = {
-			has_variable = cinnabar_focus
-		}
-	}
-	text = {
-		localization_key = current_trade_good_focus_loc_39
-		trigger = {
-			has_variable = lapis_focus
-		}
-	}
-	text = {
-		localization_key = current_trade_good_focus_loc_40
-		trigger = {
-			has_variable = jade_focus
-		}
-	}
-	text = {
-		localization_key = current_trade_good_focus_loc_41
-		trigger = {
-			has_variable = fruits_focus
-		}
-	}
-	text = {
-		localization_key = current_trade_good_focus_loc_42
-		trigger = {
-			has_variable = silphium_focus
+			has_variable = whale_focus
 		}
 	}
 }

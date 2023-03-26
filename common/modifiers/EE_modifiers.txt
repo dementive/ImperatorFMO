@@ -169,35 +169,24 @@ trading_in_wine_mod = {
 	global_population_growth = 0.01
 }
 trading_in_wood_mod = {
-	tetrere_discipline = 0.1
-	hexere_discipline = 0.1
+	cog_discipline = 0.1
+	corsair_discipline = 0.1
 }
 
-trading_in_sugar_mod = {
+trading_in_mithril_mod = {
 	global_nobles_city_desired_pop_ratio = 0.02
 }
-trading_in_cedar_mod = {
+trading_in_whale_mod = {
 	ship_repair_at_sea = 0.05
 	global_ship_recruit_speed = 0.05
 }
-trading_in_myrrh_mod = {
+trading_in_pipeweed_mod = {
 	happiness_for_same_religion_modifier = 0.02
 }
-trading_in_cinnabar_mod = {
+trading_in_mumakil_mod = {
 	global_import_commerce_modifier = 0.05
 }
-trading_in_lapis_mod = {
-	global_pop_promotion_speed_modifier = 0.05
-}
-trading_in_jade_mod = {
-	deify_ruler_cost_modifier = -0.05
-}
-trading_in_fruits_mod = {
-	global_food_capacity = 200
-}
-trading_in_silphium_mod = {
-	global_citizen_desired_pop_ratio = 0.02
-}
+
 production_focus = {
 	local_goods_from_slaves = -2
 }

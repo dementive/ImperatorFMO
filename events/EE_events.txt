@@ -1439,75 +1439,40 @@ ee_economy_events.4 = {
                 duration = -1
             }
         }
+        
         if = {
             limit = {
-                player_sugar_produced >= 75_percent_of_world_sugar
+                player_pipeweed_produced >= 75_percent_of_world_pipeweed
             }
             add_country_modifier = {
-                name = trading_in_sugar_mod
+                name = trading_in_pipeweed_mod
                 duration = -1
             }
         }
         if = {
             limit = {
-                player_cedar_produced >= 75_percent_of_world_cedar
+                player_mithril_produced >= 75_percent_of_world_mithril
             }
             add_country_modifier = {
-                name = trading_in_cedar_mod
+                name = trading_in_mithril_mod
                 duration = -1
             }
         }
         if = {
             limit = {
-                player_myrrh_produced >= 75_percent_of_world_myrrh
+                player_mumakil_produced >= 75_percent_of_world_mumakil
             }
             add_country_modifier = {
-                name = trading_in_myrrh_mod
+                name = trading_in_mumakil_mod
                 duration = -1
             }
         }
         if = {
             limit = {
-                player_cinnabar_produced >= 75_percent_of_world_cinnabar
+                player_whale_produced >= 75_percent_of_world_whale
             }
             add_country_modifier = {
-                name = trading_in_cinnabar_mod
-                duration = -1
-            }
-        }
-        if = {
-            limit = {
-                player_lapis_produced >= 75_percent_of_world_lapis
-            }
-            add_country_modifier = {
-                name = trading_in_lapis_mod
-                duration = -1
-            }
-        }
-        if = {
-            limit = {
-                player_jade_produced >= 75_percent_of_world_jade
-            }
-            add_country_modifier = {
-                name = trading_in_jade_mod
-                duration = -1
-            }
-        }
-        if = {
-            limit = {
-                player_fruits_produced >= 75_percent_of_world_fruits
-            }
-            add_country_modifier = {
-                name = trading_in_fruits_mod
-                duration = -1
-            }
-        }
-        if = {
-            limit = {
-                player_silphium_produced >= 75_percent_of_world_silphium
-            }
-            add_country_modifier = {
-                name = trading_in_silphium_mod
+                name = trading_in_whale_mod
                 duration = -1
             }
         }

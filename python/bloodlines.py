@@ -14,6 +14,8 @@ bloodlines = ["alcimachid","antigonids","antipatrid","argeads","lagids","seleuci
 
 chinese_bloodlines = ["qin_bloodline","chu_bloodline","wei_bloodline","zhou_bloodline","yue_bloodline","yan_bloodline","song_bloodline","lu_bloodline","wii_bloodline","han_bloodline","zhao_bloodline","zhongshan_bloodline","qii_bloodline","nii_bloodline","zou_bloodline","teng_bloodline","zhaoxian_bloodline"]
 
-for i in bloodlines:
+lotr_bloodlines = ["strong_blood_of_numenor", "blood_of_numenor", "house_of_gil_galad", "house_of_elrond", "house_of_galadriel", "house_of_cirdan", "elf_lord", "blood_of_isildur", "blood_of_anarion", "blood_of_aldarion", "blood_of_thorondur", "house_of_hurin", "prince_of_numenor", "blood_of_eorl", "saruman", "line_of_durin"]
+
+for i in lotr_bloodlines:
 	#print_bloodlines_scripted_lists(i)
 	print_bloodlines_scripted_guis(i)

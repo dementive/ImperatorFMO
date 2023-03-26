@@ -1,270 +1,96 @@
-﻿alcimachid = {
+﻿strong_blood_of_numenor = {
 	base = living_character
 	conditions = {
-		has_trait = alcimachid
+		has_trait = strong_blood_of_numenor
 	}
 }
-antigonids = {
+blood_of_numenor = {
 	base = living_character
 	conditions = {
-		has_trait = antigonids
+		has_trait = blood_of_numenor
 	}
 }
-antipatrid = {
+house_of_gil_galad = {
 	base = living_character
 	conditions = {
-		has_trait = antipatrid
+		has_trait = house_of_gil_galad
 	}
 }
-argeads = {
+house_of_elrond = {
 	base = living_character
 	conditions = {
-		has_trait = argeads
+		has_trait = house_of_elrond
 	}
 }
-lagids = {
+house_of_galadriel = {
 	base = living_character
 	conditions = {
-		has_trait = lagids
+		has_trait = house_of_galadriel
 	}
 }
-seleucids = {
+house_of_cirdan = {
 	base = living_character
 	conditions = {
-		has_trait = seleucids
+		has_trait = house_of_cirdan
 	}
 }
-aeacidae = {
+elf_lord = {
 	base = living_character
 	conditions = {
-		has_trait = aeacidae
+		has_trait = elf_lord
 	}
 }
-agiad = {
+blood_of_isildur = {
 	base = living_character
 	conditions = {
-		has_trait = agiad
+		has_trait = blood_of_isildur
 	}
 }
-achaemenid = {
+blood_of_anarion = {
 	base = living_character
 	conditions = {
-		has_trait = achaemenid
+		has_trait = blood_of_anarion
 	}
 }
-maurya = {
+blood_of_aldarion = {
 	base = living_character
 	conditions = {
-		has_trait = maurya
+		has_trait = blood_of_aldarion
 	}
 }
-zadok = {
+blood_of_thorondur = {
 	base = living_character
 	conditions = {
-		has_trait = zadok
+		has_trait = blood_of_thorondur
 	}
 }
-agathocles = {
+house_of_hurin = {
 	base = living_character
 	conditions = {
-		has_trait = agathocles
+		has_trait = house_of_hurin
 	}
 }
-orontid = {
+prince_of_numenor = {
 	base = living_character
 	conditions = {
-		has_trait = orontid
+		has_trait = prince_of_numenor
 	}
 }
-atropates = {
+blood_of_eorl = {
 	base = living_character
 	conditions = {
-		has_trait = atropates
+		has_trait = blood_of_eorl
 	}
 }
-barca = {
+saruman = {
 	base = living_character
 	conditions = {
-		has_trait = barca
+		has_trait = saruman
 	}
 }
-arsaces = {
+line_of_durin = {
 	base = living_character
 	conditions = {
-		has_trait = arsaces
-	}
-}
-spartocid = {
-	base = living_character
-	conditions = {
-		has_trait = spartocid
-	}
-}
-sophytid = {
-	base = living_character
-	conditions = {
-		has_trait = sophytid
-	}
-}
-diodotus = {
-	base = living_character
-	conditions = {
-		has_trait = diodotus
-	}
-}
-brennus = {
-	base = living_character
-	conditions = {
-		has_trait = brennus
-	}
-}
-illyrius = {
-	base = living_character
-	conditions = {
-		has_trait = illyrius
-	}
-}
-claudii = {
-	base = living_character
-	conditions = {
-		has_trait = claudii
-	}
-}
-cornelii = {
-	base = living_character
-	conditions = {
-		has_trait = cornelii
-	}
-}
-fabii = {
-	base = living_character
-	conditions = {
-		has_trait = fabii
-	}
-}
-demosthenid = {
-	base = living_character
-	conditions = {
-		has_trait = demosthenid
-	}
-}
-mithridates = {
-	base = living_character
-	conditions = {
-		has_trait = mithridates
-	}
-}
-superbus = {
-	base = living_character
-	conditions = {
-		has_trait = superbus
-	}
-}
-vercingetorix = {
-	base = living_character
-	conditions = {
-		has_trait = vercingetorix
-	}
-}
-chola = {
-	base = living_character
-	conditions = {
-		has_trait = chola
-	}
-}
-pandya = {
-	base = living_character
-	conditions = {
-		has_trait = pandya
-	}
-}
-chera = {
-	base = living_character
-	conditions = {
-		has_trait = chera
-	}
-}
-kalinga = {
-	base = living_character
-	conditions = {
-		has_trait = kalinga
-	}
-}
-magonid = {
-	base = living_character
-	conditions = {
-		has_trait = magonid
-	}
-}
-hannonid = {
-	base = living_character
-	conditions = {
-		has_trait = hannonid
-	}
-}
-dido = {
-	base = living_character
-	conditions = {
-		has_trait = dido
-	}
-}
-blood_of_porus = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_porus
-	}
-}
-blood_of_vijaya = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_vijaya
-	}
-}
-blood_of_zipoetes = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_zipoetes
-	}
-}
-ariovistid = {
-	base = living_character
-	conditions = {
-		has_trait = ariovistid
-	}
-}
-battiad = {
-	base = living_character
-	conditions = {
-		has_trait = battiad
-	}
-}
-blood_of_menander = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_menander
-	}
-}
-blood_of_bharata = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_bharata
-	}
-}
-blood_of_aratus = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_aratus
-	}
-}
-blood_of_david = {
-	base = living_character
-	conditions = {
-		has_trait = blood_of_david
-	}
-}
-magas = {
-	base = living_character
-	conditions = {
-		has_trait = magas
+		has_trait = line_of_durin
 	}
 }

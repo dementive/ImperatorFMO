@@ -332,6 +332,270 @@ open_artifact_view_button = {
 	}
 }
 
+set_pipeweed_focus = {
+    scope = country
+    confirm_title = "pipeweed_focus_title"
+    confirm_text = "pipeweed_focus_desc"
+    ai_is_valid = {
+        always = no
+    }
+    is_valid = {
+        trigger_if = {
+            limit = {
+                political_influence < 50
+            }
+            political_influence >= 50
+        }
+        trigger_if = {
+            limit = {
+                NOT = {
+                    any_owned_province = {
+                        trade_goods = pipeweed
+                    }
+                }
+            }
+            any_owned_province = {
+                trade_goods = pipeweed
+            }
+        }
+        trigger_if = {
+            limit = {
+                has_variable = pipeweed_focus
+            }
+            custom_tooltip = {
+                text = this_is_already_the_trade_good_focus_tt
+                NOT = { has_variable = pipeweed_focus }
+            }
+        }
+    }
+    effect = {
+        remove_trade_good_focus_variables_effect = yes
+        set_variable = pipeweed_focus
+        add_political_influence = -50
+        custom_tooltip = all_pipeweed_provinces_gain
+        random_owned_province = {
+            show_as_tooltip = {
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+        hidden_effect = {
+            every_owned_province = {
+                limit = {
+                    has_province_modifier = production_focus
+                }
+                remove_province_modifier = production_focus
+            }
+            every_owned_province = {
+                limit = { trade_goods = pipeweed }
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+    }
+}
+set_mithril_focus = {
+    scope = country
+    confirm_title = "mithril_focus_title"
+    confirm_text = "mithril_focus_desc"
+    ai_is_valid = {
+        always = no
+    }
+    is_valid = {
+        trigger_if = {
+            limit = {
+                political_influence < 50
+            }
+            political_influence >= 50
+        }
+        trigger_if = {
+            limit = {
+                NOT = {
+                    any_owned_province = {
+                        trade_goods = mithril
+                    }
+                }
+            }
+            any_owned_province = {
+                trade_goods = mithril
+            }
+        }
+        trigger_if = {
+            limit = {
+                has_variable = mithril_focus
+            }
+            custom_tooltip = {
+                text = this_is_already_the_trade_good_focus_tt
+                NOT = { has_variable = mithril_focus }
+            }
+        }
+    }
+    effect = {
+        remove_trade_good_focus_variables_effect = yes
+        set_variable = mithril_focus
+        add_political_influence = -50
+        custom_tooltip = all_mithril_provinces_gain
+        random_owned_province = {
+            show_as_tooltip = {
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+        hidden_effect = {
+            every_owned_province = {
+                limit = {
+                    has_province_modifier = production_focus
+                }
+                remove_province_modifier = production_focus
+            }
+            every_owned_province = {
+                limit = { trade_goods = mithril }
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+    }
+}
+set_mumakil_focus = {
+    scope = country
+    confirm_title = "mumakil_focus_title"
+    confirm_text = "mumakil_focus_desc"
+    ai_is_valid = {
+        always = no
+    }
+    is_valid = {
+        trigger_if = {
+            limit = {
+                political_influence < 50
+            }
+            political_influence >= 50
+        }
+        trigger_if = {
+            limit = {
+                NOT = {
+                    any_owned_province = {
+                        trade_goods = mumakil
+                    }
+                }
+            }
+            any_owned_province = {
+                trade_goods = mumakil
+            }
+        }
+        trigger_if = {
+            limit = {
+                has_variable = mumakil_focus
+            }
+            custom_tooltip = {
+                text = this_is_already_the_trade_good_focus_tt
+                NOT = { has_variable = mumakil_focus }
+            }
+        }
+    }
+    effect = {
+        remove_trade_good_focus_variables_effect = yes
+        set_variable = mumakil_focus
+        add_political_influence = -50
+        custom_tooltip = all_mumakil_provinces_gain
+        random_owned_province = {
+            show_as_tooltip = {
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+        hidden_effect = {
+            every_owned_province = {
+                limit = {
+                    has_province_modifier = production_focus
+                }
+                remove_province_modifier = production_focus
+            }
+            every_owned_province = {
+                limit = { trade_goods = mumakil }
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+    }
+}
+set_whale_focus = {
+    scope = country
+    confirm_title = "whale_focus_title"
+    confirm_text = "whale_focus_desc"
+    ai_is_valid = {
+        always = no
+    }
+    is_valid = {
+        trigger_if = {
+            limit = {
+                political_influence < 50
+            }
+            political_influence >= 50
+        }
+        trigger_if = {
+            limit = {
+                NOT = {
+                    any_owned_province = {
+                        trade_goods = whale
+                    }
+                }
+            }
+            any_owned_province = {
+                trade_goods = whale
+            }
+        }
+        trigger_if = {
+            limit = {
+                has_variable = whale_focus
+            }
+            custom_tooltip = {
+                text = this_is_already_the_trade_good_focus_tt
+                NOT = { has_variable = whale_focus }
+            }
+        }
+    }
+    effect = {
+        remove_trade_good_focus_variables_effect = yes
+        set_variable = whale_focus
+        add_political_influence = -50
+        custom_tooltip = all_whale_provinces_gain
+        random_owned_province = {
+            show_as_tooltip = {
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+        hidden_effect = {
+            every_owned_province = {
+                limit = {
+                    has_province_modifier = production_focus
+                }
+                remove_province_modifier = production_focus
+            }
+            every_owned_province = {
+                limit = { trade_goods = whale }
+                add_province_modifier = {
+                    name = production_focus
+                    duration = -1
+                }
+            }
+        }
+    }
+}
 set_grain_focus = {
     scope = country
     confirm_title = "grain_focus_title"
@@ -2568,534 +2832,6 @@ set_dates_focus = {
             }
             every_owned_province = {
                 limit = { trade_goods = dates }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_sugar_focus = {
-    scope = country
-    confirm_title = "sugar_focus_title"
-    confirm_text = "sugar_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = sugar
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = sugar
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = sugar_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = sugar_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = sugar_focus
-        add_political_influence = -50
-        custom_tooltip = all_sugar_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = sugar }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_cedar_focus = {
-    scope = country
-    confirm_title = "cedar_focus_title"
-    confirm_text = "cedar_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = cedar
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = cedar
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = cedar_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = cedar_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = cedar_focus
-        add_political_influence = -50
-        custom_tooltip = all_cedar_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = cedar }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_myrrh_focus = {
-    scope = country
-    confirm_title = "myrrh_focus_title"
-    confirm_text = "myrrh_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = myrrh
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = myrrh
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = myrrh_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = myrrh_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = myrrh_focus
-        add_political_influence = -50
-        custom_tooltip = all_myrrh_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = myrrh }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_cinnabar_focus = {
-    scope = country
-    confirm_title = "cinnabar_focus_title"
-    confirm_text = "cinnabar_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = cinnabar
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = cinnabar
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = cinnabar_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = cinnabar_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = cinnabar_focus
-        add_political_influence = -50
-        custom_tooltip = all_cinnabar_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = cinnabar }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_lapis_focus = {
-    scope = country
-    confirm_title = "lapis_focus_title"
-    confirm_text = "lapis_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = lapis
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = lapis
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = lapis_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = lapis_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = lapis_focus
-        add_political_influence = -50
-        custom_tooltip = all_lapis_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = lapis }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_jade_focus = {
-    scope = country
-    confirm_title = "jade_focus_title"
-    confirm_text = "jade_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = jade
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = jade
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = jade_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = jade_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = jade_focus
-        add_political_influence = -50
-        custom_tooltip = all_jade_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = jade }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_fruits_focus = {
-    scope = country
-    confirm_title = "fruits_focus_title"
-    confirm_text = "fruits_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = fruits
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = fruits
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = fruits_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = fruits_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = fruits_focus
-        add_political_influence = -50
-        custom_tooltip = all_fruits_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = fruits }
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-    }
-}
-set_silphium_focus = {
-    scope = country
-    confirm_title = "silphium_focus_title"
-    confirm_text = "silphium_focus_desc"
-    ai_is_valid = {
-        always = no
-    }
-    is_valid = {
-        trigger_if = {
-            limit = {
-                political_influence < 50
-            }
-            political_influence >= 50
-        }
-        trigger_if = {
-            limit = {
-                NOT = {
-                    any_owned_province = {
-                        trade_goods = silphium
-                    }
-                }
-            }
-            any_owned_province = {
-                trade_goods = silphium
-            }
-        }
-        trigger_if = {
-            limit = {
-                has_variable = silphium_focus
-            }
-            custom_tooltip = {
-                text = this_is_already_the_trade_good_focus_tt
-                NOT = { has_variable = silphium_focus }
-            }
-        }
-    }
-    effect = {
-        remove_trade_good_focus_variables_effect = yes
-        set_variable = silphium_focus
-        add_political_influence = -50
-        custom_tooltip = all_silphium_provinces_gain
-        random_owned_province = {
-            show_as_tooltip = {
-                add_province_modifier = {
-                    name = production_focus
-                    duration = -1
-                }
-            }
-        }
-        hidden_effect = {
-            every_owned_province = {
-                limit = {
-                    has_province_modifier = production_focus
-                }
-                remove_province_modifier = production_focus
-            }
-            every_owned_province = {
-                limit = { trade_goods = silphium }
                 add_province_modifier = {
                     name = production_focus
                     duration = -1

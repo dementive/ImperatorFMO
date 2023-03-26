@@ -716,7 +716,7 @@ base_window = {
 	}
 	main_bloodline_button = {
 		size = { 40 40 }
-		position = { -185 336 }
+		position = { -221 336 }
 		parentanchor = top|right
 		datacontext = "[GetScriptedGui('open_bloodline_view_button')]" 
 		enabled = "[And(ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End ), Not(HasOpenEventWindow))]"
@@ -733,25 +733,25 @@ base_window = {
 		}
 		tooltip = "SHOW_ALL_BLOODLINES__TT"
 	}
-	main_bloodline_button = {
-		size = { 40 40 }
-		position = { -227 336 }
-		parentanchor = top|right
-		datacontext = "[GetScriptedGui('open_artifact_view_button')]" 
-		visible = "[CharacterWindow.GetCharacter.IsRuler]"
-		enabled = "[And(ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End ), Not(HasOpenEventWindow))]"
-		blockoverride "Icon" 
-		{ 
-			size = { 45 45 }
-			alpha = 0.95
-			texture = "gfx/interface/icons/shared_icons/political_influence.dds"
-		}
-		blockoverride "On_click" 
-		{ 
-			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
-		}
-		tooltip = "Artifacts"
-	}
+	#main_bloodline_button = {
+	#	size = { 40 40 }
+	#	position = { -227 336 }
+	#	parentanchor = top|right
+	#	datacontext = "[GetScriptedGui('open_artifact_view_button')]" 
+	#	visible = "[CharacterWindow.GetCharacter.IsRuler]"
+	#	enabled = "[And(ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End ), Not(HasOpenEventWindow))]"
+	#	blockoverride "Icon" 
+	#	{ 
+	#		size = { 45 45 }
+	#		alpha = 0.95
+	#		texture = "gfx/interface/icons/shared_icons/political_influence.dds"
+	#	}
+	#	blockoverride "On_click" 
+	#	{ 
+	#		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+	#	}
+	#	tooltip = "Artifacts"
+	#}
 	#Open/Close Focus Buttons
 	open_focus_button = {
 		size = { 200 26 }
@@ -1023,7 +1023,7 @@ base_window = {
 		flowcontainer = {
 			position = { 3 50 }
 			icon = {
-				texture = "gfx/interface/missions/mission_image_rome.dds"
+				texture = "gfx/interface/missions/lotr_mordor_mission_header.dds"
 				size = { 748 142 }
 				icon = {
 					parentanchor = hcenter|top
@@ -1270,7 +1270,7 @@ base_window = {
 			position = { 10 210 }
 			icon_button_square_red = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/event_games_in_an_arena_gladiators_or_athletes.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_dwarves_construction.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('martial_prowess_focus_button')]"
 				tooltip = "PROWESS_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -1285,7 +1285,7 @@ base_window = {
 			position = { 10 340 }
 			icon_button_square_red = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_phalanx_engagement_battle.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_dwarves_army.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('martial_strategy_focus_button')]"
 				tooltip = "STRATEGY_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -1315,7 +1315,7 @@ base_window = {
 			position = { -10 340 }
 			icon_button_square_red = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_roman_legions_marching_in_formation.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_dwarves_councilors.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('martial_command_focus_button')]"
 				tooltip = "COMMAND_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -1675,7 +1675,7 @@ base_window = {
 		flowcontainer = {
 			position = { 3 50 }
 			icon = {
-				texture = "gfx/interface/missions/mission_image_syracuse.dds"
+				texture = "gfx/interface/missions/lotr_tribal_reform_mission_headers.dds"
 				size = { 748 142 }
 				icon = {
 					parentanchor = hcenter|top
@@ -1885,7 +1885,7 @@ base_window = {
 			position = { 10 210 }
 			icon_button_square_blue = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_senator_talking_to_commoner.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_dwarves_court.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('oratory_populist_focus_button')]"
 				tooltip = "POPULIST_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -1900,7 +1900,7 @@ base_window = {
 			position = { 10 340 }
 			icon_button_square_blue = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_senate_debate.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_edain_talking.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('oratory_oration_focus_button')]"
 				tooltip = "ORATION_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -1915,7 +1915,7 @@ base_window = {
 			position = { -10 210 }
 			icon_button_square_blue = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/event_scribe_writing.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_edain_council_country.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('oratory_foreign_affairs_focus_button')]"
 				tooltip = "FOREIGN_AFFAIRS_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -1930,7 +1930,7 @@ base_window = {
 			position = { -10 340 }
 			icon_button_square_blue = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_throneroom_king_on_throne_a_few_councilors_nearby.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_dwarves_throneroom.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('oratory_family_focus_button')]"
 				tooltip = "FAMILY_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -2287,7 +2287,7 @@ base_window = {
 		flowcontainer = {
 			position = { 3 50 }
 			icon = {
-				texture = "gfx/interface/missions/mission_image_carthage.dds"
+				texture = "gfx/interface/missions/lotr_generic_mission_ships_headers.dds"
 				size = { 748 142 }
 				icon = {
 					parentanchor = hcenter|top
@@ -2497,7 +2497,7 @@ base_window = {
 			position = { 10 210 }
 			icon_button_square_green = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_construction_work_roman_city_under_construction.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_human_construction.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('civic_construction_focus_button')]"
 				tooltip = "CONSTRUCTION_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -2512,7 +2512,7 @@ base_window = {
 			position = { 10 340 }
 			icon_button_square_green = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/event_aqueducts_in_the_distance.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_helms_deep.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('civic_holding_focus_button')]"
 				tooltip = "HOLDING_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -2527,7 +2527,7 @@ base_window = {
 			position = { -10 210 }
 			icon_button_square_green = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_everyday_scene_at_pertsepolis.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_great_thriving_city_seen_slightly_from_a_distance.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('civic_commerce_focus_button')]"
 				tooltip = "COMMERCE_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -2542,7 +2542,7 @@ base_window = {
 			position = { -10 340 }
 			icon_button_square_green = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_open_chest.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_roman_trial.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('civic_wealth_focus_button')]"
 				tooltip = "WEALTH_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -2900,7 +2900,7 @@ base_window = {
 		flowcontainer = {
 			position = { 3 50 }
 			icon = {
-				texture = "gfx/interface/missions/mission_image_generic_greek.dds"
+				texture = "gfx/interface/missions/lotr_generic_mission_landscape_headers.dds"
 				size = { 748 142 }
 				icon = {
 					parentanchor = hcenter|top
@@ -3128,7 +3128,7 @@ base_window = {
 			position = { 10 210 }
 			icon_button_square_yellow = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_religious_festival.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/aragorn_arwen.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('zeal_divinity_focus_button')]"
 				tooltip = "DIVINITY_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -3158,7 +3158,7 @@ base_window = {
 			position = { -10 210 }
 			icon_button_square_yellow = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_close_up_of_altar_with_ongoing_religious_ceremony.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/event_human_council_country.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('zeal_preistly_support_focus_button')]"
 				tooltip = "PREISTLY_SUPPORT_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 
@@ -3173,7 +3173,7 @@ base_window = {
 			position = { -10 340 }
 			icon_button_square_yellow = {
 				size = { 256 110 }
-				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_ascetic_sitting_by_a_pillar.dds" size = { 256 110 } }
+				blockoverride "Icon" { texture = "gfx/interface/event_window/Event_throneroom_king_on_throne_a_few_councilors_nearby.dds" size = { 256 110 } }
 				datacontext = "[GetScriptedGui('zeal_piety_focus_button')]"
 				tooltip = "PIETY_FOCUS_TOOLTIP"
 				blockoverride "On_click" { 

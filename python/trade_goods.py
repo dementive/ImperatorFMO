@@ -11,7 +11,7 @@ def print_trade_good_loc(trade_goods):
 	localization = "{trade_goods}_focus_title:0 \"Production of {capital_word}\"\n{trade_goods}_focus_desc:0 \"Are you sure you want to focus on the production of {no_underscore}?\"\n".format(no_underscore=no_underscore,trade_goods=trade_goods,capital_word=capital_word)
 	print(localization)	
 
-trade_goods = ["grain","salt","iron","horses","wine","wood","amber","stone","fish","spices","elephants","papyrus","cloth","wild_game","precious_metals","steppe_horses","cattle","earthware","dye","fur","olive","leather","base_metals","woad","marble","honey","incense","hemp","vegetables","gems","camel","glass","silk","dates","sugar","cedar","myrrh","cinnabar","lapis","jade","fruits","silphium"]
+trade_goods = ["pipeweed", "mithril", "mumakil", "whale", "grain","salt","iron","horses","wine","wood","amber","stone","fish","spices","elephants","papyrus","cloth","wild_game","precious_metals","steppe_horses","cattle","earthware","dye","fur","olive","leather","base_metals","woad","marble","honey","incense","hemp","vegetables","gems","camel","glass","silk","dates"]
 
 for i in trade_goods:
-	print_trade_good_loc(i)
+	print_trade_good_scripted_guis(i)

@@ -1,0 +1,396 @@
+﻿thrall_tribe = { #Tribal Vassal
+	subject_pays = subject_pays_satrapy
+	
+	joins_overlord_in_war = yes
+	
+	protected_when_attacked = yes
+	has_overlords_ruler = no
+	can_be_integrated = no
+	costs_diplomatic_slot = no
+	subject_can_cancel = yes
+	
+	has_limited_diplomacy = yes
+	
+	overlord_modifier = {
+		global_tribesmen_happyness = 0.03
+	}
+	subject_modifier = {
+		country_civilization_value = 10
+		global_monthly_civilization = 0.01
+		loyalty_to_overlord = 25
+	}
+	
+	allow = {
+		#is_tribal = yes
+		NOT = { religion = iluvatarism }
+		OR = { #prevent from AI locking itself in with vassals
+			scope:future_overlord = { is_ai = no }
+			AND = {
+				NOT = { tag = NUR }
+				OR = {
+					NOT = { tag =  JAN }
+					NOT = {
+						any_owned_province = {
+							OR = {
+								is_in_area = pustrava_area
+								is_in_area = surubeki_morad_area
+							}
+						}
+					}
+				}
+				OR = {
+					NOT = { tag =  KHU }
+					NOT = {
+						any_owned_province = {
+							OR = {
+								is_in_area = ciranthir_area
+								is_in_area = boli_area
+							}
+						}
+					}
+				}
+			}
+		}
+		exists = scope:future_overlord
+		scope:future_overlord = {
+			religion = melkorism
+			tag = MOR
+			capital_scope = {
+				civilization_value > root.capital_scope.civilization_value
+			}
+			any_subject = {
+				count < 10
+				is_subject_type = thrall_tribe
+			}
+		}
+	}
+	
+	on_enable = {
+		remove_subject_focus_effect = yes
+		add_opinion = {
+			modifier = is_client_protectorate_status
+			target = scope:future_overlord
+		}
+		scope:future_overlord = {
+			add_opinion = {
+				modifier = is_overlord_protectorate_status
+				target = root
+			} 
+		}
+	}
+	on_disable = {
+		remove_subject_focus_effect = yes
+		#add_opinion = {
+			#modifier = broke_tributary_status
+			#target = scope:former_overlord
+		#}
+		remove_opinion = {
+			modifier = is_client_protectorate_status
+			target = scope:former_overlord
+		}
+		scope:former_overlord = {
+			add_opinion = {
+				modifier = broke_tributary_status
+				target = root
+			}
+			remove_opinion = {
+				modifier = is_overlord_protectorate_status
+				target = root
+			}
+		}
+	}
+	# on_monthly = {
+	
+	# }
+	
+	diplo_chance = {
+		base = {
+			offset = -90
+		}
+		in_debt = {
+			scale = 0
+		}
+		negative_stability = {
+			scale = 0
+		}
+		current_strength = {
+			scale = 0.25
+		}
+		potential_strength = {
+			scale = 0.25
+		}
+		border_distance = {
+			scale = 2
+		}
+		junior_to = {
+			scale = -40
+		}
+	}
+}
+
+saruman_thrall_tribe = {
+	subject_pays = subject_client_state_pays
+	
+	joins_overlord_in_war = yes
+	
+	protected_when_attacked = yes
+	has_overlords_ruler = no
+	can_be_integrated = no
+	costs_diplomatic_slot = no
+	subject_can_cancel = no
+	
+	has_limited_diplomacy = yes
+	
+	overlord_modifier = {
+		global_tribesmen_happyness = 0.03
+	}
+	subject_modifier = {
+		country_civilization_value = 10
+		global_monthly_civilization = 0.01
+	}
+	
+	allow = {
+		always = no #just on start
+	}
+	
+	on_enable = {
+		remove_subject_focus_effect = yes
+	}
+	on_disable = {
+		remove_subject_focus_effect = yes
+	}
+	# on_monthly = {
+	
+	# }
+	
+	diplo_chance = {
+		base = {
+			offset = -999
+		}
+	}
+}
+
+ranger_protectorate = { #Ranger of the north mechanics
+	subject_pays = subject_pays_ranger_protectorate
+	
+	joins_overlord_in_war = yes
+	
+	protected_when_attacked = yes
+	has_overlords_ruler = no
+	can_be_integrated = no
+	costs_diplomatic_slot = no
+	subject_can_cancel = yes
+	
+	has_limited_diplomacy = yes
+	
+	#overlord_modifier = {
+	#	global_tribesmen_happyness = 0.03
+	#}
+	subject_modifier = {
+		country_civilization_value = 10
+		global_monthly_civilization = 0.01
+		loyalty_to_overlord = -200
+	}
+	
+	allow = {
+		NOR = {
+			country_culture_group = edain_group
+			country_culture_group = edain_mixed_group
+			country_culture_group = dwarf_group
+			country_culture_group = noldor_group
+			country_culture_group = teleri_group
+			country_culture_group = vanyar_group
+			country_culture_group = orcs_group
+		}
+		religion = iluvatarism
+		exists = scope:future_overlord
+		scope:future_overlord = {
+			religion = iluvatarism
+			OR = {
+				tag = ARN
+				tag = CAR
+			}
+			capital_scope = {
+				civilization_value > root.capital_scope.civilization_value
+			}
+			any_subject = {
+				count < 10
+				is_subject_type = ranger_protectorate
+			}
+		}
+	}
+	
+	on_enable = {
+		remove_subject_focus_effect = yes
+		add_opinion = {
+			modifier = is_client_protectorate_status
+			target = scope:future_overlord
+		}
+		scope:future_overlord = {
+			add_opinion = {
+				modifier = is_overlord_protectorate_status
+				target = root
+			} 
+		}
+	}
+	on_disable = {
+		remove_subject_focus_effect = yes
+		#add_opinion = {
+			#modifier = broke_tributary_status
+			#target = scope:former_overlord
+		#}
+		remove_opinion = {
+			modifier = is_client_protectorate_status
+			target = scope:former_overlord
+		}
+		scope:former_overlord = {
+			add_opinion = {
+				modifier = broke_tributary_status
+				target = root
+			}
+			remove_opinion = {
+				modifier = is_overlord_protectorate_status
+				target = root
+			}
+		}
+	}
+	# on_monthly = {
+	
+	# }
+	
+	diplo_chance = {
+		base = {
+			offset = -90
+		}
+		in_debt = {
+			scale = 0
+		}
+		negative_stability = {
+			scale = 0
+		}
+		current_strength = {
+			scale = 0.25
+		}
+		potential_strength = {
+			scale = 0.25
+		}
+		border_distance = {
+			scale = 2
+		}
+		junior_to = {
+			scale = -40
+		}
+	}
+}
+
+ranger_fief = { #Ranger of the north mechanics
+	subject_pays = subject_pays_ranger_protectorate
+	
+	joins_overlord_in_war = yes
+	
+	protected_when_attacked = yes
+	has_overlords_ruler = no
+	can_be_integrated = no
+	costs_diplomatic_slot = no
+	subject_can_cancel = yes
+	
+	has_limited_diplomacy = yes
+	
+	#overlord_modifier = {
+	#	global_tribesmen_happyness = 0.03
+	#}
+	subject_modifier = {
+		country_civilization_value = 10
+		global_monthly_civilization = 0.01
+	}
+	
+	allow = {
+		NOR = {
+			country_culture_group = edain_group
+			country_culture_group = edain_mixed_group
+			country_culture_group = dwarf_group
+			country_culture_group = noldor_group
+			country_culture_group = teleri_group
+			country_culture_group = vanyar_group
+			country_culture_group = orcs_group
+		}
+		religion = iluvatarism
+		exists = scope:future_overlord
+		scope:future_overlord = {
+			religion = iluvatarism
+			OR = {
+				tag = ARN
+				tag = CAR
+			}
+			capital_scope = {
+				civilization_value > root.capital_scope.civilization_value
+			}
+			any_subject = {
+				count < 10
+				is_subject_type = ranger_fief
+			}
+		}
+	}
+	
+	on_enable = {
+		remove_subject_focus_effect = yes
+		add_opinion = {
+			modifier = is_client_protectorate_status
+			target = scope:future_overlord
+		}
+		scope:future_overlord = {
+			add_opinion = {
+				modifier = is_overlord_protectorate_status
+				target = root
+			} 
+		}
+	}
+	on_disable = {
+		remove_subject_focus_effect = yes
+		#add_opinion = {
+			#modifier = broke_tributary_status
+			#target = scope:former_overlord
+		#}
+		remove_opinion = {
+			modifier = is_client_protectorate_status
+			target = scope:former_overlord
+		}
+		scope:former_overlord = {
+			add_opinion = {
+				modifier = broke_tributary_status
+				target = root
+			}
+			remove_opinion = {
+				modifier = is_overlord_protectorate_status
+				target = root
+			}
+		}
+	}
+	# on_monthly = {
+	
+	# }
+	
+	diplo_chance = {
+		base = {
+			offset = -90
+		}
+		in_debt = {
+			scale = 0
+		}
+		negative_stability = {
+			scale = 0
+		}
+		current_strength = {
+			scale = 0.25
+		}
+		potential_strength = {
+			scale = 0.25
+		}
+		border_distance = {
+			scale = 2
+		}
+		junior_to = {
+			scale = -40
+		}
+	}
+}

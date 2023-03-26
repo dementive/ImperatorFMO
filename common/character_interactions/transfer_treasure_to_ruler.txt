@@ -1,42 +1,42 @@
-﻿transfer_artifact_to_ruler = {
+﻿#transfer_artifact_to_ruler = {
 
-	on_other_nation = no
-	on_own_nation = yes
+#	on_other_nation = no
+#	on_own_nation = yes
 	
-	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_arrange_marriage"
+#	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_arrange_marriage"
 	
-	message = no
-	
-	
-	potential_trigger = {
-		scope:actor = {
-			#is_ai = noa
-		}
-		hidden:scope:target = {
-			is_alive = yes
-			is_ruler = yes
-			employer = scope:actor
-			NOT = { employer = { tag = REB } }
-			NOT = { employer = { tag = BAR } }
-			#Will only show up if you have an artifact
-			employer = {
-				any_country_treasure = {
-					character_artifact_trigger = yes
-				}
-			}
-		}
-	}
+#	message = no
 	
 	
-	allowed_trigger = {
-		scope:actor = { political_influence >= 25 }
-	}
+#	potential_trigger = {
+#		scope:actor = {
+#			#is_ai = noa
+#		}
+#		hidden:scope:target = {
+#			is_alive = yes
+#			is_ruler = yes
+#			employer = scope:actor
+#			NOT = { employer = { tag = REB } }
+#			NOT = { employer = { tag = BAR } }
+#			#Will only show up if you have an artifact
+#			employer = {
+#				any_country_treasure = {
+#					character_artifact_trigger = yes
+#				}
+#			}
+#		}
+#	}
 	
-	effect = {
-		scope:actor = {
-			add_political_influence = -25
-			custom_tooltip = pick_artifact_to_transfer_tt
-			trigger_event = artifact_events.1
-		}
-	}
-}
+	
+#	allowed_trigger = {
+#		scope:actor = { political_influence >= 25 }
+#	}
+	
+#	effect = {
+#		scope:actor = {
+#			add_political_influence = -25
+#			custom_tooltip = pick_artifact_to_transfer_tt
+#			trigger_event = artifact_events.1
+#		}
+#	}
+#}

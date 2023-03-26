@@ -900,220 +900,115 @@ player_wood_produced = {
 	add = all_wood_produced_in_world
 	multiply = 0.75
 }
-all_sugar_produced_in_world = {
+
+all_pipeweed_produced_in_world = {
 	value = 0
 	every_country = {
 		every_owned_province = {
 			limit = {
-				has_variable = sugar
+				has_variable = pipeweed
 			}
 			add = num_goods_produced
 		}
 	}
 }
 
-player_sugar_produced = {
+player_pipeweed_produced = {
 	value = 0
 	every_owned_province = {
 		limit = {
-			has_variable = sugar
+			has_variable = pipeweed
 		}
 		add = num_goods_produced
 	}
 }
 
-75_percent_of_world_sugar = {
+75_percent_of_world_pipeweed = {
 	value = 0
-	add = all_sugar_produced_in_world
-	multiply = 0.75
-}
-all_cedar_produced_in_world = {
-	value = 0
-	every_country = {
-		every_owned_province = {
-			limit = {
-				has_variable = cedar
-			}
-			add = num_goods_produced
-		}
-	}
-}
-
-player_cedar_produced = {
-	value = 0
-	every_owned_province = {
-		limit = {
-			has_variable = cedar
-		}
-		add = num_goods_produced
-	}
-}
-
-75_percent_of_world_cedar = {
-	value = 0
-	add = all_cedar_produced_in_world
-	multiply = 0.75
-}
-all_myrrh_produced_in_world = {
-	value = 0
-	every_country = {
-		every_owned_province = {
-			limit = {
-				has_variable = myrrh
-			}
-			add = num_goods_produced
-		}
-	}
-}
-
-player_myrrh_produced = {
-	value = 0
-	every_owned_province = {
-		limit = {
-			has_variable = myrrh
-		}
-		add = num_goods_produced
-	}
-}
-
-75_percent_of_world_myrrh = {
-	value = 0
-	add = all_myrrh_produced_in_world
-	multiply = 0.75
-}
-all_cinnabar_produced_in_world = {
-	value = 0
-	every_country = {
-		every_owned_province = {
-			limit = {
-				has_variable = cinnabar
-			}
-			add = num_goods_produced
-		}
-	}
-}
-
-player_cinnabar_produced = {
-	value = 0
-	every_owned_province = {
-		limit = {
-			has_variable = cinnabar
-		}
-		add = num_goods_produced
-	}
-}
-
-75_percent_of_world_cinnabar = {
-	value = 0
-	add = all_cinnabar_produced_in_world
+	add = all_pipeweed_produced_in_world
 	multiply = 0.75
 }
 
-all_lapis_produced_in_world = {
+all_mithril_produced_in_world = {
 	value = 0
 	every_country = {
 		every_owned_province = {
 			limit = {
-				has_variable = lapis
+				has_variable = mithril
 			}
 			add = num_goods_produced
 		}
 	}
 }
 
-player_lapis_produced = {
+player_mithril_produced = {
 	value = 0
 	every_owned_province = {
 		limit = {
-			has_variable = lapis
+			has_variable = mithril
 		}
 		add = num_goods_produced
 	}
 }
 
-75_percent_of_world_lapis = {
+75_percent_of_world_mithril = {
 	value = 0
-	add = all_lapis_produced_in_world
+	add = all_mithril_produced_in_world
 	multiply = 0.75
 }
-all_jade_produced_in_world = {
+
+all_mumakil_produced_in_world = {
 	value = 0
 	every_country = {
 		every_owned_province = {
 			limit = {
-				has_variable = jade
+				has_variable = mumakil
 			}
 			add = num_goods_produced
 		}
 	}
 }
 
-player_jade_produced = {
+player_mumakil_produced = {
 	value = 0
 	every_owned_province = {
 		limit = {
-			has_variable = jade
+			has_variable = mumakil
 		}
 		add = num_goods_produced
 	}
 }
 
-75_percent_of_world_jade = {
+75_percent_of_world_mumakil = {
 	value = 0
-	add = all_jade_produced_in_world
+	add = all_mumakil_produced_in_world
 	multiply = 0.75
 }
-all_fruits_produced_in_world = {
+
+all_whale_produced_in_world = {
 	value = 0
 	every_country = {
 		every_owned_province = {
 			limit = {
-				has_variable = fruits
+				has_variable = whale
 			}
 			add = num_goods_produced
 		}
 	}
 }
 
-player_fruits_produced = {
+player_whale_produced = {
 	value = 0
 	every_owned_province = {
 		limit = {
-			has_variable = fruits
+			has_variable = whale
 		}
 		add = num_goods_produced
 	}
 }
 
-75_percent_of_world_fruits = {
+75_percent_of_world_whale = {
 	value = 0
-	add = all_fruits_produced_in_world
-	multiply = 0.75
-}
-all_silphium_produced_in_world = {
-	value = 0
-	every_country = {
-		every_owned_province = {
-			limit = {
-				has_variable = silphium
-			}
-			add = num_goods_produced
-		}
-	}
-}
-
-player_silphium_produced = {
-	value = 0
-	every_owned_province = {
-		limit = {
-			has_variable = silphium
-		}
-		add = num_goods_produced
-	}
-}
-
-75_percent_of_world_silphium = {
-	value = 0
-	add = all_silphium_produced_in_world
+	add = all_whale_produced_in_world
 	multiply = 0.75
 }

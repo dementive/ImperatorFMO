@@ -328,93 +328,93 @@ artifact_creation_events.2 = {
         }
     }
 }
-namespace = artifact_events
+#namespace = artifact_events
 
-artifact_events.1 = {
-    type = country_event
-    title = artifact_events.1.t
-    desc = artifact_events.1.desc
-    picture = throneroom
+#artifact_events.1 = {
+#    type = country_event
+#    title = artifact_events.1.t
+#    desc = artifact_events.1.desc
+#    picture = throneroom
 
-    left_portrait = current_ruler
+#    left_portrait = current_ruler
 
-    trigger = {
+#    trigger = {
 
-    }
+#    }
 
-    immediate = {
-        random_country_treasure = {
-            limit = {
-                character_artifact_trigger = yes
-            }
-            save_scope_as = artifact_1
-        }
-        random_country_treasure = {
-            limit = {
-                character_artifact_trigger = yes
-                NOT = { THIS = scope:artifact_1 }
-            }
-            save_scope_as = artifact_2
-        }
-        random_country_treasure = {
-            limit = {
-                character_artifact_trigger = yes
-                NOR = {
-                    this = scope:artifact_1
-                    this = scope:artifact_2
-                }
-            }
-            save_scope_as = artifact_3
-        }
-        random_country_treasure = {
-            limit = {
-                character_artifact_trigger = yes
-                NOR = {
-                    this = scope:artifact_1
-                    this = scope:artifact_2
-                    this = scope:artifact_3
-                }
-            }
-            save_scope_as = artifact_4
-        }
-    }
-    option = {
-        name = artifact_events.1.a
-        trigger = {
-            exists = scope:artifact_1
-        }
-        scope:artifact_1 = {
-            transfer_treasure_to_character = root.current_ruler
-        }
-    }
-    option = {
-        name = artifact_events.1.b
-        trigger = {
-            exists = scope:artifact_2
-        }
-        scope:artifact_2 = {
-            transfer_treasure_to_character = root.current_ruler
-        }
-    }
-    option = {
-        name = artifact_events.1.c
-        trigger = {
-            exists = scope:artifact_3
-        }
-        scope:artifact_3 = {
-            transfer_treasure_to_character = root.current_ruler
-        }
-    }
-    option = {
-        name = artifact_events.1.d
-        trigger = {
-            exists = scope:artifact_4
-        }
-        scope:artifact_4 = {
-            transfer_treasure_to_character = root.current_ruler
-        }
-    }
-}
+#    immediate = {
+#        random_country_treasure = {
+#            limit = {
+#                character_artifact_trigger = yes
+#            }
+#            save_scope_as = artifact_1
+#        }
+#        random_country_treasure = {
+#            limit = {
+#                character_artifact_trigger = yes
+#                NOT = { THIS = scope:artifact_1 }
+#            }
+#            save_scope_as = artifact_2
+#        }
+#        random_country_treasure = {
+#            limit = {
+#                character_artifact_trigger = yes
+#                NOR = {
+#                    this = scope:artifact_1
+#                    this = scope:artifact_2
+#                }
+#            }
+#            save_scope_as = artifact_3
+#        }
+#        random_country_treasure = {
+#            limit = {
+#                character_artifact_trigger = yes
+#                NOR = {
+#                    this = scope:artifact_1
+#                    this = scope:artifact_2
+#                    this = scope:artifact_3
+#                }
+#            }
+#            save_scope_as = artifact_4
+#        }
+#    }
+#    option = {
+#        name = artifact_events.1.a
+#        trigger = {
+#            exists = scope:artifact_1
+#        }
+#        scope:artifact_1 = {
+#            transfer_treasure_to_character = root.current_ruler
+#        }
+#    }
+#    option = {
+#        name = artifact_events.1.b
+#        trigger = {
+#            exists = scope:artifact_2
+#        }
+#        scope:artifact_2 = {
+#            transfer_treasure_to_character = root.current_ruler
+#        }
+#    }
+#    option = {
+#        name = artifact_events.1.c
+#        trigger = {
+#            exists = scope:artifact_3
+#        }
+#        scope:artifact_3 = {
+#            transfer_treasure_to_character = root.current_ruler
+#        }
+#    }
+#    option = {
+#        name = artifact_events.1.d
+#        trigger = {
+#            exists = scope:artifact_4
+#        }
+#        scope:artifact_4 = {
+#            transfer_treasure_to_character = root.current_ruler
+#        }
+#    }
+#}
 
 namespace = mpe_pop_events
 

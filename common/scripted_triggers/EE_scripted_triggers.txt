@@ -10,64 +10,19 @@
 		}
 	}
 }
-character_artifact_trigger = {
-	OR = {
-		THIS = treasure:shield
-		THIS = treasure:shield_2
-		THIS = treasure:divine_spoon
-		THIS = treasure:axe
-		THIS = treasure:axe_2
-		THIS = treasure:armor
-		THIS = treasure:armor_2
-		THIS = treasure:gorillas
-		THIS = treasure:torc
-		THIS = treasure:helmet
-		THIS = treasure:helmet_2
-		THIS = treasure:mask
-	}
-}
-is_level_2_trade_center_at_start = {
-	province_id = 500
-	province_id = 516
-	province_id = 687
-	province_id = 790
-	province_id = 266
-	province_id = 416
-	province_id = 427
-	province_id = 476
-	province_id = 641
-	province_id = 7506
-	province_id = 476
-	province_id = 911
-	province_id = 4799
-	province_id = 6678
-	province_id = 7314
-	province_id = 7081
-	province_id = 6927
-	province_id = 6917
-	province_id = 6950
-	province_id = 5618
-	province_id = 3360
-	province_id = 84
-	province_id = 1570
-	province_id = 1799
-	province_id = 4549
-	province_id = 4529
-	province_id = 2325
-	province_id = 1344
-	province_id = 2021
-	province_id = 7524
-	province_id = 7209
-	province_id = 4646
-	province_id = 7575
-	province_id = 1593
-	province_id = 3481
-	province_id = 1278
-}
-
-is_level_3_trade_center_at_start = {
-	province_id = 4440
-	province_id = 379
-	province_id = 1
-	province_id = 3256
-}
+#character_artifact_trigger = {
+#	OR = {
+#		THIS = treasure:shield
+#		THIS = treasure:shield_2
+#		THIS = treasure:divine_spoon
+#		THIS = treasure:axe
+#		THIS = treasure:axe_2
+#		THIS = treasure:armor
+#		THIS = treasure:armor_2
+#		THIS = treasure:gorillas
+#		THIS = treasure:torc
+#		THIS = treasure:helmet
+#		THIS = treasure:helmet_2
+#		THIS = treasure:mask
+#	}
+#}
