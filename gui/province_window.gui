@@ -159,6 +159,41 @@ types ProvinceWindow
 			}
 		}
 	}
+	type mini_pop_widget_province = widget {
+		name = "noble_diamond"
+		size = { 32 32 }
+		tooltip = "[ProvinceWindow.GetProvince.GetPopHappyInformation('nobles')]"
+		icon = {
+			using = beige_background
+			size = { 100% 100% }
+			alpha = 0.8
+		}
+
+		widget = {
+			name = "nobleprogress"
+			parentanchor = hcenter|bottom
+			size = { 32 72 }
+			position = { 1 0 }
+			icon = {
+				block "Icon" { texture = "gfx/interface/icons/pop_types/citizen.dds" }
+				#size = { 30 50 }
+				parentanchor = center
+				alpha = 1
+			}
+			container = {
+				parentanchor = center
+				position = { 0 14 }
+				textbox = {
+					size = { 32 20 }
+					using = BaseFontM
+					using = Black_FontColor
+					align = center
+					block "Text" { text = "[ProvinceWindow.GetProvince.GetPopulation('nobles')]" }
+				}
+			}
+		}
+
+	}
 	type building_item_button = margin_widget {
 		size = { 53 70 }
 
@@ -3734,7 +3769,7 @@ window = {
             }
         }
 		base_window = {
-			size = { 449 233 }
+			size = { 453 233 }
 			position = { 313 202 }
 			visible = "[GetVariableSystem.HasValue( 'show_pop_interactions', 'yes' )]"
 			movable = no
@@ -3833,10 +3868,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 25 80 }
+				position = { 25 70 }
 				icon_button_square = {
-					size = { 45 45 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/demand_oaths_of_allegience.dds" }
+					size = { 50 70 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/priests.dds" size = { 50 70 } }
 					tooltip = "SEND_PRIEST_TO_PROVINCE_TT"
 					datacontext = "[GetScriptedGui('send_priest_button')]"
 					enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
@@ -3848,10 +3883,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 135 80 }
+				position = { 135 70 }
 				icon_button_square = {
-					size = { 45 45 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/price_convert_religion_cost_modifier.dds" }
+					size = { 50 70 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/merchants.dds" size = { 50 70 } }
 					tooltip = "SEND_MERCHANT_TO_PROVINCE_TT"
 					datacontext = "[GetScriptedGui('send_merchant_button')]"
 					enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
@@ -3863,10 +3898,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 263 80 }
+				position = { 263 70 }
 				icon_button_square = {
-					size = { 45 45 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/coordinate_urban_development.dds" }
+					size = { 50 70 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/architects.dds" size = { 50 70 } }
 					tooltip = "SEND_ARCHITECT_TO_PROVINCE_TT"
 					datacontext = "[GetScriptedGui('send_architect_button')]"
 					enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
@@ -3878,10 +3913,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 375 80 }
+				position = { 375 70 }
 				icon_button_square = {
-					size = { 45 45 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/patronize_arts.dds" }
+					size = { 50 70 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/artists.dds" size = { 50 70 } }
 					tooltip = "SEND_ARTIST_TO_PROVINCE_TT"
 					datacontext = "[GetScriptedGui('send_artist_button')]"
 					enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
@@ -3893,11 +3928,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 27 135 }
-				mini_pop_widget = {
-					size = { 40 85 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/demand_oaths_of_allegience.dds" }
-					blockoverride "Value" { value = 0 }
+				position = { 29 160 }
+				mini_pop_widget_province = {
+					size = { 40 40 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/priests.dds" size = { 0 0 } position = { 0 -10 } }
 					blockoverride "Text" { text = "[ProvinceWindow.GetProvince.MakeScope.Var('priest_in_territory').GetValue|0)]" }
 					tooltip = "There are currently #Y [ProvinceWindow.GetProvince.MakeScope.Var('priest_in_territory').GetValue|0)]#! Priests in [ProvinceWindow.GetProvince.GetName]"
 					tooltip_widgetanchor = bottom|left
@@ -3906,11 +3940,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 137 135 }
-				mini_pop_widget = {
-					size = { 40 85 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/price_convert_religion_cost_modifier.dds" }
-					blockoverride "Value" { value = 0 }
+				position = { 140 160 }
+				mini_pop_widget_province = {
+					size = { 40 40 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/priests.dds" size = { 0 0 } position = { 0 -10 } }
 					blockoverride "Text" { text = "[ProvinceWindow.GetProvince.MakeScope.Var('merchant_in_territory').GetValue|0)]" }
 					tooltip = "There are currently #Y [ProvinceWindow.GetProvince.MakeScope.Var('merchant_in_territory').GetValue|0)]#! Merchants in [ProvinceWindow.GetProvince.GetName]"
 					tooltip_widgetanchor = bottom|left
@@ -3919,11 +3952,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 265 135 }
-				mini_pop_widget = {
-					size = { 40 85 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/coordinate_urban_development.dds" }
-					blockoverride "Value" { value = 0 }
+				position = { 268 160 }
+				mini_pop_widget_province = {
+					size = { 40 40 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/priests.dds" size = { 0 0 } position = { 0 -10 } }
 					blockoverride "Text" { text = "[ProvinceWindow.GetProvince.MakeScope.Var('architects_in_territory').GetValue|0)]" }
 					tooltip = "There are currently #Y [ProvinceWindow.GetProvince.MakeScope.Var('architects_in_territory').GetValue|0)]#! Architects in [ProvinceWindow.GetProvince.GetName]"
 					tooltip_widgetanchor = bottom|left
@@ -3932,11 +3964,10 @@ window = {
 			}
 			flowcontainer = {
 				parentanchor = left
-				position = { 377 135 }
-				mini_pop_widget = {
-					size = { 40 85 }
-					blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/patronize_arts.dds" }
-					blockoverride "Value" { value = "0" }
+				position = { 380 160 }
+				mini_pop_widget_province = {
+					size = { 40 40 }
+					blockoverride "Icon" { texture = "gfx/interface/icons/pop_types/priests.dds" size = { 0 0 } position = { 0 -10 } }
 					blockoverride "Text" { text = "[ProvinceWindow.GetProvince.MakeScope.Var('artists_in_territory').GetValue|0)]" }
 					tooltip = "There are currently #Y [ProvinceWindow.GetProvince.MakeScope.Var('artists_in_territory').GetValue|0)]#! Artists in [ProvinceWindow.GetProvince.GetName]"
 					tooltip_widgetanchor = bottom|left
@@ -4017,7 +4048,7 @@ window = {
 			}
 			textbox = {
 				visible = "[ProvinceWindow.IsPlayerProvince]"
-				parentanchor = left
+				#parentanchor = left
 				position = { 547 60 }
 				using = HeaderFont
 				using = Black_FontColor

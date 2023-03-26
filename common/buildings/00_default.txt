@@ -889,8 +889,6 @@ court_building = { #Court of Law
 	cost = 150
 	time = 180
 
-	max_amount = 1
-
 	potential = {
 		has_city_status = yes
 	}
