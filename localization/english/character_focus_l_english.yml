@@ -28,6 +28,9 @@ COMMAND_FOCUS_TT:0 "#T Command#!"
 
 CHARACTER_FOCUS_XP_TT:0 "#T Character Focus Experience#!\n\n[CharacterWindow.GetCharacter.GetName] currently has #Y [CharacterWindow.GetCharacter.MakeScope.Var('character_focus_experience').GetValue|2]#! experience.\n\n#Y 100#! is needed to take a new focus perk.\n\n#TF Every month the ruler of a nation will gain #Y 2#! character experience. More can be gained from events and other actions."
 
+BIG_FOCUS_AVAILABLE_TOOLTIP:0 "#T Character Focus Available#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( AlertManager.GetPlayer.MakeScope ).AddScope('player', Player.MakeScope ).End )]"
+has_1_big_perk_tooltip:0 "Can pick a character focus."
+
 #Modifiers
 prowess_focus_triggered_mod:0 "Prowess Focus"
 strategy_focus_triggered_mod:0 "Strategy Focus"

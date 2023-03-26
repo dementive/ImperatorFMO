@@ -56,7 +56,7 @@
 		add_civilization_scaling_gold_cost_trigger = yes
 	}
 	effect = {
-		hidden:scope:player = {
+		scope:player = {
 			if = {
 				limit = {
 					has_variable = free_investments
