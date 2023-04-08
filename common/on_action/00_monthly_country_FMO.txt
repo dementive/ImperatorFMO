@@ -2,6 +2,7 @@
 	on_actions = {		
 		monthly_check_for_100_experience
 		monthly_reparation_payments_on_action
+		monthly_imperial_power
 	}
 
 	effect = {
@@ -18,7 +19,27 @@
 			trigger_event = me_thrace_3_new_philhellene_policy.201
 		}
 	}
+	events = {
+		imperial_events.1
+	}
 }
+monthly_imperial_power = {
+	trigger = {
+		has_variable = imperial_power
+	}
+	effect = {
+		if = {
+			limit = {
+				num_of_cities < 600
+			}
+			remove_variable = imperial_power
+		}
+		else = {
+			set_imperial_power = yes
+		}
+	}
+}
+
 monthly_reparation_payments_on_action = {
 	effect = {
 		#Add income for reparations...

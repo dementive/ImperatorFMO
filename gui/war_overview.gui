@@ -613,7 +613,6 @@ base_window = {
 	
 	text_button_square = {
 		position = { -140 -20 }
-		name = "decline_button"
 		visible = "[Not(WarOverview.GetWar.IsCivilWar)]"
 		blockoverride "Center_text" { text = "WAR_OVERVIEW_SUE_FOR_PEACE" }
 		blockoverride "On_click" { onclick = "[WarOverview.OnSueForPeace]" }
