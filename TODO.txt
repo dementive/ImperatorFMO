@@ -1,3 +1,27 @@
+New Laws
+
+• economic system
+
+• citizenship
+
+• religion specific laws
+
+• policing
+
+• education system
+
+• trade policy
+
+• welfare
+
+• free speech
+
+• health policies
+
+• internal security
+
+• bureaucracy (only for great powers)
+
 ----- TODO -----
 
  Fix progress bar tooltips that only go halfway

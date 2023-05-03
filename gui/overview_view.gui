@@ -2,7 +2,7 @@
 @windowheight = 900
 
 
-types Types
+types ImperialPowerTypes
 {
 	type imperial_power_widget = margin_widget {
 		visible = "[GetScriptedGui('is_imperial_power').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
