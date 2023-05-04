@@ -511,7 +511,7 @@ types Base_GUI_Types
 					blockoverride "Flag"
 					{
 						texture = "[Character.GetEmployer.AccessCoatOfArms.GetTexture('(int32)120', '(int32)120')]"
-						frame = "[Character.GetEmployer.AccessCoatOfArms.GetFrame('(int32)120', '(int32)120'))]"
+						frame = "[Character.GetEmployer.AccessCoatOfArms.GetFrame('(int32)120', '(int32)120')]"
 						framesize = { 120 120 }
 					}
 					blockoverride "On_click"

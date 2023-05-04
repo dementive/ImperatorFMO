@@ -1,5 +1,9 @@
 ﻿on_game_initialized = {
 
+	on_actions = {
+		COL_on_game_initialized
+	}
+
 	events = {
 		ee_economy_events.1 # Populate world with trade centers
 		artifact_creation_events.1 #Create artifacts in random countries
@@ -458,6 +462,16 @@
 				NOT = { has_global_variable = is_playing_invictus }
 			}
 			set_global_variable = is_playing_invictus #For other mods to check for Invictus stuff without errors plz don't remove
+		}
+	}
+}
+
+
+COL_on_game_initialized = {
+	effect = {
+		set_variable = {
+			name = colonization_count
+			value = 0
 		}
 	}
 }
