@@ -1,16 +1,16 @@
-﻿l_english:
+﻿#l_english:
 
-AGES_WINDOW_TITLE:0 "[Player.Custom('current_age_custom_loc')]"
-AGES_GOLDEN_AGE_BUTTON:0 "Start Golden Age"
-CURRENT_AGE_DESCRIPTION_UI:0 "[Player.Custom('current_age_desc_custom_loc')]"
-AGES_CURRENT_SPLENDOR_TOOLTIP:0 "5" #X Get Splendor
-current_age_custom_loc_1:0 "#T Hellenistic Age#!"
-current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-current_age_custom_loc_2:0 "#T Age of Migration#!"
-current_age_desc_custom_loc_2:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-current_age_custom_loc_3:0 "#T Age of Empires#!"
-current_age_desc_custom_loc_3:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+#AGES_WINDOW_TITLE:0 "[Player.Custom('current_age_custom_loc')]"
+#AGES_GOLDEN_AGE_BUTTON:0 "Start Golden Age"
+#CURRENT_AGE_DESCRIPTION_UI:0 "[Player.Custom('current_age_desc_custom_loc')]"
+#AGES_CURRENT_SPLENDOR_TOOLTIP:0 "5" #X Get Splendor
+#current_age_custom_loc_1:0 "#T Hellenistic Age#!"
+#current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+#current_age_custom_loc_2:0 "#T Age of Migration#!"
+#current_age_desc_custom_loc_2:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+#current_age_custom_loc_3:0 "#T Age of Empires#!"
+#current_age_desc_custom_loc_3:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
 
 
-HELLENIC_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
-HELLENIC_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+#HELLENIC_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
+#HELLENIC_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
