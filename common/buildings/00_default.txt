@@ -1754,8 +1754,11 @@ sacred_enclosure_building = {
 
 	potential = {
 		has_city_status = no
-		owner = {
-			is_tribal = yes
+		AND = {
+			exists = owner
+			owner = {
+				is_tribal = yes
+			}
 		}
 	}
 
@@ -1804,8 +1807,11 @@ sanctuary_building = { #Sanctuary
 
 	potential = {
 		has_city_status = no
-		owner = {
-			is_tribal = no
+		AND = {
+			exists = owner
+			owner = {
+				is_tribal = no
+			}
 		}
 	}
 

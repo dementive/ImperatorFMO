@@ -1,7 +1,6 @@
 ﻿monthly_country_pulse = {
 	on_actions = {		
 		monthly_check_for_100_experience
-		monthly_reparation_payments_on_action
 		monthly_imperial_power
 		monthly_colonization_pulse
 	}
@@ -33,7 +32,6 @@ monthly_colonization_pulse = {
 				NOT = { has_country_modifier = colonization_mod_one }
 			}
 			var:colonization_mod_one_var = {
-				remove_variable = province_is_being_colonized
 				set_owned_by = root
 			}
 			remove_variable = colonization_mod_one_var
@@ -48,7 +46,6 @@ monthly_colonization_pulse = {
 				NOT = { has_country_modifier = colonization_mod_two }
 			}
 			var:colonization_mod_two_var = {
-				remove_variable = province_is_being_colonized
 				set_owned_by = root
 			}
 			remove_variable = colonization_mod_two_var
@@ -63,7 +60,6 @@ monthly_colonization_pulse = {
 				NOT = { has_country_modifier = colonization_mod_three }
 			}
 			var:colonization_mod_three_var = {
-				remove_variable = province_is_being_colonized
 				set_owned_by = root
 			}
 			remove_variable = colonization_mod_three_var
@@ -78,7 +74,6 @@ monthly_colonization_pulse = {
 				NOT = { has_country_modifier = colonization_mod_four }
 			}
 			var:colonization_mod_four_var = {
-				remove_variable = province_is_being_colonized
 				set_owned_by = root
 			}
 			remove_variable = colonization_mod_four_var
@@ -93,7 +88,6 @@ monthly_colonization_pulse = {
 				NOT = { has_country_modifier = colonization_mod_five }
 			}
 			var:colonization_mod_five_var = {
-				remove_variable = province_is_being_colonized
 				set_owned_by = root
 			}
 			remove_variable = colonization_mod_five_var
@@ -119,24 +113,6 @@ monthly_imperial_power = {
 		}
 		else = {
 			set_imperial_power = yes
-		}
-	}
-}
-
-monthly_reparation_payments_on_action = {
-	effect = {
-		#Add income for reparations...
-		if = {
-			limit = { has_variable = paying_5_year_reparations }
-			save_scope_as = rep_country
-			add_treasury = {
-				value = subtract_10_percent_monthly_income
-			}
-			var:paying_5_year_reparations = {
-				add_treasury = {
-					value = add_10_percent_monthly_income
-				}
-			}
 		}
 	}
 }
@@ -193,6 +169,24 @@ monthly_check_for_100_experience = {
 		}
 		every_ruler_with_perk = {
 			monthly_perk_distribution_effect = yes
+		}
+	}
+}
+
+monthly_reparation_payments_on_action = {
+	effect = {
+		#Add income for reparations...
+		if = {
+			limit = { has_variable = paying_5_year_reparations }
+			save_scope_as = rep_country
+			add_treasury = {
+				value = subtract_10_percent_monthly_income
+			}
+			var:paying_5_year_reparations = {
+				add_treasury = {
+					value = add_10_percent_monthly_income
+				}
+			}
 		}
 	}
 }
