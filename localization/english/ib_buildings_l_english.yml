@@ -32,9 +32,10 @@
 
  enables_foundry_building_tt:0 "Unlocks the #Y Workshop#! City building."
  hunting_camps_tooltip:0 "Requires #Y Wild Game#! or #Y Fur#!."
- logging_camps_tooltip:0 "Requires #Y Wood#!."
+ logging_camps_tooltip:0 "Requires #Y Wood#! or #Y Cedar#!."
  enclosure_building_tt:0 "Requires #Y Livestock#!."
  nomad_camp_building_tt:0 "Requires #Y Desert#!, #Y Desert Hills#!, or #Y Oasis#! terrain."
+ can_only_increase_base_resources_once_tt:0 "Settlements can only have #Y 1#! building that increases base resources."
 
  #Roma Invicta
 commons_building:0 "Town Commons"

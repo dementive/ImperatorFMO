@@ -712,6 +712,9 @@ shrine_building = { #Shrine
 
 	potential = {
 		has_city_status = yes
+	}
+
+	allow = {
 		is_holy_site = yes
 	}
 
@@ -1864,6 +1867,17 @@ slave_mine_building = { #Mine
 
 	allow = {
 		has_minable_trade_good_trigger = yes
+		trigger_if = {
+			limit = {
+				num_of_settlement_buildings_with_base_resources > 0
+				exists = owner
+				owner = { invention = global_settlement_building_slot_inv }
+			}
+			custom_tooltip = {
+				text = can_only_increase_base_resources_once_tt
+				num_of_settlement_buildings_with_base_resources < 1
+			}
+		}
 	}
 
 	cost = 200
@@ -1906,6 +1920,17 @@ settlement_blacksmith = { #Blacksmith
 				trade_goods = base_metals
 			}
 		}
+		trigger_if = {
+			limit = {
+				num_of_settlement_buildings_with_base_resources > 0
+				exists = owner
+				owner = { invention = global_settlement_building_slot_inv }
+			}
+			custom_tooltip = {
+				text = can_only_increase_base_resources_once_tt
+				num_of_settlement_buildings_with_base_resources < 1
+			}
+		}
 	}
 
 	cost = 200
@@ -1944,6 +1969,17 @@ basic_settlement_infratructure_building = { #Farming Settlement
 
 	allow = {
 		has_food_trade_good_trigger = yes
+		trigger_if = {
+			limit = {
+				num_of_settlement_buildings_with_base_resources > 0
+				exists = owner
+				owner = { invention = global_settlement_building_slot_inv }
+			}
+			custom_tooltip = {
+				text = can_only_increase_base_resources_once_tt
+				num_of_settlement_buildings_with_base_resources < 1
+			}
+		}
 	}
 
 	cost = 200
@@ -1991,6 +2027,17 @@ enclosure_building = {
 		custom_tooltip = {
 			text = enclosure_building_tt
 			trade_goods = cattle
+		}
+		trigger_if = {
+			limit = {
+				num_of_settlement_buildings_with_base_resources > 0
+				exists = owner
+				owner = { invention = global_settlement_building_slot_inv }
+			}
+			custom_tooltip = {
+				text = can_only_increase_base_resources_once_tt
+				num_of_settlement_buildings_with_base_resources < 1
+			}
 		}
 	}
 
@@ -2094,7 +2141,10 @@ logging_camps = {
 	allow = {
 		custom_tooltip = {
 			text = logging_camps_tooltip
-			trade_goods = wood
+			OR = {
+				trade_goods = wood
+				trade_goods = cedar
+			}
 		}
 	}
 
@@ -2104,8 +2154,8 @@ logging_camps = {
 			add = 3
 		}
 		modifier = {
-			add = 5
-			num_of_slaves >= 8
+			trade_goods = cedar
+			add = 3
 		}
 	}
 
