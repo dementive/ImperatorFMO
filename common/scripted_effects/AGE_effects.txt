@@ -1,0 +1,47 @@
+﻿age_ability_effect = {
+	change_variable = {
+	    name = splendor
+	    subtract = 800
+	}
+}
+
+age_obj_completed = {
+	change_variable = {
+		name = completed_$obj$_objectives
+		add = 1
+	}
+}
+
+# Effect that is run when the ages window is opened, this checks if any objectives in the current age have been completed.
+# This is only functionally for golden ages. So checks here don't matter if golden age has already been taken or if 3 objectives have already been completed.
+check_age_objectives_effect = {
+	if = {
+		limit = {
+			NOT = { has_variable = golden_age_taken }
+		}
+		if = {
+		    limit = {
+		    	var:completed_hellenic_objectives < 3
+		    	is_age = { num = 1 }
+		    }
+		    # Check for all hellenic objectives
+		    # age_obj_completed = { obj = "hellenic" }
+		}
+		else_if = {
+		    limit = {
+		    	var:completed_migration_objectives < 3
+		    	is_age = { num = 2 }
+		    }
+		    # Check for all migration objectives
+		    # age_obj_completed = { obj = "migration" }
+		}
+		else_if = {
+		    limit = {
+		    	var:completed_empire_objectives < 3
+		    	is_age = { num = 3 }
+		    }
+		    # Check for all empire objectives
+		    # age_obj_completed = { obj = "empire" }
+		}
+	}
+}

@@ -1,0 +1,53 @@
+﻿is_first_age = {
+    scope = country
+    is_valid = {
+        is_age = { num = 1 }
+    }
+    is_shown = {
+        is_age = { num = 1 }
+    }
+}
+is_second_age = {
+    scope = country
+    is_valid = {
+        is_age = { num = 2 }
+    }
+    is_shown = {
+        is_age = { num = 2 }
+    }
+}
+is_third_age = {
+    scope = country
+    is_valid = {
+        is_age = { num = 3 }
+    }
+    is_shown = {
+        is_age = { num = 3 }
+    }
+}
+
+golden_age_button = {
+    scope = country
+    is_valid = {
+        # has completed at least 3 age objectives
+        custom_tooltip = {
+            text = golden_age_objectives_tt
+            OR = {
+                var:completed_hellenic_objectives >= 3
+                var:completed_migration_objectives >= 3
+                var:completed_empire_objectives >= 3
+            }
+        }
+    }
+    effect = {
+        add_treasury = 999
+        set_variable = golden_age_taken
+    }
+}
+
+check_age_objectives = {
+    scope = country
+    effect = {
+        check_age_objectives_effect = yes
+    }
+}

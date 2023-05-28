@@ -71,207 +71,20 @@ types AgeWindowTypes
 			name = "hellenic_age_objectives"
 			direction = vertical
 			spacing = -9
-			visible = yes
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "HELLENIC_OBJECTIVE_1_TITLE"
-				}
-				blockoverride "objective_desc"
-				{
-					text = "HELLENIC_OBJECTIVE_1_DESC"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
+			visible = "[GetScriptedGui('is_first_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			using = hellenic_objectives
 		}
 		flowcontainer = {
 			name = "migration_age_objectives"
 			direction = vertical
-			visible = no
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "Objective 2"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
+			visible = "[GetScriptedGui('is_second_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			using = migration_objectives
 		}
 		flowcontainer = {
 			name = "empire_age_objectives"
 			direction = vertical
-			visible = no
-			age_objective = {
-				blockoverride "button_content" {
-					texture = "gfx/interface/ages_window/icon_empire.dds"
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "objective_title"
-				{
-					text = "Objective 3"
-				}
-				blockoverride "progress_text"
-				{
-					text = "0 / 5"
-				}
-				blockoverride "progress_value"
-				{
-					value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
-				}
-			}
+			visible = "[GetScriptedGui('is_third_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			using = empire_objectives
 		}
 	}
 	type age_objective = margin_widget {
@@ -288,12 +101,11 @@ types AgeWindowTypes
 				spriteborder = { 60 60 }
 			}
 		}
-		button = {
+		icon = {
 			position = { 20 7 }
 			size = { 55 55 }
-			block "button_content" {
+			block "Icon" {
 				texture = "gfx/interface/ages_window/icon_empire.dds"
-				onclick = "[ToggleMessageLog]"
 			}
 		}
 		# Title and desc
@@ -360,187 +172,32 @@ types AgeWindowTypes
 			name = "hellenic_age_abilities"
 			direction = horizontal
 			spacing = 15
-			visible = yes
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
+			visible = "[GetScriptedGui('is_first_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			using = hellenic_abilities
 		}
 		flowcontainer = {
 			name = "migration_age_abilities"
 			direction = horizontal
-			visible = no
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
+			visible = "[GetScriptedGui('is_second_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			using = migration_abilities
 		}
 		flowcontainer = {
 			name = "empire_age_abilities"
 			direction = horizontal
-			visible = no
-			icon_button_square = {
-				size = { 40 40 }
-				blockoverride "On_click"
-				{
-					onclick = "[ToggleMessageLog]"
-				}
-				blockoverride "Icon"
-				{
-					texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
-					size = { 34 34 }
-				}
-				tooltip = "hi"
-			}
+			visible = "[GetScriptedGui('is_third_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			using = empire_abilities
 		}
+	}
+	type age_ability = icon_button_square {
+		size = { 40 40 }
+		blockoverride "Icon"
+		{
+			texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+		}
+		blockoverride "On_click" {
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+		}
+		enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
 	}
 }
 
@@ -548,7 +205,12 @@ message_window = {
 	name = "ages_window"
 	size = { @ages_window_x @ages_window_y }
 	position = { 531 46 }
-	movable = no
+	movable = yes
+
+	state = {
+		name = _show
+		on_start = "[GetScriptedGui('check_age_objectives').Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+	}
 
 	blockoverride "Title_text" { text = "AGES_WINDOW_TITLE" }
 
@@ -566,55 +228,123 @@ message_window = {
 		container = {
 			position = { 65 0 }
 			icon = {
-				visible = no
+				visible = "[GetScriptedGui('is_first_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 				size = { 600 239 }
 				texture = "gfx/interface/ages_window/hellenistic_age.dds"
 			}
 			icon = {
-				visible = no
+				visible = "[GetScriptedGui('is_second_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 				size = { 600 239 }
 				texture = "gfx/interface/ages_window/age_of_migration.dds"
 			}
 			icon = {
-				visible = yes
+				visible = "[GetScriptedGui('is_third_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 				size = { 600 239 }
 				texture = "gfx/interface/ages_window/age_of_empires.dds"
 			}
 		}
 		golden_age_button = {
+			datacontext = "[GetScriptedGui('golden_age_button')]"
 			blockoverride "Center_text" {
 				text = "AGES_GOLDEN_AGE_BUTTON"
 			}
-			blockoverride "On_click" { onclick = "[ToggleMessageLog]" }
+			blockoverride "On_click" {
+				onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+				enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Player.MakeScope ).End )]"
+				tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+			}
 			position = { 210 251 }
 			size = { 260 33 }
 		}
 		flowcontainer = {
 			direction = vertical
 			position = { 7 10 }
-			icon = {
-				texture = "gfx/interface/ages_window/icon_hellenic.dds"
-				tooltip = "#T Hellenic Age"
-				size = { 75 75 }
+			container = {
+				icon = {
+					visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+					shaderfile = "gfx/FX/GUI_age_icon.shader"
+					effectname = "GuiBloom"
+					datacontext = "[GetScriptedGui('is_first_age')]"
+					texture = "gfx/interface/ages_window/icon_hellenic.dds"
+					tooltip = "#T Hellenic Age"
+					size = { 60 60 }
+					state = {
+						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						size = { 95 95 }
+					}
+				}
+				icon = {
+					visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+					datacontext = "[GetScriptedGui('is_first_age')]"
+					texture = "gfx/interface/ages_window/icon_hellenic.dds"
+					tooltip = "#T Hellenic Age"
+					size = { 60 60 }
+					state = {
+						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						size = { 95 95 }
+					}
+				}
 			}
-			icon = {
-				texture = "gfx/interface/ages_window/icon_migration.dds"
-				tooltip = "#T Age of Migration"
-				size = { 75 75 }
+			container = {
+				icon = {
+					visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+					shaderfile = "gfx/FX/GUI_age_icon.shader"
+					effectname = "GuiBloom"
+					datacontext = "[GetScriptedGui('is_second_age')]"
+					texture = "gfx/interface/ages_window/icon_migration.dds"
+					tooltip = "#T Hellenic Age"
+					size = { 60 60 }
+					state = {
+						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						size = { 95 95 }
+					}
+				}
+				icon = {
+					visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+					datacontext = "[GetScriptedGui('is_second_age')]"
+					texture = "gfx/interface/ages_window/icon_migration.dds"
+					tooltip = "#T Hellenic Age"
+					size = { 70 70 }
+					state = {
+						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						size = { 95 95 }
+					}
+				}
 			}
-			icon = {
-				texture = "gfx/interface/ages_window/icon_empire.dds"
-				tooltip = "#T Age of Empires"
-				size = { 75 75 }
+			container = {
+				icon = {
+					visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+					shaderfile = "gfx/FX/GUI_age_icon.shader"
+					effectname = "GuiBloom"
+					datacontext = "[GetScriptedGui('is_third_age')]"
+					texture = "gfx/interface/ages_window/icon_empire.dds"
+					tooltip = "#T Hellenic Age"
+					size = { 60 60 }
+					state = {
+						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						size = { 95 95 }
+					}
+				}
+				icon = {
+					visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+					datacontext = "[GetScriptedGui('is_third_age')]"
+					texture = "gfx/interface/ages_window/icon_empire.dds"
+					tooltip = "#T Hellenic Age"
+					size = { 70 70 }
+					state = {
+						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						size = { 95 95 }
+					}
+				}
 			}
 		}
 	}
 	icon_and_text = {
 		size = { 80 25 }
 		parentanchor = vcenter
-		position = { 3 -143 }
+		position = { 4 -150 }
 		blockoverride "Icon" { texture = "gfx/interface/ages_window/splendor.dds" }
-		blockoverride "Text" { text = "5" }
+		blockoverride "Text" { text = "[Player.MakeScope.Var('splendor').GetValue|0]" }
 		tooltip = "AGES_CURRENT_SPLENDOR_TOOLTIP"
 	}
 	container = {
@@ -635,6 +365,6 @@ message_window = {
 	}
 	age_objectives = {
 		parentanchor = vcenter
-		position = { 22 219 }
+		position = { 22 246 }
 	}
 }

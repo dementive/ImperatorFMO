@@ -1,0 +1,100 @@
+﻿hellenic_ability_one = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        add_treasury = 50
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_two = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_three = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_four = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_five = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_six = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_seven = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_eight = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_nine = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_ten = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}
+hellenic_ability_eleven = {
+    scope = country
+    is_valid = {
+        age_ability_trigger = yes
+    }
+    effect = {
+        age_ability_effect = yes
+    }
+}

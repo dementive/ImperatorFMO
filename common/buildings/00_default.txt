@@ -49,10 +49,6 @@ fortress_ramparts_building = {
 				multiply = 8
 			}
 		}
-		modifier = {
-			has_expensive_trade_good = yes
-			add = -50
-		}
 	}
 
 	modification_display = {
@@ -203,10 +199,6 @@ foundry_building = { #Foundry
 				multiply = num_of_freemen
 			}
 		}
-		modifier = {
-			has_expensive_trade_good = yes
-			add = 5
-		}
 	}
 }
 
@@ -246,10 +238,6 @@ military_building = { #Conscription Camp
 				value = 3
 				multiply = num_of_freemen_building_sv
 			}
-		}
-		modifier = {
-			has_expensive_trade_good = yes
-			add = -50
 		}
 	}
 }

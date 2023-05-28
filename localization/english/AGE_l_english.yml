@@ -1,16 +1,196 @@
-﻿#l_english:
+﻿l_english:
 
-#AGES_WINDOW_TITLE:0 "[Player.Custom('current_age_custom_loc')]"
-#AGES_GOLDEN_AGE_BUTTON:0 "Start Golden Age"
-#CURRENT_AGE_DESCRIPTION_UI:0 "[Player.Custom('current_age_desc_custom_loc')]"
-#AGES_CURRENT_SPLENDOR_TOOLTIP:0 "5" #X Get Splendor
-#current_age_custom_loc_1:0 "#T Hellenistic Age#!"
-#current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-#current_age_custom_loc_2:0 "#T Age of Migration#!"
-#current_age_desc_custom_loc_2:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-#current_age_custom_loc_3:0 "#T Age of Empires#!"
-#current_age_desc_custom_loc_3:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+ # UI tooltips
+ AGES_WINDOW_TITLE:0 "[Player.Custom('current_age_custom_loc')]"
+ AGES_GOLDEN_AGE_BUTTON:0 "Start Golden Age"
+ CURRENT_AGE_DESCRIPTION_UI:0 "[Player.Custom('current_age_desc_custom_loc')]"
+ AGES_CURRENT_SPLENDOR_TOOLTIP:0 "#T Splendor#!: [Player.MakeScope.Var('splendor').GetValue|0Y]"
+
+ # Sgui tooltips
+ ability_requires_splendor_tt:0 "At least #Y 800#! splendor is needed to take an age ability (Current: [Player.MakeScope.Var('splendor').GetValue|0Y])"
+ golden_age_objectives_tt:0 "At least #Y 3#! [Player.Custom('current_age_custom_loc')] objectives have been completed."
+
+ # Custom locs
+ current_age_custom_loc_1:0 "#T Hellenistic Age#!"
+ current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+ current_age_custom_loc_2:0 "#T Age of Migration#!"
+ current_age_desc_custom_loc_2:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+ current_age_custom_loc_3:0 "#T Age of Empires#!"
+ current_age_desc_custom_loc_3:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+
+ # Objective sgui loc
+ HELLENIC_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
+ HELLENIC_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ HELLENIC_OBJECTIVE_2_TITLE:0 "#bold Objective 2#!"
+ HELLENIC_OBJECTIVE_2_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ HELLENIC_OBJECTIVE_3_TITLE:0 "#bold Objective 3#!"
+ HELLENIC_OBJECTIVE_3_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ HELLENIC_OBJECTIVE_4_TITLE:0 "#bold Objective 4#!"
+ HELLENIC_OBJECTIVE_4_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ HELLENIC_OBJECTIVE_5_TITLE:0 "#bold Objective 5#!"
+ HELLENIC_OBJECTIVE_5_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ HELLENIC_OBJECTIVE_6_TITLE:0 "#bold Objective 6#!"
+ HELLENIC_OBJECTIVE_6_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ HELLENIC_OBJECTIVE_7_TITLE:0 "#bold Objective 7#!"
+ HELLENIC_OBJECTIVE_7_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ # Migration age
+
+ MIGRATION_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
+ MIGRATION_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ MIGRATION_OBJECTIVE_2_TITLE:0 "#bold Objective 2#!"
+ MIGRATION_OBJECTIVE_2_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ MIGRATION_OBJECTIVE_3_TITLE:0 "#bold Objective 3#!"
+ MIGRATION_OBJECTIVE_3_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ MIGRATION_OBJECTIVE_4_TITLE:0 "#bold Objective 4#!"
+ MIGRATION_OBJECTIVE_4_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ MIGRATION_OBJECTIVE_5_TITLE:0 "#bold Objective 5#!"
+ MIGRATION_OBJECTIVE_5_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ MIGRATION_OBJECTIVE_6_TITLE:0 "#bold Objective 6#!"
+ MIGRATION_OBJECTIVE_6_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ MIGRATION_OBJECTIVE_7_TITLE:0 "#bold Objective 7#!"
+ MIGRATION_OBJECTIVE_7_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ # Empire age
+
+ EMPIRE_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
+ EMPIRE_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ EMPIRE_OBJECTIVE_2_TITLE:0 "#bold Objective 2#!"
+ EMPIRE_OBJECTIVE_2_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ EMPIRE_OBJECTIVE_3_TITLE:0 "#bold Objective 3#!"
+ EMPIRE_OBJECTIVE_3_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ EMPIRE_OBJECTIVE_4_TITLE:0 "#bold Objective 4#!"
+ EMPIRE_OBJECTIVE_4_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ EMPIRE_OBJECTIVE_5_TITLE:0 "#bold Objective 5#!"
+ EMPIRE_OBJECTIVE_5_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ EMPIRE_OBJECTIVE_6_TITLE:0 "#bold Objective 6#!"
+ EMPIRE_OBJECTIVE_6_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+
+ EMPIRE_OBJECTIVE_7_TITLE:0 "#bold Objective 7#!"
+ EMPIRE_OBJECTIVE_7_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
 
 
-#HELLENIC_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
-#HELLENIC_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ # Abilities
+
+
+ HELLENIC_ABILITY_ONE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_ONE_TT_DESC$"
+ HELLENIC_ABILITY_ONE_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_TWO_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_TWO_TT_DESC$"
+ HELLENIC_ABILITY_TWO_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_THREE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_THREE_TT_DESC$"
+ HELLENIC_ABILITY_THREE_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_FOUR_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_FOUR_TT_DESC$"
+ HELLENIC_ABILITY_FOUR_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_FIVE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_FIVE_TT_DESC$"
+ HELLENIC_ABILITY_FIVE_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_SIX_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_SIX_TT_DESC$"
+ HELLENIC_ABILITY_SIX_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_SEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_SEVEN_TT_DESC$"
+ HELLENIC_ABILITY_SEVEN_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_EIGHT_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_EIGHT_TT_DESC$"
+ HELLENIC_ABILITY_EIGHT_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_NINE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_NINE_TT_DESC$"
+ HELLENIC_ABILITY_NINE_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_TEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_TEN_TT_DESC$"
+ HELLENIC_ABILITY_TEN_TT_DESC:0 ""
+
+ HELLENIC_ABILITY_ELEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$HELLENIC_ABILITY_ELEVEN_TT_DESC$"
+ HELLENIC_ABILITY_ELEVEN_TT_DESC:0 ""
+
+
+ # Migration Abilities
+
+ MIGRATION_ABILITY_ONE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_ONE_TT_DESC$"
+ MIGRATION_ABILITY_ONE_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_TWO_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_TWO_TT_DESC$"
+ MIGRATION_ABILITY_TWO_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_THREE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_THREE_TT_DESC$"
+ MIGRATION_ABILITY_THREE_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_FOUR_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_FOUR_TT_DESC$"
+ MIGRATION_ABILITY_FOUR_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_FIVE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_FIVE_TT_DESC$"
+ MIGRATION_ABILITY_FIVE_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_SIX_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SIX_TT_DESC$"
+ MIGRATION_ABILITY_SIX_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_SEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SEVEN_TT_DESC$"
+ MIGRATION_ABILITY_SEVEN_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_EIGHT_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_EIGHT_TT_DESC$"
+ MIGRATION_ABILITY_EIGHT_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_NINE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_NINE_TT_DESC$"
+ MIGRATION_ABILITY_NINE_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_TEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_TEN_TT_DESC$"
+ MIGRATION_ABILITY_TEN_TT_DESC:0 ""
+
+ MIGRATION_ABILITY_ELEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_ELEVEN_TT_DESC$"
+ MIGRATION_ABILITY_ELEVEN_TT_DESC:0 ""
+
+
+ # Empire Abilities
+
+ EMPIRE_ABILITY_ONE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ONE_TT_DESC$"
+ EMPIRE_ABILITY_ONE_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_TWO_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_TWO_TT_DESC$"
+ EMPIRE_ABILITY_TWO_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_THREE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_THREE_TT_DESC$"
+ EMPIRE_ABILITY_THREE_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_FOUR_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_FOUR_TT_DESC$"
+ EMPIRE_ABILITY_FOUR_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_FIVE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_FIVE_TT_DESC$"
+ EMPIRE_ABILITY_FIVE_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_SIX_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_SIX_TT_DESC$"
+ EMPIRE_ABILITY_SIX_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_SEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_SEVEN_TT_DESC$"
+ EMPIRE_ABILITY_SEVEN_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_EIGHT_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_EIGHT_TT_DESC$"
+ EMPIRE_ABILITY_EIGHT_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_NINE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_NINE_TT_DESC$"
+ EMPIRE_ABILITY_NINE_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_TEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_TEN_TT_DESC$"
+ EMPIRE_ABILITY_TEN_TT_DESC:0 ""
+
+ EMPIRE_ABILITY_ELEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ELEVEN_TT_DESC$"
+ EMPIRE_ABILITY_ELEVEN_TT_DESC:0 ""

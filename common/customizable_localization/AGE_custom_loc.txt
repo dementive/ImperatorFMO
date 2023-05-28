@@ -3,21 +3,19 @@
 	text = {
 		localization_key = current_age_custom_loc_1
 		trigger = {
-			current_date >= 450.1.1
-			current_date < 550.1.1
+			is_age = { num = 1 }
 		}
 	}
 	text = {
 		localization_key = current_age_custom_loc_2
 		trigger = {
-			current_date >= 550.1.1
-			current_date < 650.1.1
+			is_age = { num = 2 }
 		}
 	}
 	text = {
 		localization_key = current_age_custom_loc_3
 		trigger = {
-			current_date >= 650.1.1
+			is_age = { num = 3 }
 		}
 	}
 }
@@ -27,21 +25,19 @@ current_age_desc_custom_loc = {
 	text = {
 		localization_key = current_age_desc_custom_loc_1
 		trigger = {
-			current_date >= 450.1.1
-			current_date < 550.1.1
+			is_age = { num = 1 }
 		}
 	}
 	text = {
 		localization_key = current_age_desc_custom_loc_2
 		trigger = {
-			current_date >= 550.1.1
-			current_date < 650.1.1
+			is_age = { num = 2 }
 		}
 	}
 	text = {
 		localization_key = current_age_desc_custom_loc_3
 		trigger = {
-			current_date >= 650.1.1
+			is_age = { num = 3 }
 		}
 	}
 }
