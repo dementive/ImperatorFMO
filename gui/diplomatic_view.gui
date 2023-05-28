@@ -484,8 +484,9 @@ base_window = {
 						layoutpolicy_horizontal = expanding
 						blockoverride "On_click" {
 							#onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							onclick = "[ExecuteConsoleCommand('gui.ClearWidgets subject_focus_window')]"
+							onclick = "[GetVariableSystem.Toggle('subject_national_menu')]"
 							onclick = "[ExecuteConsoleCommand('gui.createwidget gui/subject_focus.gui subject_focus_window')]"
+							enabled = "[Not(GetVariableSystem.Exists('subject_national_menu'))]"
 						}
 						blockoverride "Center_text"
 						{
