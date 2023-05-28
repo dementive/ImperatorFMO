@@ -11,10 +11,11 @@ state_improvement.1 = { #Military
 	trigger = { exists = scope:state_improvement_target }
 	
 	immediate = {
-		add_state_modifier = {
-			name = state_improvement_military
-			duration = -1
-			mode = add
+		every_state_province = {
+			add_permanent_province_modifier = {
+				name = state_improvement_military
+				mode = add
+			}
 		}
 		owner = {
 			trigger_event = { id = state_improvement.12 }
@@ -335,10 +336,11 @@ state_improvement.10 = { #Military SPA
 	}
 
 	immediate = {
-		add_state_modifier = {
-			name = state_improvement_military_SPA
-			duration = -1
-			mode = add
+		every_state_province = {
+			add_permanent_province_modifier = {
+				name = state_improvement_military_SPA
+				mode = add
+			}
 		}
 		owner = {
 			trigger_event = { id = state_improvement.16 }
