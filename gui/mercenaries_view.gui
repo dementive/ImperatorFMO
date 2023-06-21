@@ -399,26 +399,9 @@ base_window = {
 		
 		blockoverride "White_buttons"
 		{
-			button = {
-				texture = "gfx/interface/base_parts/white_button_color_200fs.dds"
-				spriteType = Corneredtiled
-				spriteborder = { 100 100 }
-				gfxtype = framedbuttongfx
-				size = { 19 19 }
-				clicksound = "event:/SFX/UI/Generic/2.0/sfx_ui_button_cancel"
-				framesize = { 100 100 }
-				upframe = 1
-				overframe = 2
-				downframe = 3
-				disableframe = 4
-				
-				modify_texture = {
-					name = "Alpha"
-					texture = "gfx/icons/expand.dds"
-					blend_mode = alphamultiply			
-				}
+			button_resize = {
 				onclick = "[GetVariableSystem.Toggle('compact_merc_view')]"
-				tooltip = "#T Toggle Compact View#!"
+				tooltip = "TOGGLE_COMPACT_MERC_VIEW"
 			}
 			button_back = {
 				shortcut = "previous_window"

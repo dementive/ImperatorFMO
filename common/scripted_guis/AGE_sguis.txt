@@ -48,6 +48,250 @@ golden_age_button = {
 check_age_objectives = {
     scope = country
     effect = {
-        check_age_objectives_effect = yes
+        if = {
+            limit = {
+                is_age = { num = 1 }
+            }
+            # Check for all hellenic objectives
+            # Objective 1
+            add_treasury = 999
+            if = {
+                limit = {
+                    var:hellenic_obj_one != 100
+                    hellenic_obj_one_trigger = yes
+                }
+                change_variable = {
+                    name = hellenic_obj_one
+                    add = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+
+            # Objective 2
+            if = {
+                limit = {
+                    var:hellenic_obj_two != 0
+                    rank = migrant_horde
+                }
+                remove_variable = hellenic_obj_two
+                set_variable = {
+                    name = hellenic_obj_two
+                    value = 0
+                }
+            }
+            if = {
+                limit = {
+                    var:hellenic_obj_two != 20
+                    rank = city_power
+                }
+                remove_variable = hellenic_obj_two
+                set_variable = {
+                    name = hellenic_obj_two
+                    value = 20
+                }
+            }
+            if = {
+                limit = {
+                    var:hellenic_obj_two != 40
+                    rank = local_power
+                }
+                remove_variable = hellenic_obj_two
+                set_variable = {
+                    name = hellenic_obj_two
+                    value = 40
+                }
+            }
+            if = {
+                limit = {
+                    var:hellenic_obj_two != 60
+                    rank = regional_power
+                }
+                remove_variable = hellenic_obj_two
+                set_variable = {
+                    name = hellenic_obj_two
+                    value = 60
+                }
+            }
+            if = {
+                limit = {
+                    var:hellenic_obj_two != 80
+                    rank = major_power
+                }
+                remove_variable = hellenic_obj_two
+                set_variable = {
+                    name = hellenic_obj_two
+                    value = 80
+                }
+            }
+            if = {
+                limit = {
+                    var:hellenic_obj_two != 100
+                    hellenic_obj_two_trigger = yes
+                }
+                remove_variable = hellenic_obj_two
+                set_variable = {
+                    name = hellenic_obj_two
+                    value = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+
+            # Objective 3
+            if = {
+                limit = {
+                    num_of_ships < 100
+                    NOT = { hellenic_obj_three_trigger = yes }
+                }
+                remove_variable = hellenic_obj_three
+                set_variable = {
+                    name = hellenic_obj_three
+                    value = root.num_of_ships
+                }
+            }
+            if = {
+                limit = {
+                    var:hellenic_obj_three != 100
+                    hellenic_obj_three_trigger = yes
+                }
+                remove_variable = hellenic_obj_three
+                set_variable = {
+                    name = hellenic_obj_three
+                    value = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+
+            # Objective 4
+            if = {
+                limit = {
+                    hellenic_obj_four_svalue = 0
+                }
+                remove_variable = hellenic_obj_four
+                set_variable = {
+                    name = hellenic_obj_four
+                    value = 0
+                }
+            }
+            else_if = {
+                limit = {
+                    hellenic_obj_four_svalue >= 1
+                    hellenic_obj_four_svalue < 2
+                }
+                remove_variable = hellenic_obj_four
+                set_variable = {
+                    name = hellenic_obj_four
+                    value = 33
+                }
+            }
+            else_if = {
+                limit = {
+                    hellenic_obj_four_svalue >= 2
+                    hellenic_obj_four_svalue < 3
+                }
+                remove_variable = hellenic_obj_four
+                set_variable = {
+                    name = hellenic_obj_four
+                    value = 66
+                }
+            }
+            else_if = {
+                limit = {
+                    hellenic_obj_four_svalue >= 3
+                    var:hellenic_obj_four != 100
+                }
+                remove_variable = hellenic_obj_four
+                set_variable = {
+                    name = hellenic_obj_four
+                    value = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+
+            # Objective 5
+            if = {
+                limit = {
+                    hellenic_obj_five_svalue < 100
+                }
+                remove_variable = hellenic_obj_five
+                set_variable = {
+                    name = hellenic_obj_five
+                    value = hellenic_obj_five_svalue
+                }
+            }
+            else_if = {
+                limit = {
+                    hellenic_obj_five_svalue >= 100
+                    var:hellenic_obj_five != 100
+                }
+                remove_variable = hellenic_obj_five
+                set_variable = {
+                    name = hellenic_obj_five
+                    value = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+
+            # Objective 6
+            if = {
+                limit = {
+                    hellenic_obj_six_svalue < 75
+                }
+                remove_variable = hellenic_obj_six
+                set_variable = {
+                    name = hellenic_obj_six
+                    value = hellenic_obj_six_svalue
+                }
+            }
+            else_if = {
+                limit = {
+                    hellenic_obj_six_svalue >= 75
+                    var:hellenic_obj_six != 100
+                }
+                remove_variable = hellenic_obj_six
+                set_variable = {
+                    name = hellenic_obj_six
+                    value = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+
+            # Objective 7
+            if = {
+                limit = {
+                    hellenic_obj_seven_svalue < 15
+                }
+                remove_variable = hellenic_obj_seven
+                set_variable = {
+                    name = hellenic_obj_seven
+                    value = hellenic_obj_seven_svalue
+                }
+            }
+            else_if = {
+                limit = {
+                    hellenic_obj_seven_svalue >= 15
+                    var:hellenic_obj_seven != 100
+                }
+                remove_variable = hellenic_obj_seven
+                set_variable = {
+                    name = hellenic_obj_seven
+                    value = 100
+                }
+                age_obj_completed = { obj = "hellenic" }
+            }
+        }
+        else_if = {
+            limit = {
+                is_age = { num = 2 }
+            }
+            # Check for all migration objectives
+            # age_obj_completed = { obj = "migration" }
+        }
+        else_if = {
+            limit = {
+                is_age = { num = 3 }
+            }
+            # Check for all empire objectives
+            # age_obj_completed = { obj = "empire" }
+        }
     }
 }

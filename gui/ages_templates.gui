@@ -4,7 +4,7 @@ template hellenic_objectives
 {
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/greek_god_statue.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -16,17 +16,16 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			text = "[Multiply_CFixedPoint( Player.MakeScope.Var('hellenic_obj_one').GetValue, '(CFixedPoint)0.01' )|0] / 1"
 		}
 		blockoverride "progress_value"
 		{
-			# tooltip = "hello"
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_one').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/roman_leader.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -38,16 +37,17 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 5
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('hellenic_obj_two').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)5.0')|0] / 5"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_two').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/roman_boat.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -59,16 +59,18 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			text = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_three').GetValue)|0] / 100"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_three').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/WIP/latin_roman_path_4.dds"
+			size = { 62 62 }
+			position = { 16 4 }
 		}
 		blockoverride "objective_title"
 		{
@@ -80,16 +82,16 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('hellenic_obj_four').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)4.0')|0] / 3"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_four').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/indian_philosopher.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -101,16 +103,18 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('hellenic_obj_five').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)10.0')|0] / 10"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_five').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/WIP/Event_greek_fortified_city_acropolis.dds"
+			size = { 62 62 }
+			position = { 16 4 }
 		}
 		blockoverride "objective_title"
 		{
@@ -122,16 +126,16 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			text = "[Min_CFixedPoint(Player.MakeScope.Var('hellenic_obj_six').GetValue, '(CFixedPoint)75.0' )|0] / 75"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('hellenic_obj_six').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/roman_eagle.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -143,11 +147,12 @@ template hellenic_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			text = "[Player.MakeScope.Var('hellenic_obj_seven').GetValue|0] / 15"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			# (X * 0.0667) * 100
+			value = "[FixedPointToFloat(Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('hellenic_obj_seven').GetValue, '(CFixedPoint)0.0667' ), '(CFixedPoint)100.0'))]"
 		}
 	}
 }
@@ -458,57 +463,57 @@ template hellenic_abilities
 {
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_one')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/price_found_city_cost_modifier.dds" }
 		tooltip = "HELLENIC_ABILITY_ONE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_two')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "HELLENIC_ABILITY_TWO_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_three')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/legion.dds" }
 		tooltip = "HELLENIC_ABILITY_THREE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_four')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/recruit_mercenary_cost_modifier.dds" }
 		tooltip = "HELLENIC_ABILITY_FOUR_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_five')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/global_pop_conversion_speed.dds" }
 		tooltip = "HELLENIC_ABILITY_FIVE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_six')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/shared_icons/alert_colonize_province.dds" }
 		tooltip = "HELLENIC_ABILITY_SIX_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_seven')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/global_pop_assimilation_speed_modifier.dds" }
 		tooltip = "HELLENIC_ABILITY_SEVEN_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_eight')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/diplomatic_reputation.dds" }
 		tooltip = "HELLENIC_ABILITY_EIGHT_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_nine')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/shared_icons/stability.dds" }
 		tooltip = "HELLENIC_ABILITY_NINE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_ten')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/shared_icons/loyalty.dds" }
 		tooltip = "HELLENIC_ABILITY_TEN_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('hellenic_ability_eleven')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/traits/argeads.dds" }
 		tooltip = "HELLENIC_ABILITY_ELEVEN_TT"
 	}
 }
@@ -517,57 +522,57 @@ template migration_abilities
 {
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_one')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_ONE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_two')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_TWO_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_three')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_THREE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_four')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_FOUR_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_five')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_FIVE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_six')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_SIX_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_seven')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_SEVEN_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_eight')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_EIGHT_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_nine')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_NINE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_ten')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_TEN_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_eleven')]"
-		blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
 		tooltip = "MIGRATION_ABILITY_ELEVEN_TT"
 	}
 }

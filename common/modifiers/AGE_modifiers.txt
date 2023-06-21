@@ -1,0 +1,31 @@
+﻿hellenic_ability_one_mod = {
+	price_found_city_cost_modifier = -0.05
+}
+hellenic_ability_two_mod = {
+	agressive_expansion_impact = -0.1
+}
+hellenic_ability_three_mod = {
+	army_maintenance_cost = -0.1
+}
+hellenic_ability_four_mod = {
+	mercenary_land_maintenance_cost = -0.05
+	mercenary_naval_maintenance_cost = -0.05
+}
+hellenic_ability_five_mod = {
+	global_pop_conversion_speed = 0.05
+}
+hellenic_ability_seven_mod = {
+	global_pop_assimilation_speed = 0.05
+}
+hellenic_ability_eight_mod = {
+	diplomatic_reputation = 1
+	diplomatic_relations = 1
+}
+hellenic_ability_nine_mod = {
+	stability_monthly_change = 0.01
+	governor_loyalty = 1
+}
+hellenic_ability_ten_mod = {
+	subject_loyalty = 2
+	naval_morale_modifier = 0.025
+}

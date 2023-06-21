@@ -1,0 +1,86 @@
+﻿hellenic_obj_four_svalue = {
+	value = 0
+	capital_scope = {
+		if = {
+			limit = {
+				state = { incoming_trade_routes >= 10 }
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				state = { outgoing_trade_routes >= 10 }
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				any_neighbor_province = {
+					count = all
+					is_sea = no
+					is_uninhabitable = no
+					has_road_towards = PREV
+				}
+			}
+			add = 1
+		}
+	}
+}
+
+hellenic_obj_five_svalue = {
+	value = 0
+	every_owned_province = {
+		add = num_of_academy_building
+	}
+	multiply = 10
+	max = 100
+}
+
+hellenic_obj_six_current = {
+	value = 0
+	capital_scope.area = {
+		every_area_province = {
+			every_pops_in_province = {
+				limit = {
+					pop_religion = roman_pantheon
+				}
+				add = 1
+			}
+		}
+	}
+}
+
+hellenic_obj_six_total = {
+	value = 0
+	capital_scope.area = {
+		every_area_province = {
+			add = total_population
+		}
+	}
+}
+
+# Progressbar value in gui
+hellenic_obj_six_svalue = { 
+	value = hellenic_obj_six_current
+	divide = hellenic_obj_six_total
+	multiply = 100
+}
+
+
+hellenic_obj_seven_svalue = {
+	value = 0
+	if = {
+		limit = {
+			any_legion = {
+				count > 0
+			}
+		}
+		ordered_legion = {
+			order_by = unit_count
+			every_legion_unit = {
+			    add = unit_size
+			}
+		}
+	}
+	max = 15
+}

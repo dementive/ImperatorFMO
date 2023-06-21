@@ -1099,7 +1099,7 @@ base_window = {
 						
 							container = {
 								visible = "[Not(DiplomaticView.GetTargetCountry.IsBarbarian)]"
-								position = { 118 78 }
+								position = { 100 78 }
 								container = {
 									flowcontainer = {
 										position = { 0 3 }
@@ -1216,24 +1216,46 @@ base_window = {
 					}
 				
 					margin_widget = {
-						size = { 150 134 }
+						size = { 160 144 }
 						allow_outside = yes
-					
+						
 						flowcontainer = {
 							direction = vertical
 							spacing = 10
 							using = NoninteractableBG
 							ignoreinvisible = yes
 							parentanchor = bottom|right
-							position = { -12 0 }
+							position = { 0 0 }
 							blockoverride "Margins" 
 							{
 								margin_top = 8
-								margin_left = 12
-								margin_right = 12
-								margin_bottom = 2
+								margin_left = 5
+								margin_right = 9
+								margin_bottom = 0
 							}
-							@military_icon_width = 120
+							@military_icon_width = 185
+							icon_and_text = {
+								#position = { 10 3 }
+								tooltip = "[DiplomaticView.GetTargetCountry.GetHeritage.GetTooltip]"
+								visible = "[Not(DiplomaticView.GetTargetCountry.IsBarbarian)]"
+								size = { 190 0 }
+								blockoverride "Icon" {
+									modifier_icon = {
+										position = { -5 0 }
+										datacontext = "[DiplomaticView.GetTargetCountry.GetHeritage.GetModifier]"
+										size = { 34 34 }
+									}
+								}
+								blockoverride "Text" {
+
+									text = "#bold [DiplomaticView.GetTargetCountry.GetHeritage.GetNameWithNoTooltip]"
+									align = center
+									fontsize = 14
+									position = { -4 0 }
+									autoresize = yes
+									max_width = 160
+								}
+							}
 							icon_and_text = { 
 								size = { @military_icon_width 0 }
 								visible = "[Not(DiplomaticView.GetTargetCountry.IsBarbarian)]"

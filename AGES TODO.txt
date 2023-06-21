@@ -11,3 +11,5 @@ AGES TODO
 5. The golden age button needs a unique effect
 
 6. Add natural biyearly increase of splendor for all countries
+
+7. Make it so when a age objective is completed it increases splendor gain.

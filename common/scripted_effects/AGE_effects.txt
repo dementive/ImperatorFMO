@@ -1,4 +1,18 @@
-﻿age_ability_effect = {
+﻿init_ages_variables = {
+	set_variable = { name = splendor value = 0 }
+	set_variable = { name = completed_hellenic_objectives value = 0 }
+	set_variable = { name = completed_migration_objectives value = 0 }
+	set_variable = { name = completed_empire_objectives value = 0 }
+	set_variable = { name = hellenic_obj_one value = 0 }
+	set_variable = { name = hellenic_obj_two value = 0 }
+	set_variable = { name = hellenic_obj_three value = 0 }
+	set_variable = { name = hellenic_obj_four value = 0 }
+	set_variable = { name = hellenic_obj_five value = 0 }
+	set_variable = { name = hellenic_obj_six value = 0 }
+	set_variable = { name = hellenic_obj_seven value = 0 }
+}
+
+age_ability_effect = {
 	change_variable = {
 	    name = splendor
 	    subtract = 800
@@ -12,36 +26,47 @@ age_obj_completed = {
 	}
 }
 
-# Effect that is run when the ages window is opened, this checks if any objectives in the current age have been completed.
-# This is only functionally for golden ages. So checks here don't matter if golden age has already been taken or if 3 objectives have already been completed.
-check_age_objectives_effect = {
+add_pops_from_colonization_special_effect = {
 	if = {
 		limit = {
-			NOT = { has_variable = golden_age_taken }
+			root = { has_variable = hellenic_ability_six_taken }
 		}
-		if = {
-		    limit = {
-		    	var:completed_hellenic_objectives < 3
-		    	is_age = { num = 1 }
-		    }
-		    # Check for all hellenic objectives
-		    # age_obj_completed = { obj = "hellenic" }
+		set_variable = {
+			name = count
+			value = {
+				integer_range = {
+					min = 1
+					max = 3
+				}
+			}
 		}
-		else_if = {
-		    limit = {
-		    	var:completed_migration_objectives < 3
-		    	is_age = { num = 2 }
-		    }
-		    # Check for all migration objectives
-		    # age_obj_completed = { obj = "migration" }
+		while = {
+			count = var:count
+			random_list = {
+				15 = {}
+				10 = {
+					define_pop = {
+						type = freemen
+						culture = root.culture
+						religion = root.religion
+					}
+				}
+				5 = {
+					define_pop = {
+						type = tribesmen
+						culture = root.culture
+						religion = root.religion
+					}
+				}
+				1 = {
+					define_pop = {
+						type = citizen
+						culture = root.culture
+						religion = root.religion
+					}
+				}
+			}
 		}
-		else_if = {
-		    limit = {
-		    	var:completed_empire_objectives < 3
-		    	is_age = { num = 3 }
-		    }
-		    # Check for all empire objectives
-		    # age_obj_completed = { obj = "empire" }
-		}
+		remove_variable = count
 	}
 }

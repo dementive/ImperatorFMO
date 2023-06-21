@@ -33,6 +33,7 @@ monthly_colonization_pulse = {
 			}
 			var:colonization_mod_one_var = {
 				set_owned_by = root
+				add_pops_from_colonization_special_effect = yes
 			}
 			remove_variable = colonization_mod_one_var
 			change_variable = {
@@ -47,6 +48,7 @@ monthly_colonization_pulse = {
 			}
 			var:colonization_mod_two_var = {
 				set_owned_by = root
+				add_pops_from_colonization_special_effect = yes
 			}
 			remove_variable = colonization_mod_two_var
 			change_variable = {
@@ -61,6 +63,7 @@ monthly_colonization_pulse = {
 			}
 			var:colonization_mod_three_var = {
 				set_owned_by = root
+				add_pops_from_colonization_special_effect = yes
 			}
 			remove_variable = colonization_mod_three_var
 			change_variable = {
@@ -75,6 +78,7 @@ monthly_colonization_pulse = {
 			}
 			var:colonization_mod_four_var = {
 				set_owned_by = root
+				add_pops_from_colonization_special_effect = yes
 			}
 			remove_variable = colonization_mod_four_var
 			change_variable = {
@@ -89,6 +93,7 @@ monthly_colonization_pulse = {
 			}
 			var:colonization_mod_five_var = {
 				set_owned_by = root
+				add_pops_from_colonization_special_effect = yes
 			}
 			remove_variable = colonization_mod_five_var
 			change_variable = {

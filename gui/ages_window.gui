@@ -70,6 +70,7 @@ types AgeWindowTypes
 		flowcontainer = {
 			name = "hellenic_age_objectives"
 			direction = vertical
+			position = { 0 -49 }
 			spacing = -9
 			visible = "[GetScriptedGui('is_first_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 			using = hellenic_objectives
@@ -77,12 +78,16 @@ types AgeWindowTypes
 		flowcontainer = {
 			name = "migration_age_objectives"
 			direction = vertical
+			position = { 0 -49 }
+			spacing = -9
 			visible = "[GetScriptedGui('is_second_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 			using = migration_objectives
 		}
 		flowcontainer = {
 			name = "empire_age_objectives"
 			direction = vertical
+			position = { 0 -47 }
+			spacing = -9
 			visible = "[GetScriptedGui('is_third_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 			using = empire_objectives
 		}
@@ -122,7 +127,7 @@ types AgeWindowTypes
 			}
 		}
 		textbox = {
-			position = { 90 21 }
+			position = { 90 23 }
 			using = BaseFontM
 			using = Black_FontColor
 			fontsize = 14
@@ -130,8 +135,8 @@ types AgeWindowTypes
 			autoresize = yes
 			alwaystransparent = no
 			align = left
-			max_width = 380
-			maximumsize = { 380 -1 }
+			max_width = 400
+			maximumsize = { 400 -1 }
 			block "objective_desc"
 			{
 				text = "hi"
@@ -178,12 +183,14 @@ types AgeWindowTypes
 		flowcontainer = {
 			name = "migration_age_abilities"
 			direction = horizontal
+			spacing = 15
 			visible = "[GetScriptedGui('is_second_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 			using = migration_abilities
 		}
 		flowcontainer = {
 			name = "empire_age_abilities"
 			direction = horizontal
+			spacing = 15
 			visible = "[GetScriptedGui('is_third_age').IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
 			using = empire_abilities
 		}
@@ -192,7 +199,9 @@ types AgeWindowTypes
 		size = { 40 40 }
 		blockoverride "Icon"
 		{
-			texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+			block "Texture" {
+				texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+			}
 		}
 		blockoverride "On_click" {
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -219,6 +228,7 @@ message_window = {
 		button_close = {
 			tooltip = "CLOSE"
 			onclick = "[ExecuteConsoleCommand('gui.ClearWidgets ages_window')]"
+			onclick = "[GetVariableSystem.Clear('age_window_opened')]"
 		}
 	}
 	container = {
@@ -259,6 +269,7 @@ message_window = {
 		flowcontainer = {
 			direction = vertical
 			position = { 7 10 }
+			spacing = 1
 			container = {
 				icon = {
 					visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -266,7 +277,7 @@ message_window = {
 					effectname = "GuiBloom"
 					datacontext = "[GetScriptedGui('is_first_age')]"
 					texture = "gfx/interface/ages_window/icon_hellenic.dds"
-					tooltip = "#T Hellenic Age"
+					tooltip = "current_age_custom_loc_1"
 					size = { 60 60 }
 					state = {
 						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -277,7 +288,7 @@ message_window = {
 					visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
 					datacontext = "[GetScriptedGui('is_first_age')]"
 					texture = "gfx/interface/ages_window/icon_hellenic.dds"
-					tooltip = "#T Hellenic Age"
+					tooltip = "current_age_custom_loc_1"
 					size = { 60 60 }
 					state = {
 						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -292,7 +303,7 @@ message_window = {
 					effectname = "GuiBloom"
 					datacontext = "[GetScriptedGui('is_second_age')]"
 					texture = "gfx/interface/ages_window/icon_migration.dds"
-					tooltip = "#T Hellenic Age"
+					tooltip = "current_age_custom_loc_2"
 					size = { 60 60 }
 					state = {
 						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -303,7 +314,7 @@ message_window = {
 					visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
 					datacontext = "[GetScriptedGui('is_second_age')]"
 					texture = "gfx/interface/ages_window/icon_migration.dds"
-					tooltip = "#T Hellenic Age"
+					tooltip = "current_age_custom_loc_2"
 					size = { 70 70 }
 					state = {
 						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -318,7 +329,7 @@ message_window = {
 					effectname = "GuiBloom"
 					datacontext = "[GetScriptedGui('is_third_age')]"
 					texture = "gfx/interface/ages_window/icon_empire.dds"
-					tooltip = "#T Hellenic Age"
+					tooltip = "current_age_custom_loc_3"
 					size = { 60 60 }
 					state = {
 						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
@@ -329,7 +340,7 @@ message_window = {
 					visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
 					datacontext = "[GetScriptedGui('is_third_age')]"
 					texture = "gfx/interface/ages_window/icon_empire.dds"
-					tooltip = "#T Hellenic Age"
+					tooltip = "current_age_custom_loc_3"
 					size = { 70 70 }
 					state = {
 						trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
