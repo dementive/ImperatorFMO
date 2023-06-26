@@ -60,34 +60,34 @@
  MIGRATION_OBJECTIVE_5_TITLE:0 "#bold Destroyer of Gods#!"
  MIGRATION_OBJECTIVE_5_DESC:0 "Destroy at least #E 5#! holy sites of other religions."
 
- MIGRATION_OBJECTIVE_6_TITLE:0 "#bold Objective 6#!"
- MIGRATION_OBJECTIVE_6_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ MIGRATION_OBJECTIVE_6_TITLE:0 "#bold A Great Civilization#!"
+ MIGRATION_OBJECTIVE_6_DESC:0 "Have a total of #E 15#! province investments in all territories."
 
- MIGRATION_OBJECTIVE_7_TITLE:0 "#bold Objective 7#!"
- MIGRATION_OBJECTIVE_7_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ MIGRATION_OBJECTIVE_7_TITLE:0 "#bold Head Chief#!"
+ MIGRATION_OBJECTIVE_7_DESC:0 "Have at least #E 3#! tribal vassals."
 
  # Empire age
 
- EMPIRE_OBJECTIVE_1_TITLE:0 "#bold Objective 1#!"
- EMPIRE_OBJECTIVE_1_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_1_TITLE:0 "#bold Many Metropolis#!"
+ EMPIRE_OBJECTIVE_1_DESC:0 "Control #E 10#! territories with [GetProvinceRank('city_metropolis').GetName|E] status."
 
- EMPIRE_OBJECTIVE_2_TITLE:0 "#bold Objective 2#!"
- EMPIRE_OBJECTIVE_2_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_2_TITLE:0 "#bold Constructions of Wonder#!"
+ EMPIRE_OBJECTIVE_2_DESC:0 "Build #E 5#! wonders."
 
- EMPIRE_OBJECTIVE_3_TITLE:0 "#bold Objective 3#!"
- EMPIRE_OBJECTIVE_3_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_3_TITLE:0 "#bold Superior Civilzation#!"
+ EMPIRE_OBJECTIVE_3_DESC:0 "Have a total of #E 1000#! civilization value spread across all territories."
 
- EMPIRE_OBJECTIVE_4_TITLE:0 "#bold Objective 4#!"
- EMPIRE_OBJECTIVE_4_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_4_TITLE:0 "#bold Robust Roads#!"
+ EMPIRE_OBJECTIVE_4_DESC:0 "Have #E 250#! roads in your country."
 
- EMPIRE_OBJECTIVE_5_TITLE:0 "#bold Objective 5#!"
- EMPIRE_OBJECTIVE_5_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_5_TITLE:0 "#bold Cultural Syncretism#!"
+ EMPIRE_OBJECTIVE_5_DESC:0 "Have at least #E 3#! accepted cultures with more than #E 400#! pops."
 
- EMPIRE_OBJECTIVE_6_TITLE:0 "#bold Objective 6#!"
- EMPIRE_OBJECTIVE_6_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_6_TITLE:0 "#bold Engineering Empire#!"
+ EMPIRE_OBJECTIVE_6_DESC:0 "Have #E 25#! foundries, #E 100#! libraries, #E 100#! ports, and #E 100#! aqueducts."
 
- EMPIRE_OBJECTIVE_7_TITLE:0 "#bold Objective 7#!"
- EMPIRE_OBJECTIVE_7_DESC:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+ EMPIRE_OBJECTIVE_7_TITLE:0 "#bold Ultimate Urbanization#!"
+ EMPIRE_OBJECTIVE_7_DESC:0 "Every province in your capital region that does not produce food has city status."
 
 
  # Ability Modifiers
