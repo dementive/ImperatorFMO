@@ -80,7 +80,10 @@ migration_ability_seven = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
-        tag = PTH
+        custom_tooltip = {
+            text = migration_ability_seven_tt
+            tag = PTH
+        }
     }
     effect = {
         add_country_modifier = {
@@ -94,7 +97,10 @@ migration_ability_eight = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
-        tag = ALA
+        custom_tooltip = {
+            text = migration_ability_eight_tt
+            tag = ALA
+        }
     }
     effect = {
         add_country_modifier = {
@@ -108,7 +114,10 @@ migration_ability_nine = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
-        tag = SCY
+        custom_tooltip = {
+            text = migration_ability_nine_tt
+            tag = SCY
+        }
     }
     effect = {
         add_country_modifier = {

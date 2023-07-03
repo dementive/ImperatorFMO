@@ -78,7 +78,10 @@ hellenic_ability_six = {
 hellenic_ability_seven = {
     scope = country
     is_valid = {
-        tag = SEL
+        custom_tooltip = {
+            text = hellenic_ability_seven_tt
+            tag = SEL
+        }
         age_ability_trigger = yes
     }
     effect = {
@@ -92,7 +95,10 @@ hellenic_ability_seven = {
 hellenic_ability_eight = {
     scope = country
     is_valid = {
-        tag = MAC
+        custom_tooltip = {
+            text = hellenic_ability_eight_tt
+            tag = MAC
+        }
         age_ability_trigger = yes
     }
     effect = {
@@ -106,7 +112,10 @@ hellenic_ability_eight = {
 hellenic_ability_nine = {
     scope = country
     is_valid = {
-        tag = MRY
+        custom_tooltip = {
+            text = hellenic_ability_nine_tt
+            tag = MRY
+        }
         age_ability_trigger = yes
     }
     effect = {
@@ -120,7 +129,10 @@ hellenic_ability_nine = {
 hellenic_ability_ten = {
     scope = country
     is_valid = {
-        tag = CAR
+        custom_tooltip = {
+            text = hellenic_ability_ten_tt
+            tag = CAR
+        }
         age_ability_trigger = yes
     }
     effect = {

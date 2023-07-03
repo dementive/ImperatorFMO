@@ -245,3 +245,24 @@
 
  EMPIRE_ABILITY_ELEVEN_TT:0 "#T $empire_ability_eleven_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ELEVEN_TT_DESC$"
  EMPIRE_ABILITY_ELEVEN_TT_DESC:0 ""
+
+
+ hellenic_ability_seven_tt:0 "Is #Y Seleucids#!."
+ hellenic_ability_eight_tt:0 "Is #Y Macedon#!."
+ hellenic_ability_nine_tt:0 "Is #Y Maurya#!."
+ hellenic_ability_ten_tt:0 "Is #Y Carthage#!."
+
+ migration_ability_seven_tt:0 "Is #Y Parthia#!."
+ migration_ability_eight_tt:0 "Is #Y Alania#!."
+ migration_ability_nine_tt:0 "Is #Y Scythia#!."
+
+ empire_ability_seven_tt:0 "Is #Y Kush#!."
+ empire_ability_seven_ttt:0 "Is #Y Aksum#!."
+ empire_ability_seven_tttt:0 "Is #Y Aksum#!."
+ empire_ability_eight_tt:0 "Is #Y Rome#!."
+ empire_ability_nine_tt:0 "Is #Y Bharat#!."
+ empire_ability_ten_tt:0 "Is #Y Hellenic Empire#!"
+ empire_ability_ten_ttt:0 "Is #Y Hellenic League#!"
+
+
+ steppes_combat_bonus:0 "Steppes Combat Bonus"
