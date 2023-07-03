@@ -139,3 +139,95 @@ migration_obj_seven_svalue = {
 	}
 	max = 3
 }
+
+empire_obj_one_svalue = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_province_rank = city_metropolis
+		}
+		add = 1
+	}
+	max = 10
+}
+
+empire_obj_two_svalue = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			has_great_work = yes
+		}
+		add = 1
+	}
+	max = 5
+}
+
+empire_obj_three_svalue = {
+	value = 0
+	every_owned_province = {
+		add = civilization_value
+	}
+	max = 1000
+}
+
+empire_obj_four_svalue = {
+	value = 0
+	every_owned_province = {
+		every_neighbor_province = {
+			limit = {
+				is_sea = no
+				is_uninhabitable = no
+				has_road_towards = PREV
+				exists = owner
+				owner = root
+				NOT = { has_local_variable = road_counted }
+			}
+			set_local_variable = road_counted
+			add = 1
+		}
+	}
+	max = 250
+}
+
+empire_obj_five_svalue  = {
+	value = 0
+	every_integrated_culture = {
+		limit = {
+			prev = {
+				culture_pops_in_country = {
+					target = prev
+					value >= 300
+				}
+			}
+		}
+		add = 1
+	}
+	max = 3
+}
+
+empire_obj_six_svalue = {
+	value = 0
+	every_owned_province = {
+		add = num_of_library_building
+		add = num_of_foundry_building
+		add = num_of_port_building
+		add = num_of_aqueduct_building
+	}
+	max = 350
+}
+
+empire_obj_seven_svalue = {
+	value = 0
+	if = {
+		limit = {
+			any_owned_province = {
+				count = all
+				is_in_region = capital_scope.region
+				has_non_food_trade_good_trigger = yes
+				has_city_status = yes
+			}
+		}
+		add = 1
+	}
+	max = 1
+}

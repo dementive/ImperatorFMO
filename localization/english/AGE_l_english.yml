@@ -17,6 +17,7 @@
  # Notes for Zorgo:
  # These description keys are special and need to be on 3 seperate lines and HAVE to fit in nicely with the UI. So keep them about the same length they are now.
  # These are important as you see it in the center of the entire UI.
+ # If you want to change any of the OBJECTIVE_TITLE names to make them better feel free.
 
  current_age_custom_loc_1:0 "#T Hellenistic Age#!"
  current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
@@ -85,7 +86,7 @@
  EMPIRE_OBJECTIVE_4_DESC:0 "Have #E 250#! roads in your country."
 
  EMPIRE_OBJECTIVE_5_TITLE:0 "#bold Cultural Syncretism#!"
- EMPIRE_OBJECTIVE_5_DESC:0 "Have at least #E 3#! accepted cultures with more than #E 400#! pops."
+ EMPIRE_OBJECTIVE_5_DESC:0 "Have at least #E 3#! accepted cultures with more than #E 300#! pops."
 
  EMPIRE_OBJECTIVE_6_TITLE:0 "#bold Engineering Empire#!"
  EMPIRE_OBJECTIVE_6_DESC:0 "Have #E 25#! foundries, #E 100#! libraries, #E 100#! ports, and #E 100#! aqueducts."
@@ -95,6 +96,10 @@
 
 
  # Ability Modifiers
+
+ # NOTE to ZoRgO
+ # Change these names if you want, just make sure that they match the modifiers and the trigger for the ability for the last 5 in each category
+
  hellenic_ability_one_mod:0 "Building an Empire"
  hellenic_ability_two_mod:0 "Noble Conquest"
  hellenic_ability_three_mod:0 "Legion Recruitment"
@@ -113,6 +118,23 @@
  migration_ability_four_mod:0 "Legitimate Claims"
  migration_ability_five_mod:0 "Foreign Goods"
  migration_ability_six_mod:0 "Better as a Whole"
+ migration_ability_seven_mod:0 "Parthian Hordes"
+ migration_ability_eight_mod:0 "Steppe Supremacy"
+ migration_ability_nine_mod:0 "Scythian Domination"
+ migration_ability_ten_mod:0 "Cimbrian Migrations"
+ migration_ability_eleven_mod:0 "Sarmatian Expansion"
+
+ empire_ability_one_mod:0 "Will of the Gods"
+ empire_ability_two_mod:0 "Just a Number"
+ empire_ability_three_mod:0 "Expanding the Empire"
+ empire_ability_four_mod:0 "Dominate the Seas"
+ empire_ability_five_mod:0 "One People"
+ empire_ability_six_mod:0 "Technological Advancement"
+ empire_ability_seven_mod:0 "African Empire"
+ empire_ability_eight_mod:0 "Pax Romana"
+ empire_ability_nine_mod:0 "Indian Domination"
+ empire_ability_ten_mod:0 "Memory of Alexander"
+ empire_ability_eleven_mod:0 "Italic Discipline"
 
  # Abilities
 
@@ -173,53 +195,53 @@
  MIGRATION_ABILITY_SIX_TT:0 "#T $migration_ability_six_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SIX_TT_DESC$"
  MIGRATION_ABILITY_SIX_TT_DESC:0 ""
 
- MIGRATION_ABILITY_SEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SEVEN_TT_DESC$"
+ MIGRATION_ABILITY_SEVEN_TT:0 "#T $migration_ability_seven_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SEVEN_TT_DESC$"
  MIGRATION_ABILITY_SEVEN_TT_DESC:0 ""
 
- MIGRATION_ABILITY_EIGHT_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_EIGHT_TT_DESC$"
+ MIGRATION_ABILITY_EIGHT_TT:0 "#T $migration_ability_eight_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_EIGHT_TT_DESC$"
  MIGRATION_ABILITY_EIGHT_TT_DESC:0 ""
 
- MIGRATION_ABILITY_NINE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_NINE_TT_DESC$"
+ MIGRATION_ABILITY_NINE_TT:0 "#T $migration_ability_nine_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_NINE_TT_DESC$"
  MIGRATION_ABILITY_NINE_TT_DESC:0 ""
 
- MIGRATION_ABILITY_TEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_TEN_TT_DESC$"
+ MIGRATION_ABILITY_TEN_TT:0 "#T $migration_ability_ten_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_TEN_TT_DESC$"
  MIGRATION_ABILITY_TEN_TT_DESC:0 ""
 
- MIGRATION_ABILITY_ELEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_ELEVEN_TT_DESC$"
+ MIGRATION_ABILITY_ELEVEN_TT:0 "#T $migration_ability_eleven_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_ELEVEN_TT_DESC$"
  MIGRATION_ABILITY_ELEVEN_TT_DESC:0 ""
 
 
  # Empire Abilities
 
- EMPIRE_ABILITY_ONE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ONE_TT_DESC$"
+ EMPIRE_ABILITY_ONE_TT:0 "#T $empire_ability_one_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ONE_TT_DESC$"
  EMPIRE_ABILITY_ONE_TT_DESC:0 ""
 
- EMPIRE_ABILITY_TWO_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_TWO_TT_DESC$"
+ EMPIRE_ABILITY_TWO_TT:0 "#T $empire_ability_two_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_TWO_TT_DESC$"
  EMPIRE_ABILITY_TWO_TT_DESC:0 ""
 
- EMPIRE_ABILITY_THREE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_THREE_TT_DESC$"
+ EMPIRE_ABILITY_THREE_TT:0 "#T $empire_ability_three_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_THREE_TT_DESC$"
  EMPIRE_ABILITY_THREE_TT_DESC:0 ""
 
- EMPIRE_ABILITY_FOUR_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_FOUR_TT_DESC$"
+ EMPIRE_ABILITY_FOUR_TT:0 "#T $empire_ability_four_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_FOUR_TT_DESC$"
  EMPIRE_ABILITY_FOUR_TT_DESC:0 ""
 
- EMPIRE_ABILITY_FIVE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_FIVE_TT_DESC$"
+ EMPIRE_ABILITY_FIVE_TT:0 "#T $empire_ability_five_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_FIVE_TT_DESC$"
  EMPIRE_ABILITY_FIVE_TT_DESC:0 ""
 
- EMPIRE_ABILITY_SIX_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_SIX_TT_DESC$"
+ EMPIRE_ABILITY_SIX_TT:0 "#T $empire_ability_six_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_SIX_TT_DESC$"
  EMPIRE_ABILITY_SIX_TT_DESC:0 ""
 
- EMPIRE_ABILITY_SEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_SEVEN_TT_DESC$"
+ EMPIRE_ABILITY_SEVEN_TT:0 "#T $empire_ability_seven_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_SEVEN_TT_DESC$"
  EMPIRE_ABILITY_SEVEN_TT_DESC:0 ""
 
- EMPIRE_ABILITY_EIGHT_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_EIGHT_TT_DESC$"
+ EMPIRE_ABILITY_EIGHT_TT:0 "#T $empire_ability_eight_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_EIGHT_TT_DESC$"
  EMPIRE_ABILITY_EIGHT_TT_DESC:0 ""
 
- EMPIRE_ABILITY_NINE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_NINE_TT_DESC$"
+ EMPIRE_ABILITY_NINE_TT:0 "#T $empire_ability_nine_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_NINE_TT_DESC$"
  EMPIRE_ABILITY_NINE_TT_DESC:0 ""
 
- EMPIRE_ABILITY_TEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_TEN_TT_DESC$"
+ EMPIRE_ABILITY_TEN_TT:0 "#T $empire_ability_ten_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_TEN_TT_DESC$"
  EMPIRE_ABILITY_TEN_TT_DESC:0 ""
 
- EMPIRE_ABILITY_ELEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ELEVEN_TT_DESC$"
+ EMPIRE_ABILITY_ELEVEN_TT:0 "#T $empire_ability_eleven_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$EMPIRE_ABILITY_ELEVEN_TT_DESC$"
  EMPIRE_ABILITY_ELEVEN_TT_DESC:0 ""

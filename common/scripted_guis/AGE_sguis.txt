@@ -443,20 +443,20 @@ check_age_objectives = {
 
             if = {
                 limit = {
-                    migration_obj_seven_svalue < 20
+                    migration_obj_seven_svalue < 3
                 }
                 remove_variable = migration_obj_seven
                 set_variable = {
                     name = migration_obj_seven
                     value = {
                         value = migration_obj_seven_svalue
-                        multiply = 33
+                        multiply = 34
                     }
                 }
             }
             else_if = {
                 limit = {
-                    migration_obj_seven_svalue >= 20
+                    migration_obj_seven_svalue >= 3
                     var:migration_obj_seven != 100
                 }
                 remove_variable = migration_obj_seven
@@ -473,7 +473,196 @@ check_age_objectives = {
                 is_age = { num = 3 }
             }
             # Check for all empire objectives
-            # age_obj_completed = { obj = "empire" }
+
+            # Objective 1
+            if = {
+                limit = {
+                    empire_obj_one_svalue < 10
+                }
+                remove_variable = empire_obj_one
+                set_variable = {
+                    name = empire_obj_one
+                    value = {
+                        value = empire_obj_one_svalue
+                        multiply = 10
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_one_svalue >= 10
+                    var:empire_obj_one != 100
+                }
+                remove_variable = empire_obj_one
+                set_variable = {
+                    name = empire_obj_one
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
+            # Objective 2
+            if = {
+                limit = {
+                    empire_obj_two_svalue < 5
+                }
+                remove_variable = empire_obj_two
+                set_variable = {
+                    name = empire_obj_two
+                    value = {
+                        value = empire_obj_two_svalue
+                        multiply = 20
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_two_svalue >= 5
+                    var:empire_obj_two != 100
+                }
+                remove_variable = empire_obj_two
+                set_variable = {
+                    name = empire_obj_two
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
+            # Objective 3
+            if = {
+                limit = {
+                    empire_obj_three_svalue < 1000
+                }
+                remove_variable = empire_obj_three
+                set_variable = {
+                    name = empire_obj_three
+                    value = {
+                        value = empire_obj_three_svalue
+                        divide = 10
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_three_svalue >= 1000
+                    var:empire_obj_three != 100
+                }
+                remove_variable = empire_obj_three
+                set_variable = {
+                    name = empire_obj_three
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
+            # Objective 4
+            if = {
+                limit = {
+                    empire_obj_four_svalue < 250
+                }
+                remove_variable = empire_obj_four
+                set_variable = {
+                    name = empire_obj_four
+                    value = {
+                        value = empire_obj_four_svalue
+                        divide = 2.5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_four_svalue >= 250
+                    var:empire_obj_four != 100
+                }
+                remove_variable = empire_obj_four
+                set_variable = {
+                    name = empire_obj_four
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
+            # Objective 5
+            if = {
+                limit = {
+                    empire_obj_five_svalue < 3
+                }
+                remove_variable = empire_obj_five
+                set_variable = {
+                    name = empire_obj_five
+                    value = {
+                        value = empire_obj_five_svalue
+                        multiply = 34
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_five_svalue >= 3
+                    var:empire_obj_five != 100
+                }
+                remove_variable = empire_obj_five
+                set_variable = {
+                    name = empire_obj_five
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
+            # Objective 6
+            if = {
+                limit = {
+                    empire_obj_six_svalue < 350
+                }
+                remove_variable = empire_obj_six
+                set_variable = {
+                    name = empire_obj_six
+                    value = {
+                        value = empire_obj_six_svalue
+                        divide = 3.5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_six_svalue >= 350
+                    var:empire_obj_six != 100
+                }
+                remove_variable = empire_obj_six
+                set_variable = {
+                    name = empire_obj_six
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
+            # Objective 7
+            if = {
+                limit = {
+                    empire_obj_seven_svalue < 1
+                }
+                remove_variable = empire_obj_seven
+                set_variable = {
+                    name = empire_obj_seven
+                    value = {
+                        value = empire_obj_seven_svalue
+                        divide = 3.5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    empire_obj_seven_svalue >= 1
+                    var:empire_obj_seven != 100
+                }
+                remove_variable = empire_obj_seven
+                set_variable = {
+                    name = empire_obj_seven
+                    value = 100
+                }
+                age_obj_completed = { obj = "empire" }
+            }
+
         }
     }
 }

@@ -18,6 +18,14 @@
 	set_variable = { name = migration_obj_five value = 0 }
 	set_variable = { name = migration_obj_six value = 0 }
 	set_variable = { name = migration_obj_seven value = 0 }
+
+	set_variable = { name = empire_obj_one value = 0 }
+	set_variable = { name = empire_obj_two value = 0 }
+	set_variable = { name = empire_obj_three value = 0 }
+	set_variable = { name = empire_obj_four value = 0 }
+	set_variable = { name = empire_obj_five value = 0 }
+	set_variable = { name = empire_obj_six value = 0 }
+	set_variable = { name = empire_obj_seven value = 0 }
 }
 
 clear_all_hellenic_age_data = {

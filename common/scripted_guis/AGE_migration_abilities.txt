@@ -80,8 +80,13 @@ migration_ability_seven = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
+        tag = PTH
     }
     effect = {
+        add_country_modifier = {
+            name = migration_ability_seven_mod
+            duration = -1
+        }
         age_ability_effect = yes
     }
 }
@@ -89,8 +94,13 @@ migration_ability_eight = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
+        tag = ALA
     }
     effect = {
+        add_country_modifier = {
+            name = migration_ability_eight_mod
+            duration = -1
+        }
         age_ability_effect = yes
     }
 }
@@ -98,8 +108,13 @@ migration_ability_nine = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
+        tag = SCY
     }
     effect = {
+        add_country_modifier = {
+            name = migration_ability_nine_mod
+            duration = -1
+        }
         age_ability_effect = yes
     }
 }
@@ -107,8 +122,13 @@ migration_ability_ten = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
+        primary_culture = cimbrian
     }
     effect = {
+        add_country_modifier = {
+            name = migration_ability_ten_mod
+            duration = -1
+        }
         age_ability_effect = yes
     }
 }
@@ -116,8 +136,13 @@ migration_ability_eleven = {
     scope = country
     is_valid = {
         age_ability_trigger = yes
+        country_culture_group = scythia
     }
     effect = {
+        add_country_modifier = {
+            name = migration_ability_eleven_mod
+            duration = -1
+        }
         age_ability_effect = yes
     }
 }
