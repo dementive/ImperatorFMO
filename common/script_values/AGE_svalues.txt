@@ -84,3 +84,58 @@ hellenic_obj_seven_svalue = {
 	}
 	max = 15
 }
+
+migration_obj_three_svalue = {
+	value = 0
+	if = {
+		limit = {
+			any_owned_province = {
+				fort_level >= 4
+			}
+		}
+		add = 1
+	}
+	every_owned_province = {
+		limit = {
+			fort_level = 3
+		}
+		add = 1
+	}
+	max = 4
+}
+
+migration_obj_four_svalue = {
+	value = 0
+	every_owned_province = {
+		limit = {
+			terrain = steppes
+		}
+		add = 1
+	}
+	max = 40
+}
+
+migration_obj_six_svalue = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = num_state_mods
+		}
+		change_variable = {
+			name = num_state_mods
+			add = 1
+		}
+	}
+	max = 20
+}
+
+migration_obj_seven_svalue = {
+	value = 0
+	every_subject = {
+		limit = {
+			is_subject_type = vassal_tribe
+		}
+		add = 1
+	}
+	max = 3
+}

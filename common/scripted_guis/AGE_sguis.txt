@@ -284,7 +284,189 @@ check_age_objectives = {
                 is_age = { num = 2 }
             }
             # Check for all migration objectives
-            # age_obj_completed = { obj = "migration" }
+
+            # Objective 1
+            # Variable checked in AGE_on_war_won
+            if = {
+                limit = {
+                    var:migration_obj_one >= 100
+                }
+                remove_variable = migration_obj_one
+                set_variable = {
+                    name = migration_obj_one
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
+            # Objective 2
+            # Varible checked in AGE_looting_check
+            
+            if = {
+                limit = {
+                    var:migration_obj_two >= 100
+                }
+                remove_variable = migration_obj_two
+                set_variable = {
+                    name = migration_obj_two
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
+            # Objective 3
+
+            if = {
+                limit = {
+                    migration_obj_three_svalue <= 0
+                }
+                remove_variable = migration_obj_three
+                set_variable = {
+                    name = migration_obj_three
+                    value = 0
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_three_svalue = 1
+                }
+                remove_variable = migration_obj_three
+                set_variable = {
+                    name = migration_obj_three
+                    value = 25
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_three_svalue = 2
+                }
+                remove_variable = migration_obj_three
+                set_variable = {
+                    name = migration_obj_three
+                    value = 50
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_three_svalue = 3
+                }
+                remove_variable = migration_obj_three
+                set_variable = {
+                    name = migration_obj_three
+                    value = 75
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_three_svalue >= 4
+                }
+                remove_variable = migration_obj_three
+                set_variable = {
+                    name = migration_obj_three
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
+            # Objective 4
+
+            if = {
+                limit = {
+                    migration_obj_four_svalue < 40
+                }
+                remove_variable = migration_obj_four
+                set_variable = {
+                    name = migration_obj_four
+                    value = {
+                        value = migration_obj_four_svalue
+                        multiply = 2.5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_four_svalue >= 40
+                    var:migration_obj_four != 100
+                }
+                remove_variable = migration_obj_four
+                set_variable = {
+                    name = migration_obj_four
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
+            # Objective 5
+            # Varible checked in x_desecrate_holysite
+            
+            if = {
+                limit = {
+                    var:migration_obj_five >= 100
+                }
+                remove_variable = migration_obj_five
+                set_variable = {
+                    name = migration_obj_five
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
+            # Objective 6
+
+            if = {
+                limit = {
+                    migration_obj_six_svalue < 20
+                }
+                remove_variable = migration_obj_six
+                set_variable = {
+                    name = migration_obj_six
+                    value = {
+                        value = migration_obj_six_svalue
+                        multiply = 5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_six_svalue >= 20
+                    var:migration_obj_six != 100
+                }
+                remove_variable = migration_obj_six
+                set_variable = {
+                    name = migration_obj_six
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
+            # Objective 7
+
+            if = {
+                limit = {
+                    migration_obj_seven_svalue < 20
+                }
+                remove_variable = migration_obj_seven
+                set_variable = {
+                    name = migration_obj_seven
+                    value = {
+                        value = migration_obj_seven_svalue
+                        multiply = 33
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    migration_obj_seven_svalue >= 20
+                    var:migration_obj_seven != 100
+                }
+                remove_variable = migration_obj_seven
+                set_variable = {
+                    name = migration_obj_seven
+                    value = 100
+                }
+                age_obj_completed = { obj = "migration" }
+            }
+
         }
         else_if = {
             limit = {

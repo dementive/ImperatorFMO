@@ -161,7 +161,7 @@ template migration_objectives
 {
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/celtic_warrior.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -173,16 +173,17 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 3
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_one').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)3.0')|0] / 3"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_one').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/egypt_treasure.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -194,16 +195,19 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 5
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_two').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)5.0')|0] / 5"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_two').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/WIP/greek_states_path_6.dds"
+			size = { 62 62 }
+			position = { 16 4 }
 		}
 		blockoverride "objective_title"
 		{
@@ -215,16 +219,19 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 4
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_three').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)4.0')|0] / 4"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_three').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/WIP/persian_bactrian_path_7.dds"
+			size = { 62 62 }
+			position = { 16 4 }
 		}
 		blockoverride "objective_title"
 		{
@@ -236,16 +243,19 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 40
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_four').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)40.0')|0] / 40"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_four').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/WIP/latin_support_path_3.dds"
+			size = { 62 62 }
+			position = { 16 4 }
 		}
 		blockoverride "objective_title"
 		{
@@ -257,16 +267,19 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 5
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_five').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)5.0')|0] / 5"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_five').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/WIP/mission_image_egypt.dds"
+			size = { 62 62 }
+			position = { 16 4 }
 		}
 		blockoverride "objective_title"
 		{
@@ -278,16 +291,17 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 20
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_six').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)20.0')|0] / 20"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_six').GetValue)]"
 		}
 	}
 	age_objective = {
 		blockoverride "Icon" {
-			texture = "gfx/interface/ages_window/icon_empire.dds"
+			texture = "gfx/interface/ages_window/objectives/celtic_fort.dds"
 		}
 		blockoverride "objective_title"
 		{
@@ -299,11 +313,12 @@ template migration_objectives
 		}
 		blockoverride "progress_text"
 		{
-			text = "0 / 5"
+			# (X * 0.01) * 3
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('migration_obj_seven').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)3.0')|0] / 3"
 		}
 		blockoverride "progress_value"
 		{
-			value = "[FixedPointToFloat(Player.GetProgressTowardsCivilWar)]"
+			value = "[FixedPointToFloat(Player.MakeScope.Var('migration_obj_seven').GetValue)]"
 		}
 	}
 }
@@ -522,32 +537,32 @@ template migration_abilities
 {
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_one')]"
-		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/monthly_general_loyalty.dds" }
 		tooltip = "MIGRATION_ABILITY_ONE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_two')]"
-		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/assault_ability.dds" }
 		tooltip = "MIGRATION_ABILITY_TWO_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_three')]"
-		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/diplomatic_relations.dds" }
 		tooltip = "MIGRATION_ABILITY_THREE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_four')]"
-		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/fabricate_claim_speed.dds" }
 		tooltip = "MIGRATION_ABILITY_FOUR_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_five')]"
-		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/global_import_commerce_modifier.dds" }
 		tooltip = "MIGRATION_ABILITY_FIVE_TT"
 	}
 	age_ability = {
 		datacontext = "[GetScriptedGui('migration_ability_six')]"
-		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds" }
+		blockoverride "Texture" { texture = "gfx/interface/icons/modifiers/integrate_speed.dds" }
 		tooltip = "MIGRATION_ABILITY_SIX_TT"
 	}
 	age_ability = {

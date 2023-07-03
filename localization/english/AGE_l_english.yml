@@ -14,6 +14,10 @@
  golden_age_objectives_tt:0 "At least #Y 3#! [Player.Custom('current_age_custom_loc')] objectives have been completed."
 
  # Custom locs
+ # Notes for Zorgo:
+ # These description keys are special and need to be on 3 seperate lines and HAVE to fit in nicely with the UI. So keep them about the same length they are now.
+ # These are important as you see it in the center of the entire UI.
+
  current_age_custom_loc_1:0 "#T Hellenistic Age#!"
  current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
  current_age_custom_loc_2:0 "#T Age of Migration#!"
@@ -61,7 +65,7 @@
  MIGRATION_OBJECTIVE_5_DESC:0 "Destroy at least #E 5#! holy sites of other religions."
 
  MIGRATION_OBJECTIVE_6_TITLE:0 "#bold A Great Civilization#!"
- MIGRATION_OBJECTIVE_6_DESC:0 "Have a total of #E 15#! province investments in all territories."
+ MIGRATION_OBJECTIVE_6_DESC:0 "Have a total of #E 20#! province investments in all territories."
 
  MIGRATION_OBJECTIVE_7_TITLE:0 "#bold Head Chief#!"
  MIGRATION_OBJECTIVE_7_DESC:0 "Have at least #E 3#! tribal vassals."
@@ -97,11 +101,18 @@
  hellenic_ability_four_mod:0 "Mercenary Armies"
  hellenic_ability_five_mod:0 "Convincing Conversions"
  hellenic_ability_six_mod:0 "Expanding into the Unknown"
- hellenic_ability_seven_mod:0 "Seleukid Acceptance"
+ hellenic_ability_seven_mod:0 "Seleucid Acceptance"
  hellenic_ability_eight_mod:0 "Macedonian Hegemony"
  hellenic_ability_nine_mod:0 "Mauryan Bureaucracy"
  hellenic_ability_ten_mod:0 "The Carthaginian Seas"
  hellenic_ability_eleven_mod:0 "The Memory of Alexander"
+
+ migration_ability_one_mod:0 "Ensure Loyalty"
+ migration_ability_two_mod:0 "Siegecraft"
+ migration_ability_three_mod:0 "Master of Puppets"
+ migration_ability_four_mod:0 "Legitimate Claims"
+ migration_ability_five_mod:0 "Foreign Goods"
+ migration_ability_six_mod:0 "Better as a Whole"
 
  # Abilities
 
@@ -144,22 +155,22 @@
 
  # Migration Abilities
 
- MIGRATION_ABILITY_ONE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_ONE_TT_DESC$"
+ MIGRATION_ABILITY_ONE_TT:0 "#T $migration_ability_one_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_ONE_TT_DESC$"
  MIGRATION_ABILITY_ONE_TT_DESC:0 ""
 
- MIGRATION_ABILITY_TWO_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_TWO_TT_DESC$"
+ MIGRATION_ABILITY_TWO_TT:0 "#T $migration_ability_two_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_TWO_TT_DESC$"
  MIGRATION_ABILITY_TWO_TT_DESC:0 ""
 
- MIGRATION_ABILITY_THREE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_THREE_TT_DESC$"
+ MIGRATION_ABILITY_THREE_TT:0 "#T $migration_ability_three_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_THREE_TT_DESC$"
  MIGRATION_ABILITY_THREE_TT_DESC:0 ""
 
- MIGRATION_ABILITY_FOUR_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_FOUR_TT_DESC$"
+ MIGRATION_ABILITY_FOUR_TT:0 "#T $migration_ability_four_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_FOUR_TT_DESC$"
  MIGRATION_ABILITY_FOUR_TT_DESC:0 ""
 
- MIGRATION_ABILITY_FIVE_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_FIVE_TT_DESC$"
+ MIGRATION_ABILITY_FIVE_TT:0 "#T $migration_ability_five_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_FIVE_TT_DESC$"
  MIGRATION_ABILITY_FIVE_TT_DESC:0 ""
 
- MIGRATION_ABILITY_SIX_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SIX_TT_DESC$"
+ MIGRATION_ABILITY_SIX_TT:0 "#T $migration_ability_six_mod$#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SIX_TT_DESC$"
  MIGRATION_ABILITY_SIX_TT_DESC:0 ""
 
  MIGRATION_ABILITY_SEVEN_TT:0 "#T Ability Title#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]\n$MIGRATION_ABILITY_SEVEN_TT_DESC$"

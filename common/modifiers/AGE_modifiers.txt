@@ -29,3 +29,28 @@ hellenic_ability_ten_mod = {
 	subject_loyalty = 2
 	naval_morale_modifier = 0.025
 }
+
+migration_ability_one_mod = {
+	general_loyalty = 3
+}
+
+migration_ability_two_mod = {
+	assault_ability = 0.05
+}
+
+migration_ability_three_mod = {
+	diplomatic_relations = 2
+}
+
+migration_ability_four_mod = {
+	fabricate_claim_cost_modifier = 0.5
+	fabricate_claim_speed = 0.5
+}
+
+migration_ability_five_mod = {
+	global_import_commerce_modifier = 0.05
+}
+
+migration_ability_six_mod = {
+	integrate_speed = 0.1
+}

@@ -1,0 +1,46 @@
+﻿on_winning_war = {
+	on_actions = {
+		AGE_on_winning_war
+	}
+}
+
+AGE_on_winning_war = {
+	effect = {
+		if = {
+			limit = {
+				is_age = { num = 2 }
+				is_tribal = yes
+				var:migration_obj_one < 100
+			}
+			change_variable = {
+				name = migration_obj_one
+				add = 34
+			}
+		}
+	}
+}
+
+biyearly_country_pulse = {
+	on_actions = {
+		AGE_biyearly_country_pulse
+	}
+}
+
+AGE_biyearly_country_pulse = {
+	effect = {
+		if = {
+			limit = {
+				current_date >= 550.2.1
+				current_date < 554.2.1
+			}
+			clear_all_hellenic_age_data = yes
+		}
+		if = {
+			limit = {
+				current_date >= 650.2.1
+				current_date < 654.2.1
+			}
+			clear_all_migration_age_data = yes
+		}
+	}
+}
