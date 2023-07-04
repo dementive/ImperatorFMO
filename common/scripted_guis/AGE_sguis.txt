@@ -40,7 +40,10 @@ golden_age_button = {
         }
     }
     effect = {
-        add_treasury = 999
+        add_country_modifier = {
+            name = AGE_golden_age_taken
+            duration = 9125
+        }
         set_variable = golden_age_taken
     }
 }

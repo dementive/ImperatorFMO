@@ -42,7 +42,17 @@ clear_all_hellenic_age_data = {
 }
 
 clear_all_migration_age_data = {
-
+	remove_country_modifier = migration_ability_one_mod
+	remove_country_modifier = migration_ability_two_mod
+	remove_country_modifier = migration_ability_three_mod
+	remove_country_modifier = migration_ability_four_mod
+	remove_country_modifier = migration_ability_five_mod
+	remove_country_modifier = migration_ability_six_mod
+	remove_country_modifier = migration_ability_seven_mod
+	remove_country_modifier = migration_ability_eight_mod
+	remove_country_modifier = migration_ability_nine_mod
+	remove_country_modifier = migration_ability_ten_mod
+	remove_country_modifier = migration_ability_eleven_mod
 }
 
 age_ability_effect = {

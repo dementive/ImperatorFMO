@@ -42,5 +42,55 @@ AGE_biyearly_country_pulse = {
 			}
 			clear_all_migration_age_data = yes
 		}
+
+		# Passive splendor gain
+
+		change_variable = {
+			name = splendor
+			add = 40
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 1
+				    var:completed_migration_objectives = 1
+				    var:completed_empire_objectives = 1
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 5
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 2
+				    var:completed_migration_objectives = 2
+				    var:completed_empire_objectives = 2
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 10
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 3
+				    var:completed_migration_objectives = 3
+				    var:completed_empire_objectives = 3
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 15
+			}
+		}
+
 	}
 }
