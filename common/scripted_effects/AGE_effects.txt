@@ -39,6 +39,11 @@ clear_all_hellenic_age_data = {
 	remove_country_modifier = hellenic_ability_eight_mod
 	remove_country_modifier = hellenic_ability_nine_mod
 	remove_country_modifier = hellenic_ability_ten_mod
+	remove_variable = completed_hellenic_objectives
+	set_variable = {
+		name = completed_hellenic_objectives
+		value = 0
+	}
 }
 
 clear_all_migration_age_data = {
@@ -53,6 +58,11 @@ clear_all_migration_age_data = {
 	remove_country_modifier = migration_ability_nine_mod
 	remove_country_modifier = migration_ability_ten_mod
 	remove_country_modifier = migration_ability_eleven_mod
+	remove_variable = completed_migration_objectives
+	set_variable = {
+		name = completed_migration_objectives
+		value = 0
+	}
 }
 
 age_ability_effect = {

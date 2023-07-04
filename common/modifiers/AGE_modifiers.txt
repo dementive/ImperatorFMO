@@ -122,7 +122,8 @@ empire_ability_six_mod = {
 }
 
 empire_ability_seven_mod = {
-	civil_war_threshold = -0.025
+	civil_war_threshold = 0.025
+	stability_monthly_change = 0.01
 }
 
 empire_ability_eight_mod = {

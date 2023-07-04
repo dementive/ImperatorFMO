@@ -10,8 +10,8 @@ is_age = {
         limit = {
             $num$ = 1 # hellenic
         }
-        #current_date >= 450.1.1
-        #current_date < 550.1.1
+        current_date >= 450.1.1
+        current_date < 550.1.1
         always = no
     }
     trigger_else_if = {
@@ -20,13 +20,14 @@ is_age = {
         }
         #current_date >= 550.1.1
         #current_date < 650.1.1
-        always = yes
+        always = no
     }
     trigger_else_if = {
         limit = {
             $num$ = 3 # empire
         }
-        current_date >= 650.1.1
+        #current_date >= 650.1.1
+        always = yes
     }
 }
 

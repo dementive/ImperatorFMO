@@ -42,12 +42,22 @@ AGE_biyearly_country_pulse = {
 			}
 			clear_all_migration_age_data = yes
 		}
+	}
+}
 
+monthly_country_pulse = {
+	on_actions = {
+		AGE_monthly_country_pulse
+	}
+}
+
+AGE_monthly_country_pulse = {
+	effect = {
 		# Passive splendor gain
 
 		change_variable = {
 			name = splendor
-			add = 40
+			add = 1.66
 		}
 
 		if = {
@@ -60,7 +70,7 @@ AGE_biyearly_country_pulse = {
 			}
 			change_variable = {
 				name = splendor
-				add = 5
+				add = 0.2083
 			}
 		}
 
@@ -74,7 +84,7 @@ AGE_biyearly_country_pulse = {
 			}
 			change_variable = {
 				name = splendor
-				add = 10
+				add = 0.416
 			}
 		}
 
@@ -88,7 +98,63 @@ AGE_biyearly_country_pulse = {
 			}
 			change_variable = {
 				name = splendor
-				add = 15
+				add = 0.625
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 4
+				    var:completed_migration_objectives = 4
+				    var:completed_empire_objectives = 4
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 0.833
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 5
+				    var:completed_migration_objectives = 5
+				    var:completed_empire_objectives = 5
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 1.04
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 6
+				    var:completed_migration_objectives = 6
+				    var:completed_empire_objectives = 6
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 1.25
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+				    var:completed_hellenic_objectives = 7
+				    var:completed_migration_objectives = 7
+				    var:completed_empire_objectives = 7
+				}
+			}
+			change_variable = {
+				name = splendor
+				add = 1.4583
 			}
 		}
 

@@ -20,11 +20,11 @@
  # If you want to change any of the OBJECTIVE_TITLE names to make them better feel free.
 
  current_age_custom_loc_1:0 "#T Hellenistic Age#!"
- current_age_desc_custom_loc_1:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+ current_age_desc_custom_loc_1:0 "It is a time of renewal, where one fire has dwindled and another takes its place.\nAlexander is dead, but the epoch-defining events he set into motion are only\njust beginning. The Achaemenid empire has been broken, replaced by Zeus."
  current_age_custom_loc_2:0 "#T Age of Migration#!"
- current_age_desc_custom_loc_2:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+ current_age_desc_custom_loc_2:0 "It is a time of chaos and dread. There are disturbing reports from beyond\nthe borders that speak of unrest among the barbarian tribes, with rumors\ncirculating of these cruel invaders pushing tens of thousands of people out."
  current_age_custom_loc_3:0 "#T Age of Empires#!"
- current_age_desc_custom_loc_3:0 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+ current_age_desc_custom_loc_3:0 "Across the face of the Earth, battle-scarred generals and scheming warlords\ncrown themselves as Kings and Emperors, ascending their jeweled thrones.\nRuling over vast realms conquered at the point of the spear..."
 
  # Objective sgui loc
  HELLENIC_OBJECTIVE_1_TITLE:0 "#bold A Great City#!"
