@@ -9,9 +9,10 @@
  TOGGLE_COMPACT_MERC_VIEW: "#T Toggle Compact View#!"
 
  # Sgui tooltips
- ability_requires_splendor_tt: "At least #Y 800#! #T Splendor#! is needed to take an #T Age Ability#! (Current: [Player.MakeScope.Var('splendor').GetValue|0Y])."
- ability_requires_splendor_extreme_tt: "At least #Y 4000#! #T Splendor#! is needed to take $hellenic_ability_eleven_mod$ age ability (Current: [Player.MakeScope.Var('splendor').GetValue|0Y])."
- golden_age_objectives_tt: "At least #Y 3#! [Player.Custom('current_age_custom_loc')] objectives have been completed."
+ ability_requires_splendor_tt:0 "At least #Y 800#! splendor is needed to take an age ability (Current: [Player.MakeScope.Var('splendor').GetValue|0Y])"
+ ability_requires_splendor_extreme_tt:0 "At least #Y 4000#! splendor is needed to take $hellenic_ability_eleven_mod$ age ability (Current: [Player.MakeScope.Var('splendor').GetValue|0Y])"
+ golden_age_objectives_tt:0 "At least #Y 3#! [Player.Custom('current_age_custom_loc')] objectives have been completed."
+ golden_age_taken_tt:0 "[Player.GetName|Y] can only enter a golden age one time."
 
  # Custom locs
  # Notes for Zorgo:

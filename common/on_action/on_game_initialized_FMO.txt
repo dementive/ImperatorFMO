@@ -476,9 +476,3 @@ COL_on_game_initialized = {
 		}
 	}
 }
-
-AGE_on_init = {
-	effect = {
-		init_ages_variables = yes
-	}
-}

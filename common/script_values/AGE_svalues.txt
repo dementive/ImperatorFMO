@@ -121,10 +121,7 @@ migration_obj_six_svalue = {
 		limit = {
 			has_variable = num_state_mods
 		}
-		change_variable = {
-			name = num_state_mods
-			add = 1
-		}
+		add = var:num_state_mods
 	}
 	max = 20
 }
@@ -180,13 +177,11 @@ empire_obj_four_svalue = {
 				has_road_towards = PREV
 				exists = owner
 				owner = root
-				NOT = { has_local_variable = road_counted }
 			}
-			set_local_variable = road_counted
 			add = 1
 		}
 	}
-	max = 250
+	max = 500
 }
 
 empire_obj_five_svalue  = {
@@ -214,20 +209,4 @@ empire_obj_six_svalue = {
 		add = num_of_aqueduct_building
 	}
 	max = 350
-}
-
-empire_obj_seven_svalue = {
-	value = 0
-	if = {
-		limit = {
-			any_owned_province = {
-				count = all
-				is_in_region = capital_scope.region
-				has_non_food_trade_good_trigger = yes
-				has_city_status = yes
-			}
-		}
-		add = 1
-	}
-	max = 1
 }

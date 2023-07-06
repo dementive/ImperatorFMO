@@ -388,8 +388,8 @@ template empire_objectives
 		}
 		blockoverride "progress_text"
 		{
-			# (X * 0.01) * 1000
-			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('empire_obj_three').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)1000.0')|0] / 1000"
+			# (X * 0.01) * 10000
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('empire_obj_three').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)10000.0')|0] / 10000"
 		}
 		blockoverride "progress_value"
 		{
@@ -412,8 +412,8 @@ template empire_objectives
 		}
 		blockoverride "progress_text"
 		{
-			# (X * 0.01) * 250
-			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('empire_obj_four').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)250.0')|0] / 250"
+			# (X * 0.01) * 500
+			text = "[Multiply_CFixedPoint(Multiply_CFixedPoint( Player.MakeScope.Var('empire_obj_four').GetValue, '(CFixedPoint)0.01' ), '(CFixedPoint)500.0')|0] / 500"
 		}
 		blockoverride "progress_value"
 		{

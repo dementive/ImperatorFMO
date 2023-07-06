@@ -1,31 +1,33 @@
 ﻿init_ages_variables = {
-	set_variable = { name = splendor value = 0 }
-	set_variable = { name = completed_hellenic_objectives value = 0 }
-	set_variable = { name = completed_migration_objectives value = 0 }
-	set_variable = { name = completed_empire_objectives value = 0 }
-	set_variable = { name = hellenic_obj_one value = 0 }
-	set_variable = { name = hellenic_obj_two value = 0 }
-	set_variable = { name = hellenic_obj_three value = 0 }
-	set_variable = { name = hellenic_obj_four value = 0 }
-	set_variable = { name = hellenic_obj_five value = 0 }
-	set_variable = { name = hellenic_obj_six value = 0 }
-	set_variable = { name = hellenic_obj_seven value = 0 }
+	if = { limit = { NOT = { has_variable = splendor } } set_variable = { name = splendor value = 0 } }
+	if = { limit = { NOT = { has_variable = completed_hellenic_objectives } } set_variable = { name = completed_hellenic_objectives value = 0 } }
+	if = { limit = { NOT = { has_variable = completed_migration_objectives } } set_variable = { name = completed_migration_objectives value = 0 } }
+	if = { limit = { NOT = { has_variable = completed_empire_objectives } } set_variable = { name = completed_empire_objectives value = 0 } }
+	
+	if = { limit = { NOT = { has_variable = hellenic_obj_one } } set_variable = { name = hellenic_obj_one value = 0 } }
+	if = { limit = { NOT = { has_variable = hellenic_obj_two } } set_variable = { name = hellenic_obj_two value = 0 } }
+	if = { limit = { NOT = { has_variable = hellenic_obj_three } } set_variable = { name = hellenic_obj_three value = 0 } }
+	if = { limit = { NOT = { has_variable = hellenic_obj_four } } set_variable = { name = hellenic_obj_four value = 0 } }
+	if = { limit = { NOT = { has_variable = hellenic_obj_five } } set_variable = { name = hellenic_obj_five value = 0 } }
+	if = { limit = { NOT = { has_variable = hellenic_obj_six } } set_variable = { name = hellenic_obj_six value = 0 } }
+	if = { limit = { NOT = { has_variable = hellenic_obj_seven } } set_variable = { name = hellenic_obj_seven value = 0 } }
 
-	set_variable = { name = migration_obj_one value = 0 }
-	set_variable = { name = migration_obj_two value = 0 }
-	set_variable = { name = migration_obj_three value = 0 }
-	set_variable = { name = migration_obj_four value = 0 }
-	set_variable = { name = migration_obj_five value = 0 }
-	set_variable = { name = migration_obj_six value = 0 }
-	set_variable = { name = migration_obj_seven value = 0 }
+	if = { limit = { NOT = { has_variable = migration_obj_one } } set_variable = { name = migration_obj_one value = 0 } }
+	if = { limit = { NOT = { has_variable = migration_obj_two } } set_variable = { name = migration_obj_two value = 0 } }
+	if = { limit = { NOT = { has_variable = migration_obj_three } } set_variable = { name = migration_obj_three value = 0 } }
+	if = { limit = { NOT = { has_variable = migration_obj_four } } set_variable = { name = migration_obj_four value = 0 } }
+	if = { limit = { NOT = { has_variable = migration_obj_five } } set_variable = { name = migration_obj_five value = 0 } }
+	if = { limit = { NOT = { has_variable = migration_obj_six } } set_variable = { name = migration_obj_six value = 0 } }
+	if = { limit = { NOT = { has_variable = migration_obj_seven } } set_variable = { name = migration_obj_seven value = 0 } }
 
-	set_variable = { name = empire_obj_one value = 0 }
-	set_variable = { name = empire_obj_two value = 0 }
-	set_variable = { name = empire_obj_three value = 0 }
-	set_variable = { name = empire_obj_four value = 0 }
-	set_variable = { name = empire_obj_five value = 0 }
-	set_variable = { name = empire_obj_six value = 0 }
-	set_variable = { name = empire_obj_seven value = 0 }
+	if = { limit = { NOT = { has_variable = empire_obj_one } } set_variable = { name = empire_obj_one value = 0 } }
+	if = { limit = { NOT = { has_variable = empire_obj_two } } set_variable = { name = empire_obj_two value = 0 } }
+	if = { limit = { NOT = { has_variable = empire_obj_three } } set_variable = { name = empire_obj_three value = 0 } }
+	if = { limit = { NOT = { has_variable = empire_obj_four } } set_variable = { name = empire_obj_four value = 0 } }
+	if = { limit = { NOT = { has_variable = empire_obj_five } } set_variable = { name = empire_obj_five value = 0 } }
+	if = { limit = { NOT = { has_variable = empire_obj_six } } set_variable = { name = empire_obj_six value = 0 } }
+	if = { limit = { NOT = { has_variable = empire_obj_seven } } set_variable = { name = empire_obj_seven value = 0 } }
+
 }
 
 clear_all_hellenic_age_data = {

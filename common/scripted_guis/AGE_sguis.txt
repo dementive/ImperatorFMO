@@ -38,6 +38,15 @@ golden_age_button = {
                 var:completed_empire_objectives >= 3
             }
         }
+        trigger_if = {
+            limit = {
+                has_variable = golden_age_taken
+            }
+            custom_tooltip = {
+                text = golden_age_taken_tt
+                NOT = { has_variable = golden_age_taken }
+            }
+        }
     }
     effect = {
         add_country_modifier = {
@@ -534,20 +543,20 @@ check_age_objectives = {
             # Objective 3
             if = {
                 limit = {
-                    empire_obj_three_svalue < 1000
+                    empire_obj_three_svalue < 10000
                 }
                 remove_variable = empire_obj_three
                 set_variable = {
                     name = empire_obj_three
                     value = {
                         value = empire_obj_three_svalue
-                        divide = 10
+                        divide = 100
                     }
                 }
             }
             else_if = {
                 limit = {
-                    empire_obj_three_svalue >= 1000
+                    empire_obj_three_svalue >= 10000
                     var:empire_obj_three != 100
                 }
                 remove_variable = empire_obj_three
@@ -561,20 +570,20 @@ check_age_objectives = {
             # Objective 4
             if = {
                 limit = {
-                    empire_obj_four_svalue < 250
+                    empire_obj_four_svalue < 500
                 }
                 remove_variable = empire_obj_four
                 set_variable = {
                     name = empire_obj_four
                     value = {
                         value = empire_obj_four_svalue
-                        divide = 2.5
+                        divide = 5
                     }
                 }
             }
             else_if = {
                 limit = {
-                    empire_obj_four_svalue >= 250
+                    empire_obj_four_svalue >= 500
                     var:empire_obj_four != 100
                 }
                 remove_variable = empire_obj_four
@@ -642,21 +651,30 @@ check_age_objectives = {
             # Objective 7
             if = {
                 limit = {
-                    empire_obj_seven_svalue < 1
+                    NOT = {
+                        any_owned_province = {
+                            count = all
+                            is_in_region = root.capital_scope
+                            has_non_food_trade_good_trigger = yes
+                            has_city_status = yes
+                        }
+                    }
                 }
                 remove_variable = empire_obj_seven
                 set_variable = {
                     name = empire_obj_seven
-                    value = {
-                        value = empire_obj_seven_svalue
-                        divide = 3.5
-                    }
+                    value = 0
                 }
             }
             else_if = {
                 limit = {
-                    empire_obj_seven_svalue >= 1
                     var:empire_obj_seven != 100
+                    any_owned_province = {
+                        count = all
+                        is_in_region = root.capital_scope
+                        has_non_food_trade_good_trigger = yes
+                        has_city_status = yes
+                    }
                 }
                 remove_variable = empire_obj_seven
                 set_variable = {
