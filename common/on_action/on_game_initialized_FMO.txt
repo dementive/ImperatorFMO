@@ -2,7 +2,6 @@
 
 	on_actions = {
 		COL_on_game_initialized
-		AGE_on_init
 	}
 
 	events = {
