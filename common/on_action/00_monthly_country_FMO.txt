@@ -3,6 +3,7 @@
 		monthly_check_for_100_experience
 		monthly_imperial_power
 		monthly_colonization_pulse
+		monthly_reparation_payments_on_action
 	}
 
 	effect = {

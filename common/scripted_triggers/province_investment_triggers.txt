@@ -19,7 +19,10 @@
 	}
 	trigger_else = {
 		any_state_province = {
-			has_province_modifier = state_improvement_manpower
+			OR = {
+				has_province_modifier = state_improvement_manpower
+				has_state_modifier = state_improvement_military
+			}
 		}
 	}
 }
