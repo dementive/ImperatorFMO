@@ -11,15 +11,22 @@
 			}
 		}
 		OR = {
-			has_state_modifier = state_improvement_military_SPA
+			any_state_province = {
+				has_province_modifier = state_improvement_military_SPA
+			}
 			any_state_province = {
 				has_province_modifier = state_improvement_manpower
 			}
 		}
 	}
 	trigger_else = {
-		any_state_province = {
-			has_province_modifier = state_improvement_manpower
+		OR = {
+			any_state_province = {
+				has_province_modifier = state_improvement_military
+			}
+			any_state_province = {
+				has_province_modifier = state_improvement_manpower
+			}
 		}
 	}
 }
