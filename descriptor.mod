@@ -6,5 +6,5 @@ tags={
 	"Characters"
 }
 name="FMO"
-supported_version="2.0.3"
+supported_version="2.0.*"
 remote_file_id="2805839904"
