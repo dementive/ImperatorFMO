@@ -14,6 +14,9 @@ bloodlines = ["alcimachid","antigonids","antipatrid","argeads","lagids","seleuci
 
 chinese_bloodlines = ["qin_bloodline","chu_bloodline","wei_bloodline","zhou_bloodline","yue_bloodline","yan_bloodline","song_bloodline","lu_bloodline","wii_bloodline","han_bloodline","zhao_bloodline","zhongshan_bloodline","qii_bloodline","nii_bloodline","zou_bloodline","teng_bloodline","zhaoxian_bloodline"]
 
-for i in bloodlines:
-	#print_bloodlines_scripted_lists(i)
+new_bloodlines = ["alcimachid","antigonids","antipatrid","argeads","lagids","seleucids","agiad","achaemenid","maurya","aeacidae","zadok","agathocles","orontid","atropates","barca","arsaces","spartocid","sophytid","diodotus","brennus","illyrius","claudii","cornelii","fabii","demosthenid","mithridates","superbus","vercingetorix","chola","pandya","chera","kalinga","blood_of_david","magonid","hannonid","dido","blood_of_aratus","blood_of_menander","blood_of_bharata","blood_of_porus","blood_of_vijaya","blood_of_zipoetes","blood_of_pharnavazid","blood_of_forcos","blood_of_obodid","blood_of_aretid","pharnabazid","aeetes","eumenid","attalid","blood_of_shaushtatar","blood_of_pandava","blood_of_arhan"]
+
+todo_bloodlines = [x for x in new_bloodlines if x not in bloodlines]
+for i in todo_bloodlines:
+	print_bloodlines_scripted_lists(i)
 	print_bloodlines_scripted_guis(i)

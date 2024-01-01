@@ -268,3 +268,69 @@ magas = {
 		has_trait = magas
 	}
 }
+blood_of_pharnavazid = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_pharnavazid
+	}
+}
+blood_of_forcos = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_forcos
+	}
+}
+blood_of_obodid = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_obodid
+	}
+}
+blood_of_aretid = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_aretid
+	}
+}
+pharnabazid = {
+	base = living_character
+	conditions = {
+		has_trait = pharnabazid
+	}
+}
+aeetes = {
+	base = living_character
+	conditions = {
+		has_trait = aeetes
+	}
+}
+eumenid = {
+	base = living_character
+	conditions = {
+		has_trait = eumenid
+	}
+}
+attalid = {
+	base = living_character
+	conditions = {
+		has_trait = attalid
+	}
+}
+blood_of_shaushtatar = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_shaushtatar
+	}
+}
+blood_of_pandava = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_pandava
+	}
+}
+blood_of_arhan = {
+	base = living_character
+	conditions = {
+		has_trait = blood_of_arhan
+	}
+}

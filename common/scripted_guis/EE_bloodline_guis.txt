@@ -606,3 +606,146 @@ show_magas_characters_button = {
         }
     }
 }
+show_blood_of_pharnavazid_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_pharnavazid = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_blood_of_forcos_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_forcos = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_blood_of_obodid_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_obodid = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_blood_of_aretid_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_aretid = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_pharnabazid_characters_button = {
+    scope = country
+    effect = {
+        every_pharnabazid = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_aeetes_characters_button = {
+    scope = country
+    effect = {
+        every_aeetes = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_eumenid_characters_button = {
+    scope = country
+    effect = {
+        every_eumenid = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_attalid_characters_button = {
+    scope = country
+    effect = {
+        every_attalid = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_blood_of_shaushtatar_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_shaushtatar = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_blood_of_pandava_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_pandava = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}
+show_blood_of_arhan_characters_button = {
+    scope = country
+    effect = {
+        every_blood_of_arhan = {
+            root = {
+                add_to_variable_list = {
+                    name = player_bloodline_list
+                    target = prev
+                }
+            }
+        }
+    }
+}

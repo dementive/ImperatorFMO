@@ -513,10 +513,18 @@ SHOW_DAVID_CHARACTERS:0 "#T Show characters with the Blood of David#!\n[Scripted
 SHOW_MAGAS_CHARACTERS:0 "#T Show characters with the Blood of Magas & Bernike#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 SHOW_FABII_CHARACTERS:0 "#T Show characters with the Blood the Fabii#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 
-
-#Not used yet.
 SHOW_ZIPOETES_CHARACTERS:0 "#T Show characters with the Blood of Zipoetes#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
-
+SHOW_PHARNAVAZID_CHARACTERS:0 "#T Show characters with the Blood of Pharnavazid#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_PHORCOS_CHARACTERS:0 "#T Show characters with the Blood of Phorcos#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_OBODAS_CHARACTERS:0 "#T Show characters with the Blood of Obodas#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_ARETAS_CHARACTERS:0 "#T Show characters with the Blood of Aretas#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_PHARNABAZUS_CHARACTERS:0 "#T Show characters with the Blood of Pharnabazus#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_AEETES_CHARACTERS:0 "#T Show characters with the Blood of Aeetes#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_EUMENES_CHARACTERS:0 "#T Show characters with the Blood of Eumenes#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_ATTALID_CHARACTERS:0 "#T Show characters with the Attalid Blood#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_SHAUSHTATAR_CHARACTERS:0 "#T Show characters with the Blood of Shaushtatar#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_PANDU_CHARACTERS:0 "#T Show characters with the Blood of Pandu#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
+SHOW_ARHAN_CHARACTERS:0 "#T Show characters with the Blood of Arhan#!\n[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Player.MakeScope ).End )]"
 
 imperial_military_mod_1:0 "Military Imperial Power"
 imperial_military_mod_2:0 "Military Imperial Power"
