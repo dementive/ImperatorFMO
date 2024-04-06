@@ -1,4 +1,5 @@
 ﻿add_civilization_scaling_gold_cost_effect = {
+    increment_civ_investment_count = yes
     if = {
         limit = {
             has_variable = num_civ_investments
