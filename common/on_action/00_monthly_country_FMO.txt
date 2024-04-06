@@ -8,7 +8,6 @@
 
 	events = {
 		imperial_events.1
-		promo.1
 	}
 }
 
